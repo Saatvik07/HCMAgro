@@ -1,0 +1,25 @@
+.slider-image {
+	width: 90vw;
+	height: 95vh;
+}
+#root > ul > div.swiper-wrapper > li.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.home-paper {
+	width: 50%;
+	height: 25%;
+	opacity: 0.5;
+	background: rgb(98, 168, 17);
+	background: linear-gradient(
+		90deg,
+		rgba(98, 168, 17, 1) 31%,
+		rgba(88, 177, 10, 1) 45%,
+		rgba(11, 162, 17, 1) 100%
+	);
+}
+.contact-btn svg {
+	color: green;
+	font-size: 40px;
+}
