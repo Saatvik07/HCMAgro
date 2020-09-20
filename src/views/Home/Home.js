@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { withRouter, useHistory } from "react-router-dom";
+import { withRouter, useHistory, Link } from "react-router-dom";
 import { Tooltip, IconButton } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import CallIcon from "@material-ui/icons/Call";
@@ -85,11 +85,22 @@ function Home() {
 										alt='logo'
 										className='navBar-logo'
 									></img>
-									<h3 className='navBar-link'>Home</h3>
-									<h3 className='navBar-link'>About Us</h3>
-									<h3 className='navBar-link'>Products</h3>
-									<h3 className='navBar-link'>Contact Us</h3>
-									<h3 className='navBar-link'>Catalogue</h3>
+
+									<Link to='/' className='router-link'>
+										<h3 className='navBar-link'>Home</h3>
+									</Link>
+									<Link to='/about' className='router-link'>
+										<h3 className='navBar-link'>About Us</h3>
+									</Link>
+									<Link to='/products' className='router-link'>
+										<h3 className='navBar-link'>Products</h3>
+									</Link>
+									<Link to='/contact' className='router-link'>
+										<h3 className='navBar-link'>Contact Us</h3>
+									</Link>
+									<Link to='/catalogue' className='router-link'>
+										<h3 className='navBar-link'>Catalogue</h3>
+									</Link>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -191,11 +202,21 @@ function Home() {
 										alt='logo'
 										className='navBar-logo'
 									></img>
-									<h3 className='navBar-link'>Home</h3>
-									<h3 className='navBar-link'>About Us</h3>
-									<h3 className='navBar-link'>Products</h3>
-									<h3 className='navBar-link'>Contact Us</h3>
-									<h3 className='navBar-link'>Catalogue</h3>
+									<Link to='/' className='router-link'>
+										<h3 className='navBar-link'>Home</h3>
+									</Link>
+									<Link to='/about' className='router-link'>
+										<h3 className='navBar-link'>About Us</h3>
+									</Link>
+									<Link to='/products' className='router-link'>
+										<h3 className='navBar-link'>Products</h3>
+									</Link>
+									<Link to='/contact' className='router-link'>
+										<h3 className='navBar-link'>Contact Us</h3>
+									</Link>
+									<Link to='/catalogue' className='router-link'>
+										<h3 className='navBar-link'>Catalogue</h3>
+									</Link>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -297,11 +318,21 @@ function Home() {
 										alt='logo'
 										className='navBar-logo'
 									></img>
-									<h3 className='navBar-link'>Home</h3>
-									<h3 className='navBar-link'>About Us</h3>
-									<h3 className='navBar-link'>Products</h3>
-									<h3 className='navBar-link'>Contact Us</h3>
-									<h3 className='navBar-link'>Catalogue</h3>
+									<Link to='/' className='router-link'>
+										<h3 className='navBar-link'>Home</h3>
+									</Link>
+									<Link to='/about' className='router-link'>
+										<h3 className='navBar-link'>About Us</h3>
+									</Link>
+									<Link to='/products' className='router-link'>
+										<h3 className='navBar-link'>Products</h3>
+									</Link>
+									<Link to='/contact' className='router-link'>
+										<h3 className='navBar-link'>Contact Us</h3>
+									</Link>
+									<Link to='/catalogue' className='router-link'>
+										<h3 className='navBar-link'>Catalogue</h3>
+									</Link>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -403,11 +434,21 @@ function Home() {
 										alt='logo'
 										className='navBar-logo'
 									></img>
-									<h3 className='navBar-link'>Home</h3>
-									<h3 className='navBar-link'>About Us</h3>
-									<h3 className='navBar-link'>Products</h3>
-									<h3 className='navBar-link'>Contact Us</h3>
-									<h3 className='navBar-link'>Catalogue</h3>
+									<Link to='/' className='router-link'>
+										<h3 className='navBar-link'>Home</h3>
+									</Link>
+									<Link to='/about' className='router-link'>
+										<h3 className='navBar-link'>About Us</h3>
+									</Link>
+									<Link to='/products' className='router-link'>
+										<h3 className='navBar-link'>Products</h3>
+									</Link>
+									<Link to='/contact' className='router-link'>
+										<h3 className='navBar-link'>Contact Us</h3>
+									</Link>
+									<Link to='/catalogue' className='router-link'>
+										<h3 className='navBar-link'>Catalogue</h3>
+									</Link>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -509,11 +550,21 @@ function Home() {
 										alt='logo'
 										className='navBar-logo'
 									></img>
-									<h3 className='navBar-link'>Home</h3>
-									<h3 className='navBar-link'>About Us</h3>
-									<h3 className='navBar-link'>Products</h3>
-									<h3 className='navBar-link'>Contact Us</h3>
-									<h3 className='navBar-link'>Catalogue</h3>
+									<Link to='/' className='router-link'>
+										<h3 className='navBar-link'>Home</h3>
+									</Link>
+									<Link to='/about' className='router-link'>
+										<h3 className='navBar-link'>About Us</h3>
+									</Link>
+									<Link to='/products' className='router-link'>
+										<h3 className='navBar-link'>Products</h3>
+									</Link>
+									<Link to='/contact' className='router-link'>
+										<h3 className='navBar-link'>Contact Us</h3>
+									</Link>
+									<Link to='/catalogue' className='router-link'>
+										<h3 className='navBar-link'>Catalogue</h3>
+									</Link>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener

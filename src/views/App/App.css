@@ -56,6 +56,8 @@ footer {
 	justify-content: center;
 	align-items: center;
 }
-
+.router-link {
+	text-decoration: none !important;
+}
 .footer-link {
 }

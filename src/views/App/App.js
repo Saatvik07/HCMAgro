@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "../Home/Home";
+import Products from "../Products/Products";
 import About from "../About/About";
 import { Button } from "@material-ui/core";
 function App() {
@@ -11,6 +12,7 @@ function App() {
 				<Switch>
 					<Route exact path='/' component={Home}></Route>
 					<Route exact path='/about' component={About}></Route>
+					<Route path='/products' component={Products}></Route>
 				</Switch>
 				{/* <footer>
 				<div className='footer-container'>

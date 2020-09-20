@@ -1,0 +1,75 @@
+.products-container {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+}
+.products-hero {
+	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1599605655/pexels-kaboompics-com-5808_apso79.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 40%;
+}
+.products-hero-overlay {
+	background: #151515;
+	opacity: 0.7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.products-hero-info {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 90%;
+}
+.products-hero-info > h1 {
+	font-size: 5rem;
+}
+.products-card-container {
+	width: 100%;
+	display: flex;
+}
+.products-card {
+	width: 20%;
+	margin: 50px;
+}
+.one {
+	background-color: #d88787 !important;
+}
+.two {
+	background-color: #b26161 !important;
+}
+.three {
+	background-color: #8b3a3a !important;
+}
+.four {
+	background-color: #651414 !important;
+}
+.products-card-image {
+	width: 100%;
+	height: auto;
+}
+.products-card-footer > button {
+	color: white;
+	border: 2px solid white;
+	margin: 10px 30px;
+}
+.products-card-footer {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.products-card-timeline {
+	color: white;
+	font-size: 1rem;
+	margin: 0;
+}
+.products-card-timeline-items {
+	background-color: white !important;
+}
