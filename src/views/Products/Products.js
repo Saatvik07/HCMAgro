@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Products.css";
 import {
 	ClickAwayListener,
@@ -141,7 +141,7 @@ function Products() {
 				<Card className='products-card one animate__animated animate__fadeInDown'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/");
+							history.push("/category1");
 						}}
 					>
 						<img
@@ -183,7 +183,12 @@ function Products() {
 					</CardActionArea>
 					<CardActions>
 						<div className='products-card-footer'>
-							<IconButton className='products-card-button'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/category1");
+								}}
+							>
 								<ArrowForwardOutlinedIcon />
 							</IconButton>
 						</div>
@@ -192,7 +197,7 @@ function Products() {
 				<Card className='products-card two animate__animated animate__fadeInUp'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/");
+							history.push("/category2");
 						}}
 					>
 						<img
@@ -234,7 +239,12 @@ function Products() {
 					</CardActionArea>
 					<CardActions>
 						<div className='products-card-footer'>
-							<IconButton className='products-card-button'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/category2");
+								}}
+							>
 								<ArrowForwardOutlinedIcon />
 							</IconButton>
 						</div>
@@ -243,7 +253,7 @@ function Products() {
 				<Card className='products-card three animate__animated animate__fadeInDown'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/");
+							history.push("/category3");
 						}}
 					>
 						<img
@@ -285,7 +295,12 @@ function Products() {
 					</CardActionArea>
 					<CardActions>
 						<div className='products-card-footer'>
-							<IconButton className='products-card-button'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/category3");
+								}}
+							>
 								<ArrowForwardOutlinedIcon />
 							</IconButton>
 						</div>
@@ -294,7 +309,7 @@ function Products() {
 				<Card className='products-card four animate__animated animate__fadeInUp'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/");
+							history.push("/category4");
 						}}
 					>
 						<img
@@ -336,7 +351,12 @@ function Products() {
 					</CardActionArea>
 					<CardActions>
 						<div className='products-card-footer'>
-							<IconButton className='products-card-button'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/category4");
+								}}
+							>
 								<ArrowForwardOutlinedIcon />
 							</IconButton>
 						</div>

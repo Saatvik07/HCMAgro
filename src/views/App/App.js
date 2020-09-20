@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import Products from "../Products/Products";
 import About from "../About/About";
 import { Button } from "@material-ui/core";
+import Category1 from "../Products/Category1/Category1";
 function App() {
 	return (
 		<div>
@@ -13,6 +14,7 @@ function App() {
 					<Route exact path='/' component={Home}></Route>
 					<Route exact path='/about' component={About}></Route>
 					<Route path='/products' component={Products}></Route>
+					<Route path='/category1' component={Category1}></Route>
 				</Switch>
 				{/* <footer>
 				<div className='footer-container'>

@@ -59,5 +59,9 @@ footer {
 .router-link {
 	text-decoration: none !important;
 }
+th,
+td {
+	border-bottom: 1px solid black !important;
+}
 .footer-link {
 }
