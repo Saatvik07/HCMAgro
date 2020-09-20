@@ -204,7 +204,11 @@ function Category1() {
 					</CardActions>
 				</Card>
 				<Card className='category1-card'>
-					<CardActionArea>
+					<CardActionArea
+						onClick={() => {
+							setModals([false, true, false]);
+						}}
+					>
 						<img
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566655/WhatsApp_Image_2020-09-18_at_22.32.15_1_fhjpq0.jpg'
 							alt='Granule Organic Manure'
@@ -217,25 +221,36 @@ function Category1() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Granule Organic Manure
+								Bio-Fertilizers
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
-								Organic Manure is an eco-friendly fertilizer, which helps in improving the quality &
-								fertility of soil and hence make the produce healthy & nutritious. It enriches the
-								soil with micro-organisms & restore the depleted nutrients of the soil.
+								Mycorrhizae is a biofertilizer that helps in promotion of plant growth in an
+								environment friendly manner as well as providing several other benefits to
+								cultivation of plants. We offer commercial production of viable, healthy genetically
+								pure & high quality mycorrhizae without contamination in sterile environment.
 							</Typography>
 						</CardContent>
 					</CardActionArea>
 					<CardActions>
 						<div className='category1-card-footer'>
-							<Button variant='outlined' className='category1-card-button'>
+							<Button
+								variant='outlined'
+								className='category1-card-button'
+								onClick={() => {
+									setModals([false, true, false]);
+								}}
+							>
 								Learn More
 							</Button>
 						</div>
 					</CardActions>
 				</Card>
 				<Card className='category1-card'>
-					<CardActionArea>
+					<CardActionArea
+						onClick={() => {
+							setModals([false, false, true]);
+						}}
+					>
 						<img
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566656/WhatsApp_Image_2020-09-18_at_22.31.30_x9y8d4.jpg'
 							alt='Granule Organic Manure'
@@ -248,18 +263,25 @@ function Category1() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Granule Organic Manure
+								Seaweed Extract
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
-								Organic Manure is an eco-friendly fertilizer, which helps in improving the quality &
-								fertility of soil and hence make the produce healthy & nutritious. It enriches the
-								soil with micro-organisms & restore the depleted nutrients of the soil.
+								The Seaweed extract is natural organic concentrate that are extracted from marine
+								plants. These natural and non-toxic extracts are rich in minor elements and natural
+								growth hormones and trace elements like auxins, gibberellins and cytokinins. These
+								trace elements help the plants in different ways qand leads to faster growth.
 							</Typography>
 						</CardContent>
 					</CardActionArea>
 					<CardActions>
 						<div className='category1-card-footer'>
-							<Button variant='outlined' className='category1-card-button'>
+							<Button
+								variant='outlined'
+								className='category1-card-button'
+								onClick={() => {
+									setModals([false, false, true]);
+								}}
+							>
 								Learn More
 							</Button>
 						</div>
@@ -268,6 +290,128 @@ function Category1() {
 			</div>
 			<Modal
 				open={modals[0]}
+				onClose={() => {
+					document.querySelector(".category1-modal").className =
+						"category1-modal animate__animated animate__fadeOut";
+					document.querySelector(".category1-modal").onanimationend = () => {
+						setModals([false, false, false]);
+					};
+				}}
+				closeAfterTransition
+				BackdropComponent={Backdrop}
+				BackdropProps={{
+					timeout: 500,
+				}}
+				className='category1-modal animate__animated animate__fadeIn'
+			>
+				<div className='category1-modal-container'>
+					<div className='category1-modal-left-div'>
+						<img
+							className='category1-modal-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<TableContainer className='category1-modal-table-container'>
+							<Table className='category1-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{product1.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+					</div>
+					<div className='category1-modal-right-div'>
+						<Paper elevation={5} className='category1-modal-heading'>
+							<h2>Granule Organic Manure</h2>
+						</Paper>
+						<List>
+							{product1Benefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+				</div>
+			</Modal>
+			<Modal
+				open={modals[1]}
+				onClose={() => {
+					document.querySelector(".category1-modal").className =
+						"category1-modal animate__animated animate__fadeOut";
+					document.querySelector(".category1-modal").onanimationend = () => {
+						setModals([false, false, false]);
+					};
+				}}
+				closeAfterTransition
+				BackdropComponent={Backdrop}
+				BackdropProps={{
+					timeout: 500,
+				}}
+				className='category1-modal animate__animated animate__fadeIn'
+			>
+				<div className='category1-modal-container'>
+					<div className='category1-modal-left-div'>
+						<img
+							className='category1-modal-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<TableContainer className='category1-modal-table-container'>
+							<Table className='category1-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{product1.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+					</div>
+					<div className='category1-modal-right-div'>
+						<Paper elevation={5} className='category1-modal-heading'>
+							<h2>Granule Organic Manure</h2>
+						</Paper>
+						<List>
+							{product1Benefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+				</div>
+			</Modal>
+			<Modal
+				open={modals[2]}
 				onClose={() => {
 					document.querySelector(".category1-modal").className =
 						"category1-modal animate__animated animate__fadeOut";
