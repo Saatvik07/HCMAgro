@@ -11,6 +11,11 @@ import {
 	CardContent,
 	CardActions,
 	Button,
+	Collapse,
+	List,
+	ListItem,
+	ListItemIcon,
+	ListItemText,
 } from "@material-ui/core";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -18,6 +23,8 @@ import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ArrowDropDownCircleRoundedIcon from "@material-ui/icons/ArrowDropDownCircleRounded";
 import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
@@ -33,6 +40,7 @@ const CustomTooltip = withStyles((theme) => ({
 function Products() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
+	const [expandSeaWeed, setExpandSeaWeed] = useState(false);
 	const history = useHistory();
 	return (
 		<div className='products-container'>
@@ -156,29 +164,11 @@ function Products() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Humates
+								Organic Manure Granules
 							</Typography>
-							<Timeline align='alternate' className='products-card-timeline'>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Eat</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Code</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineDot className='products-card-timeline-items' />
-
-									<TimelineContent>Sleep</TimelineContent>
-								</TimelineItem>
-							</Timeline>
+							Organic Manure is an eco-friendly fertilizer, which helps in improving the quality &
+							fertility of soil and hence make the produce healthy & nutritious. It enriches the
+							soil with micro-organisms & restore the depleted nutrients of the soil.
 						</CardContent>
 					</CardActionArea>
 					<CardActions>
@@ -197,46 +187,73 @@ function Products() {
 				<Card className='products-card two animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/category2");
+							setExpandSeaWeed(!expandSeaWeed);
 						}}
 					>
 						<img
 							className='products-card-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-							alt='humates'
+							alt='seaweed extract'
 						/>
-						<CardContent>
+						<CardContent className='products-card-info'>
 							<Typography
 								gutterBottom
 								variant='h5'
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Humates
+								Sea Weed Extract
 							</Typography>
-							<Timeline align='alternate' className='products-card-timeline'>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Eat</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Code</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineDot className='products-card-timeline-items' />
-
-									<TimelineContent>Sleep</TimelineContent>
-								</TimelineItem>
-							</Timeline>
+							The Seaweed extract is natural organic concentrate that are extracted from marine
+							plants.
+							<br></br>
+							<Button variant='outlined' className='products-card-expand-icon'>
+								SEE MORE
+							</Button>
 						</CardContent>
 					</CardActionArea>
+					<Collapse in={expandSeaWeed} timeout='auto' unmountOnExit>
+						<CardContent>
+							<List>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon />
+									</ListItemIcon>
+									<ListItemText primary='Seaweed Extract Granules' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon />
+									</ListItemIcon>
+									<ListItemText primary='Seaweed Extract Powder' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon />
+									</ListItemIcon>
+									<ListItemText primary='Seaweed Extract Flakes' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon />
+									</ListItemIcon>
+									<ListItemText primary='Seaweed Extract Gel' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon />
+									</ListItemIcon>
+									<ListItemText primary='Green Seaweed Extract' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon />
+									</ListItemIcon>
+									<ListItemText primary='Brown Seaweed Extract' />
+								</ListItem>
+							</List>
+						</CardContent>
+					</Collapse>
 					<CardActions>
 						<div className='products-card-footer'>
 							<IconButton
@@ -270,27 +287,6 @@ function Products() {
 							>
 								Humates
 							</Typography>
-							<Timeline align='alternate' className='products-card-timeline'>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Eat</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Code</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineDot className='products-card-timeline-items' />
-
-									<TimelineContent>Sleep</TimelineContent>
-								</TimelineItem>
-							</Timeline>
 						</CardContent>
 					</CardActionArea>
 					<CardActions>
@@ -306,7 +302,7 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card four animate__animated animate__fadeIn'>
+				<Card className='products-card one animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/category4");
@@ -326,27 +322,6 @@ function Products() {
 							>
 								Humates
 							</Typography>
-							<Timeline align='alternate' className='products-card-timeline'>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Eat</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineSeparator>
-										<TimelineDot className='products-card-timeline-items' />
-										<TimelineConnector className='products-card-timeline-items' />
-									</TimelineSeparator>
-									<TimelineContent>Code</TimelineContent>
-								</TimelineItem>
-								<TimelineItem>
-									<TimelineDot className='products-card-timeline-items' />
-
-									<TimelineContent>Sleep</TimelineContent>
-								</TimelineItem>
-							</Timeline>
 						</CardContent>
 					</CardActionArea>
 					<CardActions>
