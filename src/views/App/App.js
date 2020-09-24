@@ -23,14 +23,17 @@ import EmailIcon from "@material-ui/icons/Email";
 function App() {
 	const [email, setEmail] = useState("");
 	return (
-		<div>
+		<div className='content-footer'>
 			<BrowserRouter>
-				<Switch>
-					<Route exact path='/' component={Home}></Route>
-					<Route exact path='/about' component={About}></Route>
-					<Route path='/products' component={Products}></Route>
-					<Route path='/category1' component={Category1}></Route>
-				</Switch>
+				<div className='content'>
+					<Switch>
+						<Route exact path='/' component={Home}></Route>
+						<Route exact path='/about' component={About}></Route>
+						<Route path='/products' component={Products}></Route>
+						<Route path='/category1' component={Category1}></Route>
+					</Switch>
+				</div>
+
 				<footer>
 					<div className='footer-container'>
 						<div className='footer-left'>
@@ -142,6 +145,19 @@ function App() {
 													</ListItem>
 												</Link>
 											</TableCell>
+											<TableCell className='footer-tableCell'>
+												<Link to='/category2' className='router-link'>
+													<ListItem className='footer-table-listItem'>
+														<ListItemIcon className='footer-table-icon'>
+															<DoubleArrowIcon />
+														</ListItemIcon>
+														<ListItemText
+															primary='Category3'
+															className='footer-link'
+														></ListItemText>
+													</ListItem>
+												</Link>
+											</TableCell>
 										</TableRow>
 										<TableRow>
 											<TableCell className='footer-tableCell'>
@@ -151,7 +167,7 @@ function App() {
 															<DoubleArrowIcon />
 														</ListItemIcon>
 														<ListItemText
-															primary='Category3'
+															primary='Category4'
 															className='footer-link'
 														></ListItemText>
 													</ListItem>
@@ -164,7 +180,61 @@ function App() {
 															<DoubleArrowIcon />
 														</ListItemIcon>
 														<ListItemText
-															primary='Category4'
+															primary='Category5'
+															className='footer-link'
+														></ListItemText>
+													</ListItem>
+												</Link>
+											</TableCell>
+											<TableCell className='footer-tableCell'>
+												<Link to='/category2' className='router-link'>
+													<ListItem className='footer-table-listItem'>
+														<ListItemIcon className='footer-table-icon'>
+															<DoubleArrowIcon />
+														</ListItemIcon>
+														<ListItemText
+															primary='Category6'
+															className='footer-link'
+														></ListItemText>
+													</ListItem>
+												</Link>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell className='footer-tableCell'>
+												<Link to='/category3' className='router-link'>
+													<ListItem className='footer-table-listItem'>
+														<ListItemIcon className='footer-table-icon'>
+															<DoubleArrowIcon />
+														</ListItemIcon>
+														<ListItemText
+															primary='Category7'
+															className='footer-link'
+														></ListItemText>
+													</ListItem>
+												</Link>
+											</TableCell>
+											<TableCell className='footer-tableCell'>
+												<Link to='/category4' className='router-link'>
+													<ListItem className='footer-table-listItem'>
+														<ListItemIcon className='footer-table-icon'>
+															<DoubleArrowIcon />
+														</ListItemIcon>
+														<ListItemText
+															primary='Category8'
+															className='footer-link'
+														></ListItemText>
+													</ListItem>
+												</Link>
+											</TableCell>
+											<TableCell className='footer-tableCell'>
+												<Link to='/category2' className='router-link'>
+													<ListItem className='footer-table-listItem'>
+														<ListItemIcon className='footer-table-icon'>
+															<DoubleArrowIcon />
+														</ListItemIcon>
+														<ListItemText
+															primary='Category9'
 															className='footer-link'
 														></ListItemText>
 													</ListItem>

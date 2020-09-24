@@ -154,7 +154,7 @@ function About() {
 					</div>
 				</div>
 			</Parallax>
-			<h1 className='about-headings'>Our values</h1>
+
 			<Parallax
 				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600913802/sean-stratton-ObpCE_X3j6U-unsplash_vqbj0j.jpg'
 				bgClassName='about-bg'
@@ -168,6 +168,7 @@ function About() {
 						data-aos-mirror='true'
 						data-aos-once='false'
 					>
+						<h1 className='about-headings'>Our values</h1>
 						<p>
 							At HCM we win together, we lose together. We own our jobs. We serve customers
 							throughout their journeys. We reflect, plan and act. We keep learning, improving and
@@ -243,7 +244,6 @@ function About() {
 					</div>
 				</div>
 			</Parallax>
-			<h1 className='about-headings'>Our vision</h1>
 			<Parallax
 				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600902481/pexels-pixabay-276259_qru4lg.jpg'
 				className='about-second-parallax'
@@ -256,6 +256,7 @@ function About() {
 						data-aos-mirror='true'
 						data-aos-once='false'
 					>
+						<h1 className='about-headings'>Our vision</h1>
 						<p>
 							To establish an everlasting relationship with our customers, focusing relentlessly on
 							quality by consistently delivering high performing products which offers great values.
@@ -263,7 +264,7 @@ function About() {
 					</div>
 				</div>
 			</Parallax>
-			<h1 className='about-headings'>Our mission</h1>
+
 			<Parallax
 				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600905703/pexels-markus-spiske-2559749_p9ijw8.jpg'
 				className='about-third-parallax'
@@ -276,6 +277,7 @@ function About() {
 						data-aos-mirror='true'
 						data-aos-once='false'
 					>
+						<h1 className='about-headings'>Our mission</h1>
 						<p>
 							To establish an everlasting relationship with our customers, focusing relentlessly on
 							quality by consistently delivering high performing products which offers great values.
