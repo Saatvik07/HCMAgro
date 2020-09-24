@@ -32,24 +32,37 @@
 }
 .category1-card-container {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .category1-card {
-	width: 30%;
+	width: 25%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	background-color: #d88787 !important;
 	margin: 50px;
+	height: 70vh;
 }
 .category1-card-image {
 	width: 100%;
 	height: auto;
 }
+.category1-card-footer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.category1-card-footer-container {
+	height: 20%;
+	width: 100%;
+}
 .category1-card-button {
 	color: white !important;
 	border: 2px solid white !important;
-	margin: 20px !important;
 }
 .category1-modal {
 	display: flex;

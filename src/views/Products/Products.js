@@ -36,7 +36,7 @@ function Products() {
 	const history = useHistory();
 	return (
 		<div className='products-container'>
-			<div className='products-hero animate__animated animate__fadeInDown'>
+			<div className='products-hero animate__animated animate__fadeIn'>
 				<div className='products-hero-overlay '>
 					<div className='navBar'>
 						<div className='navBar-left'>
@@ -138,7 +138,7 @@ function Products() {
 				</div>
 			</div>
 			<div className='products-card-container'>
-				<Card className='products-card one animate__animated animate__fadeInDown'>
+				<Card className='products-card one animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/category1");
@@ -194,7 +194,7 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card two animate__animated animate__fadeInUp'>
+				<Card className='products-card two animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/category2");
@@ -250,7 +250,7 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card three animate__animated animate__fadeInDown'>
+				<Card className='products-card three animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/category3");
@@ -306,7 +306,7 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card four animate__animated animate__fadeInUp'>
+				<Card className='products-card four animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/category4");

@@ -52,7 +52,6 @@ const CustomTooltip = withStyles((theme) => ({
 function Home() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
-	const history = useHistory();
 	return (
 		<div>
 			<Swiper

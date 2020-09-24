@@ -162,7 +162,7 @@ function Category1() {
 				</div>
 			</div>
 			<div className='category1-card-container'>
-				<Card className='category1-card'>
+				<Card className='category1-card animate__animated animate__fadeInUp'>
 					<CardActionArea
 						onClick={() => {
 							setModals([true, false, false]);
@@ -173,7 +173,7 @@ function Category1() {
 							alt='Granule Organic Manure'
 							className='category1-card-image'
 						/>
-						<CardContent>
+						<CardContent style={{ height: "40%" }}>
 							<Typography
 								gutterBottom
 								variant='h5'
@@ -189,7 +189,7 @@ function Category1() {
 							</Typography>
 						</CardContent>
 					</CardActionArea>
-					<CardActions>
+					<CardActions className='category1-card-footer-container'>
 						<div className='category1-card-footer'>
 							<Button
 								variant='outlined'
@@ -203,7 +203,7 @@ function Category1() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='category1-card'>
+				<Card className='category1-card animate__animated animate__fadeInUp'>
 					<CardActionArea
 						onClick={() => {
 							setModals([false, true, false]);
@@ -214,7 +214,7 @@ function Category1() {
 							alt='Granule Organic Manure'
 							className='category1-card-image'
 						/>
-						<CardContent>
+						<CardContent style={{ height: "40%" }}>
 							<Typography
 								gutterBottom
 								variant='h5'
@@ -231,7 +231,7 @@ function Category1() {
 							</Typography>
 						</CardContent>
 					</CardActionArea>
-					<CardActions>
+					<CardActions className='category1-card-footer-container'>
 						<div className='category1-card-footer'>
 							<Button
 								variant='outlined'
@@ -245,7 +245,7 @@ function Category1() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='category1-card'>
+				<Card className='category1-card animate__animated animate__fadeInUp'>
 					<CardActionArea
 						onClick={() => {
 							setModals([false, false, true]);
@@ -268,12 +268,11 @@ function Category1() {
 							<Typography variant='body2' color='textSecondary' component='p'>
 								The Seaweed extract is natural organic concentrate that are extracted from marine
 								plants. These natural and non-toxic extracts are rich in minor elements and natural
-								growth hormones and trace elements like auxins, gibberellins and cytokinins. These
-								trace elements help the plants in different ways qand leads to faster growth.
+								growth hormones and trace elements like auxins, gibberellins and cytokinins.
 							</Typography>
 						</CardContent>
 					</CardActionArea>
-					<CardActions>
+					<CardActions className='category1-card-footer-container'>
 						<div className='category1-card-footer'>
 							<Button
 								variant='outlined'
