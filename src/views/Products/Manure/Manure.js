@@ -28,7 +28,7 @@ import {
 	ListItemText,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import "./Category1.css";
+import "./Manure.css";
 const CustomTooltip = withStyles((theme) => ({
 	tooltip: {
 		backgroundColor: "#d28a7c",
@@ -54,7 +54,7 @@ const product1Benefits = [
 	"Strengthens roots system of plants.",
 	"Improve soil quality by adding organic carbon.",
 ];
-function Category1() {
+function Manure() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
 	const [modals, setModals] = useState([false, false, false]);
@@ -474,4 +474,4 @@ function Category1() {
 	);
 }
 
-export default Category1;
+export default Manure;

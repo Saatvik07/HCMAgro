@@ -89,12 +89,16 @@ td {
 .footer-table-listItem {
 	padding: 0 !important;
 }
-.footer-input > span {
-	color: white;
+.footer-input > label {
+	color: white !important;
 }
-.footer-input > fieldset {
-	border-color: white;
+.footer-input > div > fieldset {
+	border-color: white !important;
 }
+.footer-input > div > input {
+	color: white !important;
+}
+
 .footer-sendBtn {
 	margin: 20px !important;
 	color: white !important;
@@ -113,4 +117,13 @@ td {
 	border-radius: 10px;
 	background-color: #8b3a3a;
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px #651414 inset !important;
+}
+input:-webkit-autofill {
+	-webkit-text-fill-color: lightgreen !important;
 }

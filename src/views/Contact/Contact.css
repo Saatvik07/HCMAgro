@@ -1,0 +1,83 @@
+.contact-hero {
+	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1599605655/pexels-kaboompics-com-5808_apso79.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 40%;
+}
+.contact-hero-overlay {
+	background: #151515;
+	opacity: 0.7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.contact-hero-info {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 90%;
+}
+.contact-hero-info > h1 {
+	font-size: 5rem;
+}
+.contact-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.contact-main-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.contact-main-left,
+.contact-main-right {
+	width: 50%;
+
+	color: white !important;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0 50px 0;
+}
+.contact-main-left {
+	background-color: #b26161;
+	padding: 71.5px 0 71.5px 0;
+}
+.contact-main-right {
+	background-color: #651414;
+}
+.contact-input > label {
+	color: white !important;
+}
+.contact-input > div > textarea {
+	color: white !important;
+}
+.contact-input > div > fieldset {
+	border-color: white !important;
+}
+.contact-input > div > input {
+	color: white !important;
+}
+
+.contact-input-container {
+	display: flex;
+}
+.contact-sendBtn {
+	margin: 20px !important;
+	color: white !important;
+	border-color: white !important;
+}
+.contact-map {
+	width: 100%;
+	height: 500px;
+	margin-bottom: 10px;
+	filter: invert();
+}

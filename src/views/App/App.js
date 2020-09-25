@@ -16,10 +16,11 @@ import {
 	ListItemText,
 	TextField,
 } from "@material-ui/core";
-import Category1 from "../Products/Category1/Category1";
+import Manure from "../Products/Manure/Manure";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import TripOriginIcon from "@material-ui/icons/TripOrigin";
 import EmailIcon from "@material-ui/icons/Email";
+import Contact from "../Contact/Contact";
 function App() {
 	const [email, setEmail] = useState("");
 	return (
@@ -30,7 +31,8 @@ function App() {
 						<Route exact path='/' component={Home}></Route>
 						<Route exact path='/about' component={About}></Route>
 						<Route path='/products' component={Products}></Route>
-						<Route path='/category1' component={Category1}></Route>
+						<Route path='/manure' component={Manure}></Route>
+						<Route path='/contact' component={Contact}></Route>
 					</Switch>
 				</div>
 
