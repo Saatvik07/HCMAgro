@@ -21,6 +21,8 @@ import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import TripOriginIcon from "@material-ui/icons/TripOrigin";
 import EmailIcon from "@material-ui/icons/Email";
 import Contact from "../Contact/Contact";
+import Xanthan from "../Products/Xanthan/Xanthan";
+import Silicon from "../Products/Silicon/Silicon";
 function App() {
 	const [email, setEmail] = useState("");
 	return (
@@ -32,6 +34,8 @@ function App() {
 						<Route exact path='/about' component={About}></Route>
 						<Route path='/products' component={Products}></Route>
 						<Route path='/manure' component={Manure}></Route>
+						<Route path='/xanthan' component={Xanthan}></Route>
+						<Route path='/silicon' component={Silicon}></Route>
 						<Route path='/contact' component={Contact}></Route>
 					</Switch>
 				</div>
@@ -141,7 +145,7 @@ function App() {
 															<DoubleArrowIcon />
 														</ListItemIcon>
 														<ListItemText
-															primary='Category2'
+															primary='Xanthan Gum'
 															className='footer-link'
 														></ListItemText>
 													</ListItem>
@@ -154,7 +158,7 @@ function App() {
 															<DoubleArrowIcon />
 														</ListItemIcon>
 														<ListItemText
-															primary='Category3'
+															primary='Silicon Spreader'
 															className='footer-link'
 														></ListItemText>
 													</ListItem>

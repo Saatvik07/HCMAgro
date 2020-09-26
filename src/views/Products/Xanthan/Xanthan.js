@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import CallIcon from "@material-ui/icons/Call";
-import MailIcon from "@material-ui/icons/Mail";
-import StarBorder from "@material-ui/icons/StarBorder";
 import {
 	ClickAwayListener,
 	Tooltip,
@@ -20,7 +17,10 @@ import {
 	ListItemText,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import "./Manure.css";
+import CallIcon from "@material-ui/icons/Call";
+import MailIcon from "@material-ui/icons/Mail";
+import StarBorder from "@material-ui/icons/StarBorder";
+import "./Xanthan.css";
 const CustomTooltip = withStyles((theme) => ({
 	tooltip: {
 		backgroundColor: "#d28a7c",
@@ -30,29 +30,41 @@ const CustomTooltip = withStyles((theme) => ({
 	},
 }))(Tooltip);
 const product1 = [
-	{ item: "Moisture % by wt.Max", standard: "25.0" },
-	{ item: "Total organic carbon % by wt. Min.", standard: "14.0" },
-	{ item: "Total N, P2O5, K2O nutrient should not be less than 3%", standard: ">3%" },
+	{ item: "Appearance", standard: "Cream-White" },
+	{ item: "Viscosity 1% Solution in 1% KCl", standard: "13200-1800 cps" },
+	{ item: "pH 1% Solution", standard: "6.0-8.0" },
+	{ item: "Moisture", standard: "Maximum 13%" },
+	{ item: "Ash", standard: "Maximum 13%" },
+	{ item: "Particle Size", standard: "Min 95% through 200 Mesh" },
+	{ item: "V1/V2", standard: "1.02-1.45" },
+	{ item: "Pyruvic Acid", standard: "Minimum 1.5%" },
+	{ item: "Heavy Metal ", standard: "Max 20 ppm" },
+	{ item: "Lead", standard: "Max 2 ppm" },
+	{ item: "Arsenic", standard: "Max 3 ppm" },
+	{ item: "Ispropyl Alcohol", standard: "Max 500 ppm" },
+	{ item: "Sincerity (purity or assay)", standard: "92-108%" },
+	{ item: "Total Plate Count", standard: "Not more than 500 cfu/g" },
+	{ item: "Yeast/Moulds", standard: "Not more than 500 cfu/g" },
+	{ item: "E. Coli", standard: "Absent /25g" },
 ];
 const product1Benefits = [
-	"Very Cost effective.",
-	"Supplies organic carbon to soil.",
-	"Improves quality of crop.",
-	"Suitable for all crops, plants, vegetables and fruit trees.",
-	"Absorbs nitrogen from atmosphere.",
-	"Easy to spread and absorb.",
-	"Eco friendly and non-toxic.",
-	"100% Organic from natural agro mineral source.",
-	"Strengthens roots system of plants.",
-	"Improve soil quality by adding organic carbon.",
+	"Minimized pumping friction in lime, freshwater and saltwater muds.",
+	"Maximized drill bit penetration.",
+	"Accelerated drilling rates in low viscosity/high shear conditions.",
+	"High viscosity at low concentrations.",
+	"Decreased solids buildup in drilling fluids.",
+	"Handling high gravel concentrations.",
+	"Efficient suspension/solids transport in high viscosity/low shear conditions.",
+	"Stabilization of hole-cleaning fluids.",
+	"Decreased damage to oil formation.",
 ];
-function Manure() {
+function Xanthan() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
 	return (
-		<div className='manure-container'>
-			<div className='manure-hero animate__animated animate__fadeIn'>
-				<div className='manure-hero-overlay '>
+		<div className='xanthan-container'>
+			<div className='xanthan-hero animate__animated animate__fadeIn'>
+				<div className='xanthan-hero-overlay '>
 					<div className='navBar'>
 						<div className='navBar-left'>
 							<img
@@ -147,25 +159,40 @@ function Manure() {
 							</ClickAwayListener>
 						</div>
 					</div>
-					<div className='manure-hero-info'>
-						<h1>Organic Manure</h1>
+					<div className='xanthan-hero-info'>
+						<h1>Xanthan Gum</h1>
 					</div>
 				</div>
 			</div>
-			<div className='manure-card-container'>
-				<div className='manure-modal-container animate__animated animate__fadeIn'>
-					<div className='manure-modal-left-div '>
+			<div className='xanthan-card-container'>
+				<div className='xanthan-modal-container animate__animated animate__fadeIn'>
+					<div className='xanthan-modal-left-div '>
 						<img
-							className='manure-modal-image'
+							className='xanthan-modal-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
-						<TableContainer className='manure-modal-table-container'>
-							<Table className='manure-modal-table'>
+						<Paper elevation={5} className='xanthan-modal-heading'>
+							<h2>Applications</h2>
+						</Paper>
+						<List>
+							{product1Benefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+					<div className='xanthan-modal-right-div'>
+						<TableContainer className='xanthan-modal-table-container'>
+							<Table className='xanthan-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell>Characteristics</TableCell>
+										<TableCell>Specifications</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
@@ -181,25 +208,10 @@ function Manure() {
 							</Table>
 						</TableContainer>
 					</div>
-					<div className='manure-modal-right-div'>
-						<Paper elevation={5} className='manure-modal-heading'>
-							<h2>Benefits</h2>
-						</Paper>
-						<List>
-							{product1Benefits.map((benefit) => (
-								<ListItem>
-									<ListItemIcon>
-										<StarBorder />
-									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
-								</ListItem>
-							))}
-						</List>
-					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default Manure;
+export default Xanthan;

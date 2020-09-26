@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import CallIcon from "@material-ui/icons/Call";
-import MailIcon from "@material-ui/icons/Mail";
-import StarBorder from "@material-ui/icons/StarBorder";
+import "./Silicon.css";
 import {
 	ClickAwayListener,
 	Tooltip,
@@ -19,8 +17,11 @@ import {
 	ListItemIcon,
 	ListItemText,
 } from "@material-ui/core";
+
 import { Link } from "react-router-dom";
-import "./Manure.css";
+import CallIcon from "@material-ui/icons/Call";
+import MailIcon from "@material-ui/icons/Mail";
+import StarBorder from "@material-ui/icons/StarBorder";
 const CustomTooltip = withStyles((theme) => ({
 	tooltip: {
 		backgroundColor: "#d28a7c",
@@ -29,30 +30,20 @@ const CustomTooltip = withStyles((theme) => ({
 		fontSize: theme.typography.pxToRem(14),
 	},
 }))(Tooltip);
-const product1 = [
-	{ item: "Moisture % by wt.Max", standard: "25.0" },
-	{ item: "Total organic carbon % by wt. Min.", standard: "14.0" },
-	{ item: "Total N, P2O5, K2O nutrient should not be less than 3%", standard: ">3%" },
-];
 const product1Benefits = [
-	"Very Cost effective.",
-	"Supplies organic carbon to soil.",
-	"Improves quality of crop.",
-	"Suitable for all crops, plants, vegetables and fruit trees.",
-	"Absorbs nitrogen from atmosphere.",
-	"Easy to spread and absorb.",
-	"Eco friendly and non-toxic.",
-	"100% Organic from natural agro mineral source.",
-	"Strengthens roots system of plants.",
-	"Improve soil quality by adding organic carbon.",
+	"Facilitate uptake of chemicals into the plant tissue.",
+	"Easy dispersion in aqueous systems.",
+	"Produces very rapid wetting and spreading on hard to wet surface such as waxy leaves.",
+	"Enhance the performance of agricultural chemicals and plant growth regulator.",
+	"It can be used as formulation ingredient in pesticide products, or as tank-mix adjuvant for foliar applied chemicals.",
 ];
-function Manure() {
+function Silicon() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
 	return (
-		<div className='manure-container'>
-			<div className='manure-hero animate__animated animate__fadeIn'>
-				<div className='manure-hero-overlay '>
+		<div className='silicon-container'>
+			<div className='silicon-hero animate__animated animate__fadeIn'>
+				<div className='silicon-hero-overlay '>
 					<div className='navBar'>
 						<div className='navBar-left'>
 							<img
@@ -147,43 +138,30 @@ function Manure() {
 							</ClickAwayListener>
 						</div>
 					</div>
-					<div className='manure-hero-info'>
-						<h1>Organic Manure</h1>
+					<div className='silicon-hero-info'>
+						<h1>Silicon Spreader</h1>
 					</div>
 				</div>
 			</div>
-			<div className='manure-card-container'>
-				<div className='manure-modal-container animate__animated animate__fadeIn'>
-					<div className='manure-modal-left-div '>
+			<div className='silicon-card-container animate__animated animate__fadeIn'>
+				<div className='silicon-headline'>
+					<h2>
+						Our Silicon Spreader is processed by experienced professionals using optimum quality,
+						chemical compounds and progressive technology in adherence with norms.
+					</h2>
+				</div>
+
+				<div className='silicon-modal-container '>
+					<div className='silicon-modal-left-div '>
 						<img
-							className='manure-modal-image'
+							className='silicon-modal-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
-						<TableContainer className='manure-modal-table-container'>
-							<Table className='manure-modal-table'>
-								<TableHead>
-									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{product1.map((row) => (
-										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
-												{row.item}
-											</TableCell>
-											<TableCell>{row.standard}</TableCell>
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
 					</div>
-					<div className='manure-modal-right-div'>
-						<Paper elevation={5} className='manure-modal-heading'>
-							<h2>Benefits</h2>
+					<div className='silicon-modal-right-div'>
+						<Paper elevation={5} className='silicon-modal-heading'>
+							<h2>Advantages</h2>
 						</Paper>
 						<List>
 							{product1Benefits.map((benefit) => (
@@ -202,4 +180,4 @@ function Manure() {
 	);
 }
 
-export default Manure;
+export default Silicon;

@@ -185,13 +185,13 @@ function Products() {
 				<Card className='products-card two animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/category3");
+							history.push("/xanthan");
 						}}
 					>
 						<img
 							className='products-card-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557804/pexels-matheus-cenali-2733918_j78wcf.jpg'
-							alt='Xanthum gum'
+							alt='Xanthan gum'
 						/>
 						<CardContent className='products-list-text'>
 							<Typography
@@ -200,7 +200,7 @@ function Products() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Xanthum Gum
+								Xanthan Gum
 							</Typography>
 							Xanthan Gum is a high molecular weight exocellular polysaccharide derived from the
 							bacterium Xanthomonas campestris using a natural, aerobic fermentation process, in a
@@ -212,7 +212,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/category3");
+									history.push("/xanthan");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />
@@ -223,13 +223,13 @@ function Products() {
 				<Card className='products-card three animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/category4");
+							history.push("/silicon");
 						}}
 					>
 						<img
 							className='products-card-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557788/pexels-quang-nguyen-vinh-2135677_f5mpyo.jpg'
-							alt='humates'
+							alt='Silicon Spreader'
 						/>
 						<CardContent className='products-list-text'>
 							<Typography
@@ -250,7 +250,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/category4");
+									history.push("/silicon");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />
