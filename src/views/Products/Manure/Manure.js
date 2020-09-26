@@ -57,11 +57,10 @@ const product1Benefits = [
 function Manure() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
-	const [modals, setModals] = useState([false, false, false]);
 	return (
-		<div className='category1-container'>
-			<div className='category1-hero animate__animated animate__fadeInDown'>
-				<div className='category1-hero-overlay '>
+		<div className='manure-container'>
+			<div className='manure-hero animate__animated animate__fadeIn'>
+				<div className='manure-hero-overlay '>
 					<div className='navBar'>
 						<div className='navBar-left'>
 							<img
@@ -156,320 +155,57 @@ function Manure() {
 							</ClickAwayListener>
 						</div>
 					</div>
-					<div className='category1-hero-info'>
-						<h1>Category1</h1>
+					<div className='manure-hero-info'>
+						<h1>Organic Manure</h1>
 					</div>
 				</div>
 			</div>
-			<div className='category1-card-container'>
-				<Card className='category1-card animate__animated animate__fadeInUp'>
-					<CardActionArea
-						onClick={() => {
-							setModals([true, false, false]);
-						}}
-					>
+			<div className='manure-card-container'>
+				<div className='manure-modal-container animate__animated animate__fadeIn'>
+					<div className='manure-modal-left-div '>
 						<img
+							className='manure-modal-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='Granule Organic Manure'
-							className='category1-card-image'
+							alt='product1'
 						/>
-						<CardContent style={{ height: "40%" }}>
-							<Typography
-								gutterBottom
-								variant='h5'
-								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
-							>
-								Granule Organic Manure
-							</Typography>
-							<Typography variant='body2' color='textSecondary' component='p'>
-								Organic Manure is an eco-friendly fertilizer, which helps in improving the quality &
-								fertility of soil and hence make the produce healthy & nutritious. It enriches the
-								soil with micro-organisms & restore the depleted nutrients of the soil.
-							</Typography>
-						</CardContent>
-					</CardActionArea>
-					<CardActions className='category1-card-footer-container'>
-						<div className='category1-card-footer'>
-							<Button
-								variant='outlined'
-								className='category1-card-button'
-								onClick={() => {
-									setModals([true, false, false]);
-								}}
-							>
-								Learn More
-							</Button>
-						</div>
-					</CardActions>
-				</Card>
-				<Card className='category1-card animate__animated animate__fadeInUp'>
-					<CardActionArea
-						onClick={() => {
-							setModals([false, true, false]);
-						}}
-					>
-						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566655/WhatsApp_Image_2020-09-18_at_22.32.15_1_fhjpq0.jpg'
-							alt='Granule Organic Manure'
-							className='category1-card-image'
-						/>
-						<CardContent style={{ height: "40%" }}>
-							<Typography
-								gutterBottom
-								variant='h5'
-								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
-							>
-								Bio-Fertilizers
-							</Typography>
-							<Typography variant='body2' color='textSecondary' component='p'>
-								Mycorrhizae is a biofertilizer that helps in promotion of plant growth in an
-								environment friendly manner as well as providing several other benefits to
-								cultivation of plants. We offer commercial production of viable, healthy genetically
-								pure & high quality mycorrhizae without contamination in sterile environment.
-							</Typography>
-						</CardContent>
-					</CardActionArea>
-					<CardActions className='category1-card-footer-container'>
-						<div className='category1-card-footer'>
-							<Button
-								variant='outlined'
-								className='category1-card-button'
-								onClick={() => {
-									setModals([false, true, false]);
-								}}
-							>
-								Learn More
-							</Button>
-						</div>
-					</CardActions>
-				</Card>
-				<Card className='category1-card animate__animated animate__fadeInUp'>
-					<CardActionArea
-						onClick={() => {
-							setModals([false, false, true]);
-						}}
-					>
-						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566656/WhatsApp_Image_2020-09-18_at_22.31.30_x9y8d4.jpg'
-							alt='Granule Organic Manure'
-							className='category1-card-image'
-						/>
-						<CardContent>
-							<Typography
-								gutterBottom
-								variant='h5'
-								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
-							>
-								Seaweed Extract
-							</Typography>
-							<Typography variant='body2' color='textSecondary' component='p'>
-								The Seaweed extract is natural organic concentrate that are extracted from marine
-								plants. These natural and non-toxic extracts are rich in minor elements and natural
-								growth hormones and trace elements like auxins, gibberellins and cytokinins.
-							</Typography>
-						</CardContent>
-					</CardActionArea>
-					<CardActions className='category1-card-footer-container'>
-						<div className='category1-card-footer'>
-							<Button
-								variant='outlined'
-								className='category1-card-button'
-								onClick={() => {
-									setModals([false, false, true]);
-								}}
-							>
-								Learn More
-							</Button>
-						</div>
-					</CardActions>
-				</Card>
+						<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{product1.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+					</div>
+					<div className='manure-modal-right-div'>
+						<Paper elevation={5} className='manure-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+						<List>
+							{product1Benefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+				</div>
 			</div>
-			<Modal
-				open={modals[0]}
-				onClose={() => {
-					document.querySelector(".category1-modal").className =
-						"category1-modal animate__animated animate__fadeOut";
-					document.querySelector(".category1-modal").onanimationend = () => {
-						setModals([false, false, false]);
-					};
-				}}
-				closeAfterTransition
-				BackdropComponent={Backdrop}
-				BackdropProps={{
-					timeout: 500,
-				}}
-				className='category1-modal animate__animated animate__fadeIn'
-			>
-				<div className='category1-modal-container'>
-					<div className='category1-modal-left-div'>
-						<img
-							className='category1-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
-						<TableContainer className='category1-modal-table-container'>
-							<Table className='category1-modal-table'>
-								<TableHead>
-									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{product1.map((row) => (
-										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
-												{row.item}
-											</TableCell>
-											<TableCell>{row.standard}</TableCell>
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
-					</div>
-					<div className='category1-modal-right-div'>
-						<Paper elevation={5} className='category1-modal-heading'>
-							<h2>Granule Organic Manure</h2>
-						</Paper>
-						<List>
-							{product1Benefits.map((benefit) => (
-								<ListItem>
-									<ListItemIcon>
-										<StarBorder />
-									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
-								</ListItem>
-							))}
-						</List>
-					</div>
-				</div>
-			</Modal>
-			<Modal
-				open={modals[1]}
-				onClose={() => {
-					document.querySelector(".category1-modal").className =
-						"category1-modal animate__animated animate__fadeOut";
-					document.querySelector(".category1-modal").onanimationend = () => {
-						setModals([false, false, false]);
-					};
-				}}
-				closeAfterTransition
-				BackdropComponent={Backdrop}
-				BackdropProps={{
-					timeout: 500,
-				}}
-				className='category1-modal animate__animated animate__fadeIn'
-			>
-				<div className='category1-modal-container'>
-					<div className='category1-modal-left-div'>
-						<img
-							className='category1-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
-						<TableContainer className='category1-modal-table-container'>
-							<Table className='category1-modal-table'>
-								<TableHead>
-									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{product1.map((row) => (
-										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
-												{row.item}
-											</TableCell>
-											<TableCell>{row.standard}</TableCell>
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
-					</div>
-					<div className='category1-modal-right-div'>
-						<Paper elevation={5} className='category1-modal-heading'>
-							<h2>Granule Organic Manure</h2>
-						</Paper>
-						<List>
-							{product1Benefits.map((benefit) => (
-								<ListItem>
-									<ListItemIcon>
-										<StarBorder />
-									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
-								</ListItem>
-							))}
-						</List>
-					</div>
-				</div>
-			</Modal>
-			<Modal
-				open={modals[2]}
-				onClose={() => {
-					document.querySelector(".category1-modal").className =
-						"category1-modal animate__animated animate__fadeOut";
-					document.querySelector(".category1-modal").onanimationend = () => {
-						setModals([false, false, false]);
-					};
-				}}
-				closeAfterTransition
-				BackdropComponent={Backdrop}
-				BackdropProps={{
-					timeout: 500,
-				}}
-				className='category1-modal animate__animated animate__fadeIn'
-			>
-				<div className='category1-modal-container'>
-					<div className='category1-modal-left-div'>
-						<img
-							className='category1-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
-						<TableContainer className='category1-modal-table-container'>
-							<Table className='category1-modal-table'>
-								<TableHead>
-									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{product1.map((row) => (
-										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
-												{row.item}
-											</TableCell>
-											<TableCell>{row.standard}</TableCell>
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
-					</div>
-					<div className='category1-modal-right-div'>
-						<Paper elevation={5} className='category1-modal-heading'>
-							<h2>Granule Organic Manure</h2>
-						</Paper>
-						<List>
-							{product1Benefits.map((benefit) => (
-								<ListItem>
-									<ListItemIcon>
-										<StarBorder />
-									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
-								</ListItem>
-							))}
-						</List>
-					</div>
-				</div>
-			</Modal>
 		</div>
 	);
 }

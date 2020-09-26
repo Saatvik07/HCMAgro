@@ -122,13 +122,13 @@ function App() {
 									<TableBody>
 										<TableRow>
 											<TableCell className='footer-tableCell'>
-												<Link to='/category1' className='router-link'>
+												<Link to='/manure' className='router-link'>
 													<ListItem className='footer-table-listItem'>
 														<ListItemIcon className='footer-table-icon'>
 															<DoubleArrowIcon />
 														</ListItemIcon>
 														<ListItemText
-															primary='Category1'
+															primary='Organic Manure'
 															className='footer-link'
 														></ListItemText>
 													</ListItem>

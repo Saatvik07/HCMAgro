@@ -12,6 +12,7 @@ import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
+	CircularProgress,
 } from "@material-ui/core";
 import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
@@ -27,14 +28,30 @@ const CustomTooltip = withStyles((theme) => ({
 function About() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
+	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		AOS.init();
 	}, []);
+	useEffect(() => {
+		if (loading) {
+			document.querySelector(".loader").classList.remove("hide");
+			document.querySelector(".about-container").classList.add("hide");
+			document.querySelector("footer").classList.add("hide");
+		} else {
+			document.querySelector(".about-container").classList.remove("hide");
+			document.querySelector("footer").classList.remove("hide");
+			document.querySelector(".loader").classList.add("hide");
+		}
+	});
 	return (
 		<div className='about-container'>
+			<CircularProgress style={{ color: "brown" }} className='loader' />
 			<Parallax
 				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600898470/noah-buscher-x8ZStukS2PM-unsplash_wqujxi.jpg'
 				strength={1000}
+				onLoad={() => {
+					setLoading(false);
+				}}
 			>
 				<div className='about-hero animate__animated animate__fadeIn'>
 					<div className='about-hero-overlay '>

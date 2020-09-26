@@ -135,7 +135,7 @@ function Contact() {
 				</div>
 			</div>
 			<div className='contact-main-container'>
-				<div className='contact-main-left'>
+				<div className='contact-main-left animate__animated animate__fadeIn'>
 					<h2>Get in Touch</h2>
 
 					<List>
@@ -171,7 +171,7 @@ function Contact() {
 						</ListItem>
 					</List>
 				</div>
-				<div className='contact-main-right'>
+				<div className='contact-main-right animate__animated animate__fadeIn'>
 					<h2>Want to hear from us ?</h2>
 					<h5>Write to us and expect a reply within two working days :)</h5>
 					<div className='contact-input-container'>
@@ -231,8 +231,8 @@ function Contact() {
 			</div>
 			<iframe
 				title='map'
-				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.3134333224093!2d77.08445333147549!3d28.68026926770318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0414a7999a27%3A0x1011012beb136944!2sHcm%20Agro%20Products%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1600994799465!5m2!1sen!2sin'
-				className='contact-map'
+				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.311571363517!2d77.08296015073024!3d28.680324982312612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0414a7999a27%3A0x1011012beb136944!2sHcm%20Agro%20Products%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1600995850294!5m2!1sen!2sin'
+				className='contact-map animate__animated animate__fadeIn'
 			></iframe>
 		</div>
 	);

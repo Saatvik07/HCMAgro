@@ -147,7 +147,7 @@ function Products() {
 				<Card className='products-card one animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
-							history.push("/category1");
+							history.push("/manure");
 						}}
 					>
 						<img
@@ -162,7 +162,7 @@ function Products() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Organic Manure Granules
+								Organic Manure
 							</Typography>
 							Organic Manure is an eco-friendly fertilizer, which helps in improving the quality &
 							fertility of soil and hence make the produce healthy & nutritious. It enriches the
@@ -174,7 +174,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/category1");
+									history.push("/manure");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />
