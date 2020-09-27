@@ -12,7 +12,6 @@ import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
-	CircularProgress,
 } from "@material-ui/core";
 import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
@@ -32,20 +31,8 @@ function About() {
 	useEffect(() => {
 		AOS.init();
 	}, []);
-	useEffect(() => {
-		if (loading) {
-			document.querySelector(".loader").classList.remove("hide");
-			document.querySelector(".about-container").classList.add("hide");
-			document.querySelector("footer").classList.add("hide");
-		} else {
-			document.querySelector(".about-container").classList.remove("hide");
-			document.querySelector("footer").classList.remove("hide");
-			document.querySelector(".loader").classList.add("hide");
-		}
-	});
 	return (
 		<div className='about-container'>
-			<CircularProgress style={{ color: "brown" }} className='loader' />
 			<Parallax
 				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600898470/noah-buscher-x8ZStukS2PM-unsplash_wqujxi.jpg'
 				strength={1000}
@@ -74,9 +61,14 @@ function About() {
 								<Link to='/contact' className='router-link'>
 									<h3 className='navBar-link'>Contact Us</h3>
 								</Link>
-								<Link to='/catalogue' className='router-link'>
+								<a
+									href='https://online.flippingbook.com/view/16101/'
+									className='router-link'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
 									<h3 className='navBar-link'>Catalogue</h3>
-								</Link>
+								</a>
 							</div>
 							<div className='navBar-right'>
 								<ClickAwayListener

@@ -63,9 +63,14 @@ function Products() {
 							<Link to='/contact' className='router-link'>
 								<h3 className='navBar-link'>Contact Us</h3>
 							</Link>
-							<Link to='/catalogue' className='router-link'>
+							<a
+								href='https://online.flippingbook.com/view/16101/'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='router-link'
+							>
 								<h3 className='navBar-link'>Catalogue</h3>
-							</Link>
+							</a>
 						</div>
 						<div className='navBar-right'>
 							<ClickAwayListener

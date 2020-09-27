@@ -23,6 +23,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import Contact from "../Contact/Contact";
 import Xanthan from "../Products/Xanthan/Xanthan";
 import Silicon from "../Products/Silicon/Silicon";
+import Catalogue from "../Catalogue/Catalogue";
 function App() {
 	const [email, setEmail] = useState("");
 	return (
@@ -37,6 +38,7 @@ function App() {
 						<Route path='/xanthan' component={Xanthan}></Route>
 						<Route path='/silicon' component={Silicon}></Route>
 						<Route path='/contact' component={Contact}></Route>
+						<Route path='/catalogue' component={Catalogue}></Route>
 					</Switch>
 				</div>
 
@@ -93,7 +95,12 @@ function App() {
 										</TableRow>
 										<TableRow>
 											<TableCell className='footer-tableCell'>
-												<Link to='/catalogue' className='router-link'>
+												<a
+													href='https://online.flippingbook.com/view/16101/'
+													className='router-link'
+													target='_blank'
+													rel='noopener noreferrer'
+												>
 													<ListItem className='footer-table-listItem'>
 														<ListItemIcon className='footer-table-icon'>
 															<DoubleArrowIcon />
@@ -103,7 +110,7 @@ function App() {
 															className='footer-link'
 														></ListItemText>
 													</ListItem>
-												</Link>
+												</a>
 											</TableCell>
 										</TableRow>
 									</TableBody>

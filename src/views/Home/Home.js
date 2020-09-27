@@ -97,9 +97,14 @@ function Home() {
 									<Link to='/contact' className='router-link'>
 										<h3 className='navBar-link'>Contact Us</h3>
 									</Link>
-									<Link to='/catalogue' className='router-link'>
+									<a
+										href='https://online.flippingbook.com/view/16101/'
+										className='router-link'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<h3 className='navBar-link'>Catalogue</h3>
-									</Link>
+									</a>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -213,9 +218,14 @@ function Home() {
 									<Link to='/contact' className='router-link'>
 										<h3 className='navBar-link'>Contact Us</h3>
 									</Link>
-									<Link to='/catalogue' className='router-link'>
+									<a
+										href='https://online.flippingbook.com/view/16101/'
+										className='router-link'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<h3 className='navBar-link'>Catalogue</h3>
-									</Link>
+									</a>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -329,9 +339,14 @@ function Home() {
 									<Link to='/contact' className='router-link'>
 										<h3 className='navBar-link'>Contact Us</h3>
 									</Link>
-									<Link to='/catalogue' className='router-link'>
+									<a
+										href='https://online.flippingbook.com/view/16101/'
+										className='router-link'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<h3 className='navBar-link'>Catalogue</h3>
-									</Link>
+									</a>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -445,9 +460,14 @@ function Home() {
 									<Link to='/contact' className='router-link'>
 										<h3 className='navBar-link'>Contact Us</h3>
 									</Link>
-									<Link to='/catalogue' className='router-link'>
+									<a
+										href='https://online.flippingbook.com/view/16101/'
+										className='router-link'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<h3 className='navBar-link'>Catalogue</h3>
-									</Link>
+									</a>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
@@ -561,9 +581,14 @@ function Home() {
 									<Link to='/contact' className='router-link'>
 										<h3 className='navBar-link'>Contact Us</h3>
 									</Link>
-									<Link to='/catalogue' className='router-link'>
+									<a
+										href='https://online.flippingbook.com/view/16101/'
+										className='router-link'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<h3 className='navBar-link'>Catalogue</h3>
-									</Link>
+									</a>
 								</div>
 								<div className='navBar-right'>
 									<ClickAwayListener
