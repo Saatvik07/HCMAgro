@@ -73,3 +73,18 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.navBar-logo-phone {
+	width: 30px;
+	height: auto;
+	margin: 0 20px;
+}
+.navBar-right-phone {
+	width: 25%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.contact-btn-phone svg {
+	color: #d28a7c;
+	font-size: 30px;
+}

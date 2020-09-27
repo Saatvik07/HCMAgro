@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Products.css";
 import {
-	ClickAwayListener,
-	Tooltip,
-	withStyles,
 	IconButton,
 	Card,
 	CardActionArea,
@@ -18,21 +15,11 @@ import {
 	ListItemText,
 } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import CallIcon from "@material-ui/icons/Call";
-import MailIcon from "@material-ui/icons/Mail";
+
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
-import { useHistory, Link } from "react-router-dom";
-const CustomTooltip = withStyles((theme) => ({
-	tooltip: {
-		backgroundColor: "#d28a7c",
-		color: "rgba(0, 0, 0, 0.87)",
-		maxWidth: 220,
-		fontSize: theme.typography.pxToRem(14),
-	},
-}))(Tooltip);
+import { useHistory } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 function Products() {
-	const [callTool, setCallTool] = useState(false);
-	const [mailTool, setMailTool] = useState(false);
 	const [expandSeaWeed, setExpandSeaWeed] = useState(false);
 	const [expandBio, setExpandBio] = useState(false);
 	const [expandHumate, setExpandHumate] = useState(false);
@@ -44,105 +31,7 @@ function Products() {
 		<div className='products-container'>
 			<div className='products-hero animate__animated animate__fadeIn'>
 				<div className='products-hero-overlay '>
-					<div className='navBar'>
-						<div className='navBar-left'>
-							<img
-								src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
-								alt='logo'
-								className='navBar-logo'
-							></img>
-							<Link to='/' className='router-link'>
-								<h3 className='navBar-link'>Home</h3>
-							</Link>
-							<Link to='/about' className='router-link'>
-								<h3 className='navBar-link'>About Us</h3>
-							</Link>
-							<Link to='/products' className='router-link'>
-								<h3 className='navBar-link'>Products</h3>
-							</Link>
-							<Link to='/contact' className='router-link'>
-								<h3 className='navBar-link'>Contact Us</h3>
-							</Link>
-							<a
-								href='https://online.flippingbook.com/view/16101/'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='router-link'
-							>
-								<h3 className='navBar-link'>Catalogue</h3>
-							</a>
-						</div>
-						<div className='navBar-right'>
-							<ClickAwayListener
-								onClickAway={() => {
-									setCallTool(false);
-								}}
-							>
-								<CustomTooltip
-									title={
-										<p>
-											011-25267064
-											<br />
-											011-40192472
-										</p>
-									}
-									onClose={() => {
-										setCallTool(false);
-									}}
-									open={callTool}
-									disableFocusListener
-									disableTouchListener
-									disableHoverListener
-									placement='bottom'
-								>
-									<IconButton
-										aria-label='call us'
-										className='contact-btn'
-										onClick={() => {
-											if (callTool) {
-												setCallTool(false);
-											} else {
-												setCallTool(true);
-											}
-										}}
-									>
-										<CallIcon />
-									</IconButton>
-								</CustomTooltip>
-							</ClickAwayListener>
-							<ClickAwayListener
-								onClickAway={() => {
-									setMailTool(false);
-								}}
-							>
-								<CustomTooltip
-									title='info@hcmagroproducts.com'
-									onClose={() => {
-										setMailTool(false);
-									}}
-									open={mailTool}
-									disableFocusListener
-									disableTouchListener
-									disableHoverListener
-									placement='right'
-								>
-									<IconButton
-										aria-label='mail us'
-										className='contact-btn'
-										onClick={() => {
-											if (mailTool) {
-												setMailTool(false);
-											} else {
-												setMailTool(true);
-											}
-										}}
-									>
-										<MailIcon />
-									</IconButton>
-								</CustomTooltip>
-							</ClickAwayListener>
-						</div>
-					</div>
+					<NavBar />
 					<div className='products-hero-info'>
 						<h1>Products</h1>
 					</div>
