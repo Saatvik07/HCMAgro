@@ -7,7 +7,7 @@ body {
 }
 .content-footer-phone {
 	position: relative;
-	padding-bottom: 375px;
+	padding-bottom: 390px;
 }
 .content {
 	background-color: #fec397;
@@ -153,7 +153,7 @@ input:-webkit-autofill {
 	margin: 0 10px;
 }
 .footer-logo-phone {
-	width: 30%;
+	width: 20%;
 	height: auto;
 }
 .footer-right-bottom {
@@ -169,6 +169,12 @@ input:-webkit-autofill {
 }
 .get-catalogue-label > span {
 	font-size: 14px;
+}
+.footer-left-email {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 @media only screen and (max-width: 720px) {
 	.footer-link > span {

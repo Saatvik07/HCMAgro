@@ -27,7 +27,7 @@ import Silicon from "../Products/Silicon/Silicon";
 import Catalogue from "../Catalogue/Catalogue";
 function App() {
 	const [email, setEmail] = useState("");
-	const matches = useMediaQuery("(max-width:720px)");
+	const matches = useMediaQuery("(max-width:1250px)");
 	return (
 		<div className={matches ? "content-footer-phone" : "content-footer"}>
 			<BrowserRouter>
@@ -48,90 +48,92 @@ function App() {
 						<footer>
 							<div className='footer-container-phone'>
 								<div className='footer-left-phone'>
-									<Table>
-										<TableHead>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<ListItem className='footer-table-listItem'>
-														<ListItemIcon className='footer-table-icon'>
-															<TripOriginIcon />
-														</ListItemIcon>
-														<ListItemText
-															primary='Quick Links'
-															className='footer-link'
-														></ListItemText>
-													</ListItem>
-												</TableCell>
-											</TableRow>
-										</TableHead>
-										<TableBody>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/' className='router-link'>
+									<div className='footer-left-table'>
+										<Table>
+											<TableHead>
+												<TableRow>
+													<TableCell className='footer-tableCell'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText primary='Home' className='footer-link'></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/about' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
+																<TripOriginIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='About Us'
+																primary='Quick Links'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
-													</Link>
-												</TableCell>
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<a
-														href='https://online.flippingbook.com/view/16101/'
-														className='router-link'
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Catalogue'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</a>
-												</TableCell>
-											</TableRow>
-										</TableBody>
-									</Table>
-									<ListItem>
-										<ListItemIcon>
-											<EmailIcon style={{ color: "white" }} />
-										</ListItemIcon>
-										<ListItemText primary='Get the Catalogue' className='get-catalogue-label' />
-									</ListItem>
+													</TableCell>
+												</TableRow>
+											</TableHead>
+											<TableBody>
+												<TableRow>
+													<TableCell className='footer-tableCell'>
+														<Link to='/' className='router-link'>
+															<ListItem className='footer-table-listItem'>
+																<ListItemIcon className='footer-table-icon'>
+																	<DoubleArrowIcon />
+																</ListItemIcon>
+																<ListItemText primary='Home' className='footer-link'></ListItemText>
+															</ListItem>
+														</Link>
+													</TableCell>
+													<TableCell className='footer-tableCell'>
+														<Link to='/about' className='router-link'>
+															<ListItem className='footer-table-listItem'>
+																<ListItemIcon className='footer-table-icon'>
+																	<DoubleArrowIcon />
+																</ListItemIcon>
+																<ListItemText
+																	primary='About Us'
+																	className='footer-link'
+																></ListItemText>
+															</ListItem>
+														</Link>
+													</TableCell>
+												</TableRow>
+												<TableRow>
+													<TableCell className='footer-tableCell'>
+														<a
+															href='https://online.flippingbook.com/view/16101/'
+															className='router-link'
+															target='_blank'
+															rel='noopener noreferrer'
+														>
+															<ListItem className='footer-table-listItem'>
+																<ListItemIcon className='footer-table-icon'>
+																	<DoubleArrowIcon />
+																</ListItemIcon>
+																<ListItemText
+																	primary='Catalogue'
+																	className='footer-link'
+																></ListItemText>
+															</ListItem>
+														</a>
+													</TableCell>
+												</TableRow>
+											</TableBody>
+										</Table>
+									</div>
+									<div className='footer-left-email'>
+										<ListItem>
+											<ListItemIcon>
+												<EmailIcon style={{ color: "white" }} />
+											</ListItemIcon>
+											<ListItemText primary='Get the Catalogue' className='get-catalogue-label' />
+										</ListItem>
 
-									<TextField
-										className='footer-input phone'
-										variant='outlined'
-										label='Email'
-										onChange={(event) => {
-											setEmail(event.target.value);
-										}}
-									/>
-									<Button variant='outlined' className='footer-sendBtn'>
-										Send
-									</Button>
+										<TextField
+											className='footer-input phone'
+											variant='outlined'
+											label='Email'
+											onChange={(event) => {
+												setEmail(event.target.value);
+											}}
+										/>
+										<Button variant='outlined' className='footer-sendBtn'>
+											Send
+										</Button>
+									</div>
 								</div>
 								<div className='footer-right-phone'>
 									<Table>
