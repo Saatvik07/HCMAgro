@@ -5,6 +5,10 @@ body {
 	position: relative;
 	padding-bottom: 226px;
 }
+.content-footer-phone {
+	position: relative;
+	padding-bottom: 375px;
+}
 .content {
 	background-color: #fec397;
 	z-index: 1000;
@@ -17,7 +21,7 @@ body {
 }
 .footer-container {
 	width: 100%;
-	background-color: #8b3a3a;
+	background: #651414;
 	display: flex;
 }
 footer {
@@ -115,7 +119,7 @@ td {
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 5px;
-	background-color: #8b3a3a;
+	background-color: #651414;
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 input:-webkit-autofill,
@@ -130,5 +134,44 @@ input:-webkit-autofill {
 .hide {
 	display: none;
 }
+.footer-container-phone {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	background: #651414;
+}
+.footer-left-phone,
+.footer-right-phone {
+	display: flex;
+	width: 45%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer-right-phone {
+	margin: 0 10px;
+}
+.footer-logo-phone {
+	width: 30%;
+	height: auto;
+}
+.footer-right-bottom {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer-right-bottom > h5 {
+	font-size: 10px;
+	text-align: center;
+}
+.get-catalogue-label > span {
+	font-size: 14px;
+}
 @media only screen and (max-width: 720px) {
+	.footer-link > span {
+		font-size: 10px !important;
+	}
 }

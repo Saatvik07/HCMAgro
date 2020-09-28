@@ -88,3 +88,20 @@
 	color: #d28a7c;
 	font-size: 30px;
 }
+@media only screen and (max-width: 720px) {
+	.slide-info {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.slide-info > img {
+		width: 100px !important;
+		height: auto !important;
+	}
+	.slide-info > h1 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+	.swiper-container {
+		height: 50vh;
+	}
+}
