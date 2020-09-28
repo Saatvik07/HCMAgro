@@ -90,3 +90,27 @@
 .products-list-text {
 	color: white !important;
 }
+@media only screen and (max-width: 720px) {
+	.products-hero-info > h1 {
+		font-size: 3rem;
+	}
+	.products-card {
+		width: 70%;
+	}
+}
+@media only screen and (min-width: 721px) and (max-width: 1020px) {
+	.products-hero-info > h1 {
+		font-size: 3rem;
+	}
+	.products-card {
+		width: 60%;
+	}
+}
+@media only screen and (min-width: 1020px) and (max-width: 1210px) {
+	.products-hero-info > h1 {
+		font-size: 3rem;
+	}
+	.products-card {
+		width: 40%;
+	}
+}
