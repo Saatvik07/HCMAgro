@@ -40,7 +40,7 @@ function Contact() {
 				<div className='contact-main-left animate__animated animate__fadeIn'>
 					<h2>Get in Touch</h2>
 
-					<List>
+					<List className='get-in-touch-list'>
 						<ListItem>
 							<ListItemIcon>
 								<PinDropIcon style={{ color: "white" }} />

@@ -114,3 +114,8 @@ body
 		color: #651414 !important;
 	}
 }
+@media only screen and (max-width: 1075px) {
+	.navBar-link {
+		color: #651414 !important;
+	}
+}

@@ -85,3 +85,19 @@
 	align-items: center;
 	flex-direction: column;
 }
+@media only screen and (max-width: 720px) {
+	.silicon-hero-info > h1 {
+		font-size: 2.5rem;
+	}
+	.silicon-headline > h2 {
+		font-size: 1rem;
+	}
+	.silicon-modal-container {
+		flex-direction: column;
+		margin-top: 0px;
+	}
+	.silicon-modal-left-div,
+	.silicon-modal-right-div {
+		width: 90%;
+	}
+}

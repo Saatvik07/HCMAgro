@@ -80,3 +80,21 @@
 	height: 500px;
 	margin-bottom: 10px;
 }
+@media only screen and (max-width: 720px) {
+	.contact-main-container {
+		flex-direction: column;
+	}
+	.contact-hero-info > h1 {
+		font-size: 3rem;
+	}
+	.contact-main-left,
+	.contact-main-right {
+		width: 100%;
+	}
+	.contact-main-left {
+		padding: 30px 0;
+	}
+	.get-in-touch-list {
+		width: 90%;
+	}
+}

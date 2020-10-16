@@ -76,3 +76,15 @@
 	align-items: center;
 	margin: 20px auto;
 }
+@media only screen and (max-width: 720px) {
+	.xanthan-hero-info > h1 {
+		font-size: 2.5rem;
+	}
+	.xanthan-modal-container {
+		flex-direction: column;
+	}
+	.xanthan-modal-left-div,
+	.xanthan-modal-right-div {
+		width: 90%;
+	}
+}

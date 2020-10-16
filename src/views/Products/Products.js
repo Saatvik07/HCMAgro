@@ -172,8 +172,8 @@ function Products() {
 							>
 								Sea Weed Extract
 							</Typography>
-							The Seaweed extract is natural organic concentrate that are extracted from marine
-							plants.
+							Seaweed extracts is a natural concentrate extracted from marine plants which
+							demonstrate to possess novel mechanisms for increasing crop productivity.
 							<br></br>
 							<Button variant='outlined' className='products-card-expand-icon'>
 								{expandSeaWeed ? "See Less" : "See More"}
@@ -392,7 +392,9 @@ function Products() {
 							>
 								Humate/Humic Series
 							</Typography>
-							Category info not available
+							Humate is a key component in building a living soil. It is used as fertilizer additive
+							that contributes naturally in increasing the soil fertility and accelerating plant
+							growth.
 							<br></br>
 							<Button variant='outlined' className='products-card-expand-icon'>
 								SEE MORE
@@ -468,7 +470,8 @@ function Products() {
 							>
 								Amino & Fulvic Acid Series
 							</Typography>
-							Category Information not available
+							They are bio- organic products which play an important role in the nutrition
+							development of the plant and promotes hormonal activity for higher yields
 							<br></br>
 							<Button variant='outlined' className='products-card-expand-icon'>
 								SEE MORE
@@ -532,7 +535,8 @@ function Products() {
 							>
 								Zinc Series
 							</Typography>
-							Category Information not available
+							In plants, zinc is a key constituent of many enzymes and proteins. It is needed by
+							plants in small amounts, but yet crucial to plant development.
 							<br></br>
 							<Button variant='outlined' className='products-card-expand-icon'>
 								SEE MORE
