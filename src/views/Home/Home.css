@@ -78,6 +78,12 @@
 	height: auto;
 	margin: 0 20px;
 }
+body
+	> div.MuiPopover-root.phone-menu-list
+	> div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded
+	> ul {
+	background-color: #fec397;
+}
 .navBar-right-phone {
 	width: 25%;
 	display: flex;
@@ -103,5 +109,8 @@
 	}
 	.swiper-container {
 		height: 50vh;
+	}
+	.navBar-link {
+		color: #651414 !important;
 	}
 }

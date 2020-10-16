@@ -16,7 +16,7 @@ function About() {
 	return (
 		<div className='about-container'>
 			<Parallax
-				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600898470/noah-buscher-x8ZStukS2PM-unsplash_wqujxi.jpg'
+				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600902481/pexels-pixabay-276259_qru4lg.jpg'
 				strength={1000}
 				onLoad={() => {
 					setLoading(false);
@@ -45,16 +45,6 @@ function About() {
 							Products Private Ltd.
 						</p>
 					</div>
-				</div>
-			</Parallax>
-
-			<Parallax
-				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600913802/sean-stratton-ObpCE_X3j6U-unsplash_vqbj0j.jpg'
-				bgClassName='about-bg'
-				className='about-fourth-parallax'
-				strength={1000}
-			>
-				<div className='about-fourth-overlay'>
 					<div
 						className='about-fourth-info-container'
 						data-aos='fade-right'
@@ -135,14 +125,6 @@ function About() {
 							</ListItem>
 						</List>
 					</div>
-				</div>
-			</Parallax>
-			<Parallax
-				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600902481/pexels-pixabay-276259_qru4lg.jpg'
-				className='about-second-parallax'
-				strength={1000}
-			>
-				<div className='about-second-overlay'>
 					<div
 						className='about-second-info-container'
 						data-aos='fade-left'
@@ -155,15 +137,6 @@ function About() {
 							quality by consistently delivering high performing products which offers great values.
 						</p>
 					</div>
-				</div>
-			</Parallax>
-
-			<Parallax
-				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600905703/pexels-markus-spiske-2559749_p9ijw8.jpg'
-				className='about-third-parallax'
-				strength={1000}
-			>
-				<div className='about-third-overlay'>
 					<div
 						className='about-third-info-container'
 						data-aos='fade-right'

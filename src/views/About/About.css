@@ -14,7 +14,7 @@
 }
 .about-hero-overlay {
 	background: #151515;
-	opacity: 0.7;
+	opacity: 0.8;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -30,14 +30,17 @@
 	width: 100%;
 	color: white;
 	background: #151515;
-	opacity: 0.7;
+	opacity: 0.8;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 .about-first-info-container,
 .about-second-info-container,
 .about-third-info-container,
 .about-fourth-info-container {
-	margin: 0 auto;
+	margin: 30px auto;
 	font-size: 1.5rem;
 	width: 60%;
 	display: flex;
@@ -46,12 +49,7 @@
 	flex-direction: column;
 	font-weight: bold;
 }
-.about-first-info-container {
-	padding: 50px 0;
-}
-.about-fourth-info-container {
-	padding: 50px 0;
-}
+
 .about-second-overlay,
 .about-third-overlay,
 .about-fourth-overlay {
@@ -81,10 +79,34 @@
 	font-size: 2rem;
 	text-align: center;
 }
+.about-third-info-container {
+	margin-bottom: 100px;
+}
 .about-list-text > span {
 	font-size: 1.5rem !important;
 	font-weight: bold;
 }
 .about-bg {
 	background-position: top;
+}
+@media only screen and (max-width: 720px) {
+	.about-headings {
+		font-size: 2rem;
+	}
+	.about-first-info-container,
+	.about-second-info-container,
+	.about-third-info-container,
+	.about-fourth-info-container {
+		width: 90%;
+		margin: 10px auto;
+		font-size: 1rem;
+	}
+	.about-list-text > span {
+		font-size: 1rem !important;
+		font-weight: bold;
+	}
+	.about-second-info-container > p,
+	.about-third-info-container > p {
+		font-size: 1.2rem;
+	}
 }

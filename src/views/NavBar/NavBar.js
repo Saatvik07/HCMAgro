@@ -36,7 +36,7 @@ function NavBar() {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
-	const matches = useMediaQuery("(max-width:720px)");
+	const matches = useMediaQuery("(max-width:1075px)");
 	return (
 		<div className='navBar'>
 			{matches ? (
