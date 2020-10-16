@@ -89,9 +89,17 @@
 .about-bg {
 	background-position: top;
 }
+.phone-about-first-list {
+	text-align: center;
+}
 @media only screen and (max-width: 720px) {
 	.about-headings {
 		font-size: 2rem;
+		margin: 30px;
+	}
+	.about-first-overlay,
+	.about-hero-overlay {
+		opacity: 0.7;
 	}
 	.about-first-info-container,
 	.about-second-info-container,
@@ -100,6 +108,7 @@
 		width: 90%;
 		margin: 10px auto;
 		font-size: 1rem;
+		font-weight: normal;
 	}
 	.about-list-text > span {
 		font-size: 1rem !important;
@@ -108,5 +117,11 @@
 	.about-second-info-container > p,
 	.about-third-info-container > p {
 		font-size: 1.2rem;
+	}
+	.about-list-icon {
+		width: 40px;
+	}
+	.about-third-info-container {
+		margin-bottom: 50px;
 	}
 }

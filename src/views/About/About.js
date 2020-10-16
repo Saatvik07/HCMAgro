@@ -3,20 +3,24 @@ import AOS from "aos";
 import "./About.css";
 import "aos/dist/aos.css";
 
-import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import { List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from "@material-ui/core";
 
 import { Parallax } from "react-parallax";
 import NavBar from "../NavBar/NavBar";
 
 function About() {
 	const [loading, setLoading] = useState(true);
+	const matches = useMediaQuery("(max-width:1250px)");
+	const backgroundPic = matches
+		? "https://res.cloudinary.com/maximuscloud/image/upload/v1602886111/pexels-karolina-grabowska-4207907_qntcox.jpg"
+		: "https://res.cloudinary.com/maximuscloud/image/upload/v1600902481/pexels-pixabay-276259_qru4lg.jpg";
 	useEffect(() => {
 		AOS.init();
 	}, []);
 	return (
 		<div className='about-container'>
 			<Parallax
-				bgImage='https://res.cloudinary.com/maximuscloud/image/upload/v1600902481/pexels-pixabay-276259_qru4lg.jpg'
+				bgImage={backgroundPic}
 				strength={1000}
 				onLoad={() => {
 					setLoading(false);
@@ -31,19 +35,58 @@ function About() {
 					</div>
 				</div>
 				<div className='about-first-overlay animate__animated animate__slideInUp'>
-					<div className='about-first-info-container'>
-						<p>
-							HCM Agro Products is the key enterprise in the field of agriculture focusing
-							relentlessly on quality and empowering our customers with a stunning and innovative
-							range of products. Our broad vision propels us forward in the direction of sustainable
-							agriculture with minimal impact on the environment which encompasses several aspects.
-						</p>
-						<p>
-							With years of experience in the market through unremitting innovation specialising in
-							R&D through comprehensive and meticulous service to provide best solutions embedded in
-							our products, we were able to set up 2 units that strengthen the roots of HCM Agro
-							Products Private Ltd.
-						</p>
+					<div
+						className='about-first-info-container'
+						data-aos='fade-left'
+						data-aos-mirror='true'
+						data-aos-once='false'
+					>
+						{matches ? (
+							<>
+								<List>
+									<ListItem>
+										<ListItemText
+											primary='HCM Agro Products is the key enterprise in the field of agriculture focusing
+									relentlessly on quality and empowering our customers with a stunning and
+									innovative range of products.'
+											className='phone-about-first-list'
+										></ListItemText>
+									</ListItem>
+									<ListItem>
+										<ListItemText
+											primary='Our broad vision propels us forward in the direction of sustainable agriculture
+											with minimal impact on the environment which encompasses several aspects.'
+											className='phone-about-first-list'
+										></ListItemText>
+									</ListItem>
+									<ListItem>
+										<ListItemText
+											primary='With years of experience in the market through unremitting innovation specialising
+											in R&D through comprehensive and meticulous service to provide best solutions
+											embedded in our products, we were able to set up 2 units that strengthen the roots
+											of HCM Agro Products Private Ltd.'
+											className='phone-about-first-list'
+										></ListItemText>
+									</ListItem>
+								</List>
+							</>
+						) : (
+							<>
+								<p>
+									HCM Agro Products is the key enterprise in the field of agriculture focusing
+									relentlessly on quality and empowering our customers with a stunning and
+									innovative range of products. Our broad vision propels us forward in the direction
+									of sustainable agriculture with minimal impact on the environment which
+									encompasses several aspects.
+								</p>
+								<p>
+									With years of experience in the market through unremitting innovation specialising
+									in R&D through comprehensive and meticulous service to provide best solutions
+									embedded in our products, we were able to set up 2 units that strengthen the roots
+									of HCM Agro Products Private Ltd.
+								</p>
+							</>
+						)}
 					</div>
 					<div
 						className='about-fourth-info-container'
