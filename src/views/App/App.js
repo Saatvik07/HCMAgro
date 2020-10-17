@@ -349,26 +349,7 @@ function App() {
 														</Link>
 													</TableCell>
 												</TableRow>
-												<TableRow>
-													<TableCell className='footer-tableCell'>
-														<a
-															href='https://online.flippingbook.com/view/16101/'
-															className='router-link'
-															target='_blank'
-															rel='noopener noreferrer'
-														>
-															<ListItem className='footer-table-listItem'>
-																<ListItemIcon className='footer-table-icon'>
-																	<DoubleArrowIcon />
-																</ListItemIcon>
-																<ListItemText
-																	primary='Catalogue'
-																	className='footer-link'
-																></ListItemText>
-															</ListItem>
-														</a>
-													</TableCell>
-												</TableRow>
+												
 											</TableBody>
 										</Table>
 									</div>

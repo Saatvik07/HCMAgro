@@ -42,7 +42,7 @@ function Amino() {
 			  });
 			  setTimeout(() => {
 				setModals([false,false,false]);
-			}, 500);
+			}, 350);
 
 	}
 	return (
@@ -210,7 +210,61 @@ function Amino() {
 								<TableHead>
 									<TableRow>
 										<TableCell>Item</TableCell>
+										<TableCell></TableCell>
 										<TableCell>Standard</TableCell>
+										<TableCell></TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{product1.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard1}</TableCell>
+											<TableCell>{row.standard2}</TableCell>
+											<TableCell>{row.standard3}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+
+					</div>
+				</div>
+			</Dialog>
+			<Dialog open={modals[2]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+
+				<div className='product-dialog-container '>
+					<div className='manure-modal-left-div '>
+						<img
+							className='product-dialog-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<Paper elevation={5} className='manure-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+						<List className="product-dialog-list">
+							{product1Benefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+					<div className='manure-modal-right-div'>
+					<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell></TableCell>
+										<TableCell>Standard</TableCell>
+										<TableCell></TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>

@@ -1,14 +1,14 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "./Home.css";
-import SwiperCore, { Navigation, A11y, EffectFade, Autoplay } from "swiper";
+import SwiperCore, { Navigation, A11y, EffectFade, Autoplay, EffectCoverflow} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/effect-flip/effect-flip.scss";
 import NavBar from "../NavBar/NavBar";
 import { useMediaQuery } from "@material-ui/core";
-SwiperCore.use([Navigation, A11y, Autoplay, EffectFade]);
+SwiperCore.use([Navigation, A11y, Autoplay, EffectFade, EffectCoverflow]);
 function Home() {
 	return (
 		<div>
@@ -17,7 +17,7 @@ function Home() {
 				slidesPerView={1}
 				navigation
 				tag='ul'
-				effect='fade'
+				effect='coverflow'
 				id='first'
 				className='animate__animated animate__fadeIn swiper-container'
 				autoplay={{
@@ -34,7 +34,7 @@ function Home() {
 								"url(https://res.cloudinary.com/maximuscloud/image/upload/v1599605651/pexels-pixabay-51947_yymg1c.jpg)",
 						}}
 					>
-						<div className='slide-overlay'>
+						
 							<NavBar />
 							<div className='slide-info'>
 								<img
@@ -46,7 +46,7 @@ function Home() {
 									We welcome you to fascinating world of HCM Agro Products Private Ltd.
 								</h1>
 							</div>
-						</div>
+						
 					</div>
 				</SwiperSlide>
 				<SwiperSlide tag='li'>
@@ -57,8 +57,7 @@ function Home() {
 								"url(https://res.cloudinary.com/maximuscloud/image/upload/v1599605655/pexels-kaboompics-com-5808_apso79.jpg)",
 						}}
 					>
-						<div className='slide-overlay'>
-							<NavBar />
+						<NavBar />
 							<div className='slide-info'>
 								<img
 									src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
@@ -69,6 +68,8 @@ function Home() {
 									We welcome you to fascinating world of HCM Agro Products Private Ltd.
 								</h1>
 							</div>
+						<div className='slide-overlay'>
+							
 						</div>
 					</div>
 				</SwiperSlide>
@@ -80,7 +81,7 @@ function Home() {
 								"url(https://res.cloudinary.com/maximuscloud/image/upload/v1600471837/pexels-oleg-magni-890507_pupjf7.jpg)",
 						}}
 					>
-						<div className='slide-overlay'>
+						
 							<NavBar />
 							<div className='slide-info'>
 								<img
@@ -92,7 +93,7 @@ function Home() {
 									We welcome you to fascinating world of HCM Agro Products Private Ltd.
 								</h1>
 							</div>
-						</div>
+						
 					</div>
 				</SwiperSlide>
 				<SwiperSlide tag='li'>
@@ -103,7 +104,7 @@ function Home() {
 								"url(https://res.cloudinary.com/maximuscloud/image/upload/v1599605652/Main_rkfanj.jpg)",
 						}}
 					>
-						<div className='slide-overlay'>
+						
 							<NavBar />
 							<div className='slide-info'>
 								<img
@@ -115,7 +116,7 @@ function Home() {
 									We welcome you to fascinating world of HCM Agro Products Private Ltd.
 								</h1>
 							</div>
-						</div>
+						
 					</div>
 				</SwiperSlide>
 				<SwiperSlide tag='li'>
@@ -126,7 +127,7 @@ function Home() {
 								"url(https://res.cloudinary.com/maximuscloud/image/upload/v1600471386/Main_gkqn9l.jpg)",
 						}}
 					>
-						<div className='slide-overlay'>
+						
 							<NavBar />
 							<div className='slide-info'>
 								<img
@@ -138,12 +139,12 @@ function Home() {
 									We welcome you to fascinating world of HCM Agro Products Private Ltd.
 								</h1>
 							</div>
-						</div>
+						
 					</div>
 				</SwiperSlide>
 				...
 			</Swiper>
-			<div></div>
+			<div style={{minHeight:"500px", borderBottom:"10px solid white"}}></div>
 		</div>
 	);
 }

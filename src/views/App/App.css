@@ -1,5 +1,5 @@
 body {
-	background-color: #fec397;
+	background-color: white;
 }
 .content-footer {
 	position: relative;
@@ -10,7 +10,7 @@ body {
 	padding-bottom: 390px;
 }
 .content {
-	background-color: #fec397;
+	background-color: white;
 	z-index: 1000;
 	position: relative;
 }

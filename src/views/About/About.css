@@ -14,7 +14,7 @@
 }
 .about-hero-overlay {
 	background: #151515;
-	opacity: 0.8;
+	opacity: 0.7;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -30,7 +30,7 @@
 	width: 100%;
 	color: white;
 	background: #151515;
-	opacity: 0.8;
+	opacity: 0.7;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -62,7 +62,7 @@
 	color: white;
 	font-weight: bold;
 	background-color: #151515;
-	opacity: 0.7;
+	opacity: 0.5;
 	text-align: center;
 }
 .about-headings {
