@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import StarBorder from "@material-ui/icons/StarBorder";
 import {
 	Card,
 	CardActionArea,
@@ -6,18 +7,51 @@ import {
 	CardActions,
 	Button,
 	Typography,
+	Modal,
+	Paper,
+	TableContainer,TableBody,Table,TableHead,TableRow,TableCell,List,ListItem,ListItemIcon,ListItemText, Dialog
 } from "@material-ui/core";
 import "./Amino.css";
 import NavBar from "../../NavBar/NavBar";
+const product1 = [
+	{ item: "", standard1: "50-55%", standard2:"80-85%", standard3:"90-95%" },
+	{ item: "Appearance", standard1: "White", standard2:"Cream Powder", standard3:"Off white" },
+	{ item: "Total Protein", standard1: "50-55%", standard2:"80-85%", standard3:"90-95%" },
+	{ item: "Total Nitrogen", standard1: "10-11%", standard2:"12-13%", standard3:"15-16%" },
+	{ item: "pH", standard1: "3.5-5.5", standard2:"6-7", standard3:"6-7" },
+	{ item: "Loss on drying", standard1: "4-5%", standard2:"4-5%", standard3:"3-3.5%" },
+	{ item: "Odour", standard1: "Protein Odour", standard2:"Protein Odour", standard3:"Protein Odour" },
+	{ item: "Water solubility", standard1: "100%", standard2:"100%", standard3:"100%" },
+];
+const product1Benefits = [
+	"Stimulates plant growth and increases the output of plants.",
+	"Improve the quality of product & also promotes the development of root & shoots",
+	"A good supplementary nutrilizer to N,P,K fertilizers & pesticides",
+];
 function Amino() {
 	const [modals, setModals] = useState([false, false, false]);
+	const handleClose = ()=>{
+			let dialog = document.body.querySelector("#dialog");
+			dialog.animate([
+				// keyframes
+				{ opacity: 1 }, 
+				{ opacity: 0}
+			  ], { 
+				// timing options
+				duration: 700,
+			  });
+			  setTimeout(() => {
+				setModals([false,false,false]);
+			}, 500);
+
+	}
 	return (
 		<div className='amino-container'>
 			<div className='amino-hero animate__animated animate__fadeIn'>
 				<div className='amino-hero-overlay '>
 					<NavBar />
 					<div className='amino-hero-info'>
-						<h1>Organic amino</h1>
+						<h1>Amino & Fulvic Acid Series</h1>
 					</div>
 				</div>
 			</div>
@@ -40,7 +74,7 @@ function Amino() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Granule Organic amino
+								Amino Acid Powder
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
 								Organic amino is an eco-friendly fertilizer, which helps in improving the quality &
@@ -81,7 +115,7 @@ function Amino() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Bio-Fertilizers
+								Amino Acid Granules
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
 								Mycorrhizae is a biofertilizer that helps in promotion of plant growth in an
@@ -123,7 +157,7 @@ function Amino() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "white" }}
 							>
-								Seaweed Extract
+								Fulvic Acid
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
 								The Seaweed extract is natural organic concentrate that are extracted from marine
@@ -147,6 +181,56 @@ function Amino() {
 					</CardActions>
 				</Card>
 			</div>
+			<Dialog open={modals[0]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+
+				<div className='product-dialog-container '>
+					<div className='manure-modal-left-div '>
+						<img
+							className='product-dialog-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<Paper elevation={5} className='manure-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+						<List className="product-dialog-list">
+							{product1Benefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+					<div className='manure-modal-right-div'>
+					<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{product1.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard1}</TableCell>
+											<TableCell>{row.standard2}</TableCell>
+											<TableCell>{row.standard3}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+
+					</div>
+				</div>
+			</Dialog>
 		</div>
 	);
 }

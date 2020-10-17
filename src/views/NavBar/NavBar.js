@@ -76,14 +76,9 @@ function NavBar() {
 								</Link>
 							</MenuItem>
 							<MenuItem onClick={handleClose}>
-								<a
-									href='https://online.flippingbook.com/view/16101/'
-									className='router-link'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
+								<Link to='/catalogue' className='router-link'>
 									<h3 className='navBar-link'>Catalogue</h3>
-								</a>
+								</Link>
 							</MenuItem>
 						</Menu>
 					</div>
@@ -179,14 +174,9 @@ function NavBar() {
 						<Link to='/contact' className='router-link'>
 							<h3 className='navBar-link'>Contact Us</h3>
 						</Link>
-						<a
-							href='https://online.flippingbook.com/view/16101/'
-							className='router-link'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
+						<Link to='/catalogue' className='router-link'>
 							<h3 className='navBar-link'>Catalogue</h3>
-						</a>
+						</Link>
 					</div>
 					<div className='navBar-right'>
 						<ClickAwayListener

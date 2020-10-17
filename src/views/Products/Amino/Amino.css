@@ -64,3 +64,35 @@
 	color: white !important;
 	border: 2px solid white !important;
 }
+.product-dialog-container {
+	background-color: #fec397 !important;
+	margin: 50px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.product-dialog > div > div {
+	max-width: 100% !important;
+}
+body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scrollPaper > div {
+	width: 80%;
+	background-color: #fec397;
+}
+.product-dialog-image {
+	width: 75%;
+}
+.product-dialog-list {
+	width: 85%;
+}
+.fade {
+	animation-name: fadeAway;
+	animation-duration: 1s;
+}
+@keyfames fadeAway {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

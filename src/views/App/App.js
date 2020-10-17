@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "../Home/Home";
 import Products from "../Products/Products";
 import About from "../About/About";
+import Amino from "../Products/Amino/Amino";
 import {
 	Button,
 	TableBody,
@@ -40,6 +41,7 @@ function App() {
 						<Route path='/xanthan' component={Xanthan}></Route>
 						<Route path='/silicon' component={Silicon}></Route>
 						<Route path='/contact' component={Contact}></Route>
+						<Route path = "/amino" component={Amino}></Route>
 						<Route path='/catalogue' component={Catalogue}></Route>
 					</Switch>
 				</div>
