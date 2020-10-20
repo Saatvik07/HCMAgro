@@ -26,15 +26,15 @@ function About() {
 					setLoading(false);
 				}}
 			>
-				<div className='about-hero animate__animated animate__fadeIn'>
+				<div className='about-hero '>
 					<div className='about-hero-overlay '>
 						<NavBar />
-						<div className='products-hero-info'>
+						<div className='products-hero-info animate__animated animate__fadeInLeft animate__fast'>
 							<h1>About Us</h1>
 						</div>
 					</div>
 				</div>
-				<div className='about-first-overlay animate__animated animate__slideInUp'>
+				<div className='about-first-overlay '>
 					<div
 						className='about-first-info-container'
 						data-aos='fade-left'

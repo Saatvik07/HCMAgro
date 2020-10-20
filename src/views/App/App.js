@@ -25,13 +25,14 @@ import EmailIcon from "@material-ui/icons/Email";
 import Contact from "../Contact/Contact";
 import Xanthan from "../Products/Xanthan/Xanthan";
 import Silicon from "../Products/Silicon/Silicon";
-import Catalogue from "../Catalogue/Catalogue";
+import ScrollTop from "../../utils/ScrollTop";
 function App() {
 	const [email, setEmail] = useState("");
 	const matches = useMediaQuery("(max-width:1250px)");
 	return (
 		<div className={matches ? "content-footer-phone" : "content-footer"}>
 			<BrowserRouter>
+				<ScrollTop/>
 				<div className='content'>
 					<Switch>
 						<Route exact path='/' component={Home}></Route>
@@ -42,7 +43,6 @@ function App() {
 						<Route path='/silicon' component={Silicon}></Route>
 						<Route path='/contact' component={Contact}></Route>
 						<Route path = "/amino" component={Amino}></Route>
-						<Route path='/catalogue' component={Catalogue}></Route>
 					</Switch>
 				</div>
 				{matches ? (
@@ -522,6 +522,7 @@ function App() {
 						</footer>
 					</>
 				)}
+				
 			</BrowserRouter>
 		</div>
 	);

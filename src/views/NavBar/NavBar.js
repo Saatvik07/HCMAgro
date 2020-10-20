@@ -75,11 +75,6 @@ function NavBar() {
 									<h3 className='navBar-link'>Contact Us</h3>
 								</Link>
 							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								<Link to='/catalogue' className='router-link'>
-									<h3 className='navBar-link'>Catalogue</h3>
-								</Link>
-							</MenuItem>
 						</Menu>
 					</div>
 					<div className='navBar-right-phone'>
@@ -173,9 +168,6 @@ function NavBar() {
 						</Link>
 						<Link to='/contact' className='router-link'>
 							<h3 className='navBar-link'>Contact Us</h3>
-						</Link>
-						<Link to='/catalogue' className='router-link'>
-							<h3 className='navBar-link'>Catalogue</h3>
 						</Link>
 					</div>
 					<div className='navBar-right'>
