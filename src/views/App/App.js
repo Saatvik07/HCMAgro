@@ -93,28 +93,13 @@ function App() {
 														</Link>
 													</TableCell>
 												</TableRow>
-												<TableRow>
-													<TableCell className='footer-tableCell'>
-														<a
-															href='https://online.flippingbook.com/view/16101/'
-															className='router-link'
-															target='_blank'
-															rel='noopener noreferrer'
-														>
-															<ListItem className='footer-table-listItem'>
-																<ListItemIcon className='footer-table-icon'>
-																	<DoubleArrowIcon />
-																</ListItemIcon>
-																<ListItemText
-																	primary='Catalogue'
-																	className='footer-link'
-																></ListItemText>
-															</ListItem>
-														</a>
-													</TableCell>
-												</TableRow>
 											</TableBody>
 										</Table>
+										<div className="footer-center-left-bottom-phone">
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246785/output-onlinepngtools_tmslgv.png" alt="facebook" className="footer-social-icon-phone"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246786/output-onlinepngtools_1_yvqgh0.png" alt="instagram" className="footer-social-icon-phone"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246790/output-onlinepngtools_2_hoogjv.png" alt="mail" className="footer-social-icon-phone"/>
+										</div>
 									</div>
 									<div className='footer-left-email'>
 										<ListItem>

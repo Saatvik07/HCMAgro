@@ -108,15 +108,23 @@ td {
 .footer-input > div > input {
 	color: white !important;
 }
-.footer-center-left-bottom {
+.footer-center-left-bottom,
+.footer-center-left-bottom-phone {
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
 	margin: 20px 0px;
 	align-items: center;
 }
+.footer-center-left-bottom-phone {
+	margin: 10px 0;
+}
 .footer-social-icon {
 	width: 35px;
+	height: auto;
+}
+.footer-social-icon-phone {
+	width: 20px;
 	height: auto;
 }
 .footer-sendBtn {
@@ -195,6 +203,6 @@ input:-webkit-autofill {
 		font-size: 10px !important;
 	}
 	.content-footer-phone {
-		padding-bottom: 330px;
+		padding-bottom: 335px;
 	}
 }
