@@ -1,11 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./Contact.css";
 import {
-	ClickAwayListener,
-	Tooltip,
-	withStyles,
-	IconButton,
 	ListItemIcon,
 	ListItemText,
 	List,
@@ -13,9 +8,7 @@ import {
 	TextField,
 	InputAdornment,
 	Button,
-	Menu,
-	MenuItem,
-	useMediaQuery,
+
 } from "@material-ui/core";
 import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
@@ -67,11 +60,15 @@ function Contact() {
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
-								<BusinessIcon style={{ color: "white" }} />
+								<MailIcon style={{ color: "white" }} />
 							</ListItemIcon>
 							<ListItemText primary='Email: info@hcmagroproducts.com'></ListItemText>
 						</ListItem>
 					</List>
+					<div className="contact-social-container">
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246785/output-onlinepngtools_tmslgv.png" alt="facebook" className="footer-social-icon"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246786/output-onlinepngtools_1_yvqgh0.png" alt="instagram" className="footer-social-icon"/>
+					</div>
 				</div>
 				<div className='contact-main-right animate__animated animate__fadeIn'>
 					<h2>Want to hear from us ?</h2>

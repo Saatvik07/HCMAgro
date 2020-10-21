@@ -307,52 +307,60 @@ function App() {
 								</div>
 								<div className='footer-center'>
 									<div className='footer-center-left'>
-										<Table>
-											<TableHead>
-												<TableRow>
-													<TableCell className='footer-tableCell'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<TripOriginIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Quick Links'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</TableCell>
-												</TableRow>
-											</TableHead>
-											<TableBody>
-												<TableRow>
-													<TableCell className='footer-tableCell'>
-														<Link to='/' className='router-link'>
+										<div className="footer-center-left-top">
+											<Table>
+												<TableHead>
+													<TableRow>
+														<TableCell className='footer-tableCell'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
-																	<DoubleArrowIcon />
-																</ListItemIcon>
-																<ListItemText primary='Home' className='footer-link'></ListItemText>
-															</ListItem>
-														</Link>
-													</TableCell>
-													<TableCell className='footer-tableCell'>
-														<Link to='/about' className='router-link'>
-															<ListItem className='footer-table-listItem'>
-																<ListItemIcon className='footer-table-icon'>
-																	<DoubleArrowIcon />
+																	<TripOriginIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='About Us'
+																	primary='Quick Links'
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>
-														</Link>
-													</TableCell>
-												</TableRow>
-												
-											</TableBody>
-										</Table>
+														</TableCell>
+													</TableRow>
+												</TableHead>
+												<TableBody>
+													<TableRow>
+														<TableCell className='footer-tableCell'>
+															<Link to='/' className='router-link'>
+																<ListItem className='footer-table-listItem'>
+																	<ListItemIcon className='footer-table-icon'>
+																		<DoubleArrowIcon />
+																	</ListItemIcon>
+																	<ListItemText primary='Home' className='footer-link'></ListItemText>
+																</ListItem>
+															</Link>
+														</TableCell>
+														<TableCell className='footer-tableCell'>
+															<Link to='/about' className='router-link'>
+																<ListItem className='footer-table-listItem'>
+																	<ListItemIcon className='footer-table-icon'>
+																		<DoubleArrowIcon />
+																	</ListItemIcon>
+																	<ListItemText
+																		primary='About Us'
+																		className='footer-link'
+																	></ListItemText>
+																</ListItem>
+															</Link>
+														</TableCell>
+													</TableRow>
+													
+												</TableBody>
+											</Table>
+										</div>
+										<div className="footer-center-left-bottom">
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246785/output-onlinepngtools_tmslgv.png" alt="facebook" className="footer-social-icon"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246786/output-onlinepngtools_1_yvqgh0.png" alt="instagram" className="footer-social-icon"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246790/output-onlinepngtools_2_hoogjv.png" alt="mail" className="footer-social-icon"/>
+										</div>
 									</div>
+										
 									<div className='footer-center-right'>
 										<Table>
 											<TableHead>
@@ -529,3 +537,5 @@ function App() {
 }
 
 export default App;
+//Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+//Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

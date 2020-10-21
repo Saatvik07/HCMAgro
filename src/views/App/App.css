@@ -61,6 +61,12 @@ footer {
 	width: 35%;
 	margin: 30px;
 }
+.footer-center-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .footer-right {
 	width: 15%;
 	display: flex;
@@ -102,7 +108,17 @@ td {
 .footer-input > div > input {
 	color: white !important;
 }
-
+.footer-center-left-bottom {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin: 20px 0px;
+	align-items: center;
+}
+.footer-social-icon {
+	width: 35px;
+	height: auto;
+}
 .footer-sendBtn {
 	margin: 20px !important;
 	color: white !important;

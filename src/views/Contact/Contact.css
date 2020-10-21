@@ -45,14 +45,14 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 50px 0 50px 0;
 }
 .contact-main-left {
 	background-color: #b26161;
-	padding: 71.5px 0 71.5px 0;
+	padding: 50px 0 50px 0;
 }
 .contact-main-right {
 	background-color: #651414;
+	padding: 61px 0 61px 0;
 }
 .contact-input > label {
 	color: white !important;
@@ -76,9 +76,15 @@
 	border-color: white !important;
 }
 .contact-map {
-	width: 100%;
+	width: 98%;
 	height: 500px;
-	margin-bottom: 10px;
+}
+.contact-social-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 30px;
 }
 @media only screen and (max-width: 720px) {
 	.contact-main-container {

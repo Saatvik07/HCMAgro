@@ -21,7 +21,7 @@ function About() {
 		<div className='about-container'>
 			<Parallax
 				bgImage={backgroundPic}
-				strength={1000}
+				strength={1500}
 				onLoad={() => {
 					setLoading(false);
 				}}
