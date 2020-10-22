@@ -17,7 +17,10 @@ import {
 	ListItemText,
 	TextField,
 	useMediaQuery,
+	CircularProgress,
+	IconButton,
 } from "@material-ui/core";
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Manure from "../Products/Manure/Manure";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import TripOriginIcon from "@material-ui/icons/TripOrigin";
@@ -26,9 +29,51 @@ import Contact from "../Contact/Contact";
 import Xanthan from "../Products/Xanthan/Xanthan";
 import Silicon from "../Products/Silicon/Silicon";
 import ScrollTop from "../../utils/ScrollTop";
+import {sendCatalogue} from "../../utils/helpers";
 function App() {
 	const [email, setEmail] = useState("");
+	const [mailLoader, setMailLoader] = useState(false);
+	const [prompt, setPrompt] = useState(null);
 	const matches = useMediaQuery("(max-width:1250px)");
+	const handleSendClick = () =>{
+		setMailLoader(true);
+		setPrompt(<div style={{background:"linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
+		<h3>Hang in there, sending the catalog might a minute or two due to the size of PDF file</h3>
+		<IconButton onClick={()=>{
+			setPrompt(null);
+		}}>
+			<HighlightOffIcon className="closePrompt-button"/>
+		</IconButton>
+	</div>);
+		window.scrollBy(0,-120);
+		sendCatalogue(email).then(result=>{
+			if(result==="Not sent"){
+				setMailLoader(false);
+				setPrompt(<div style={{background:"linear-gradient(90deg, hsla(52, 82%, 52%, 1) 0%, hsla(1, 92%, 47%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__headShake">
+				<h3>Sorry there was an issue, please try again later or with some other email address</h3>
+				<IconButton onClick={()=>{
+					setPrompt(null);
+				}}>
+					<HighlightOffIcon className="closePrompt-button"/>
+				</IconButton>
+			</div>);
+				window.scrollBy(0,-120);
+			}
+			else if(result==="Catalog sent"){
+				setMailLoader(false);
+				setPrompt(<div style={{background:"linear-gradient(90deg,hsla(140, 73%, 36%, 1) 0%,hsla(152, 85%, 50%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
+				<h3>Successfully sent, please check your email for confirmation</h3>
+				<IconButton onClick={()=>{
+					setPrompt(null);
+				}}>
+					<HighlightOffIcon className="closePrompt-button"/>
+				</IconButton>
+				</div>);
+				window.scrollBy(0,-120);
+			}
+		});
+		
+	}
 	return (
 		<div className={matches ? "content-footer-phone" : "content-footer"}>
 			<BrowserRouter>
@@ -54,7 +99,7 @@ function App() {
 										<Table>
 											<TableHead>
 												<TableRow>
-													<TableCell className='footer-tableCell'>
+													<TableCell className='footer-tableCell' colSpan={2}>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<TripOriginIcon />
@@ -117,7 +162,7 @@ function App() {
 												setEmail(event.target.value);
 											}}
 										/>
-										<Button variant='outlined' className='footer-sendBtn'>
+										<Button variant='outlined' className='footer-sendBtn' onClick={handleSendClick}>
 											Send
 										</Button>
 									</div>
@@ -507,15 +552,16 @@ function App() {
 											setEmail(event.target.value);
 										}}
 									/>
-									<Button variant='outlined' className='footer-sendBtn'>
+									{mailLoader? <CircularProgress className="footer-sendBtn"/> :<Button variant='outlined' className='footer-sendBtn' onClick={handleSendClick}>
 										Send
-									</Button>
+									</Button>}
 								</div>
 							</div>
 						</footer>
+						
 					</>
 				)}
-				
+				{prompt}
 			</BrowserRouter>
 		</div>
 	);

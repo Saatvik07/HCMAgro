@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import {
 	ListItemIcon,
@@ -8,17 +8,53 @@ import {
 	TextField,
 	InputAdornment,
 	Button,
-
+	CircularProgress,
+	IconButton,
 } from "@material-ui/core";
 import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import BusinessIcon from "@material-ui/icons/Business";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-
 import ModeCommentIcon from "@material-ui/icons/ModeComment";
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import NavBar from "../NavBar/NavBar";
+import { sendQuery } from "../../utils/helpers";
 function Contact() {
+	const [email,setEmail] = useState("");
+	const [name,setName] = useState("");
+	const [query, setQuery] = useState("");
+	const [mailLoader, setMailLoader] = useState(false);
+	const [prompt, setPrompt] = useState(null);
+	const handleSend = async()=>{
+		setMailLoader(true);
+		sendQuery(name,email,query).then(result=>{
+			if(result==="message sent"){
+				setMailLoader(false);
+				setPrompt(<div style={{background:"linear-gradient(90deg,hsla(140, 73%, 36%, 1) 0%,hsla(152, 85%, 50%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", width:"100vw"}} className="animate__animated animate__fadeIn">
+					<h3>Query received by us, please check your email for confirmation</h3>
+					<IconButton onClick={()=>{
+						setPrompt(null);
+					}}>
+						<HighlightOffIcon className="closePrompt-button"/>
+					</IconButton>
+				</div>);
+			}
+			else if(result==="not sent"){
+				setMailLoader(false);
+				setPrompt(<div style={{background:"linear-gradient(90deg, hsla(52, 82%, 52%, 1) 0%, hsla(1, 92%, 47%, 1) 100%);", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", width:"100vw"}} className="animate__animated animate__headShake">
+					<h3>Sorry there was some issue sending your message, try again later or try using another email address</h3>
+					<IconButton onClick={()=>{
+						setPrompt(null);
+					}}>
+						<HighlightOffIcon className="closePrompt-button"/>
+					</IconButton>
+				</div>);
+			}
+		});
+		
+		
+	}
 	return (
 		<div className='contact-container'>
 			<div className='contact-hero animate__animated animate__fadeIn'>
@@ -87,6 +123,9 @@ function Contact() {
 											</InputAdornment>
 										),
 									}}
+									onChange= {(event)=>{
+										setName(event.target.value);
+									}}
 								/>
 							</ListItem>
 							<ListItem>
@@ -100,6 +139,9 @@ function Contact() {
 												<MailIcon style={{ color: "white" }} />
 											</InputAdornment>
 										),
+									}}
+									onChange= {(event)=>{
+										setEmail(event.target.value);
 									}}
 								/>
 							</ListItem>
@@ -119,15 +161,18 @@ function Contact() {
 											</InputAdornment>
 										),
 									}}
+									onChange= {(event)=>{
+										setQuery(event.target.value);
+									}}
 								/>
 							</ListItem>
 						</List>
 					</div>
-					<Button variant='outline' className='contact-sendBtn'>
-						Send a Message
-					</Button>
+					{mailLoader ? <CircularProgress className="contact-sendBtn"/> : <Button variant='outline' className='contact-sendBtn' onClick={handleSend}>Send a Message</Button>}
+					
 				</div>
 			</div>
+			{prompt}
 			<iframe
 				title='map'
 				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.311571363517!2d77.08296015073024!3d28.680324982312612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0414a7999a27%3A0x1011012beb136944!2sHcm%20Agro%20Products%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1600995850294!5m2!1sen!2sin'

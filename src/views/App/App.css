@@ -23,6 +23,10 @@ body {
 	width: 100%;
 	background: #651414;
 	display: flex;
+	flex-wrap: wrap;
+}
+.footer-container-phone {
+	margin-top: 10px;
 }
 footer {
 	color: white;
@@ -124,7 +128,7 @@ td {
 	height: auto;
 }
 .footer-social-icon-phone {
-	width: 20px;
+	width: 25px;
 	height: auto;
 }
 .footer-sendBtn {
@@ -172,6 +176,7 @@ input:-webkit-autofill {
 	justify-content: center;
 }
 .footer-right-phone {
+	width: 50%;
 	margin: 0 10px;
 }
 .footer-logo-phone {
@@ -186,7 +191,7 @@ input:-webkit-autofill {
 	justify-content: center;
 }
 .footer-right-bottom > h5 {
-	font-size: 10px;
+	font-size: 8px;
 	text-align: center;
 }
 .get-catalogue-label > span {
