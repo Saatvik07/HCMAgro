@@ -1,17 +1,17 @@
-.amino-container {
+.humate-container {
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
 }
-.amino-hero {
+.humate-hero {
 	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1600557794/pexels-john-lambeth-2252584_gqmapm.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 40%;
 }
-.amino-hero-overlay {
+.humate-hero-overlay {
 	background: #151515;
 	opacity: 0.7;
 	display: flex;
@@ -19,7 +19,7 @@
 	align-items: center;
 	justify-content: center;
 }
-.amino-hero-info {
+.humate-hero-info {
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -27,15 +27,15 @@
 	width: 100%;
 	height: 90%;
 }
-.amino-hero-info > h1 {
+.humate-hero-info > h1 {
 	font-size: 5rem;
 }
-.amino-card-container {
+.humate-card-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-.amino-card {
+.humate-card {
 	width: 25%;
 	display: flex;
 	align-items: center;
@@ -45,22 +45,22 @@
 	margin: 50px;
 	max-height: 70vh;
 }
-.amino-card-image {
+.humate-card-image {
 	width: 100%;
 	height: auto;
 }
-.amino-card-footer {
+.humate-card-footer {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.amino-card-footer-container {
+.humate-card-footer-container {
 	height: 20%;
 	width: 100%;
 }
-.amino-card-button {
+.humate-card-button {
 	color: white !important;
 	border: 2px solid white !important;
 }
@@ -71,14 +71,14 @@
 	align-items: center;
 	justify-content: center;
 }
-.amino-dialog-left-div {
+.humate-dialog-left-div {
 	display: flex;
 	flex-direction: column;
 	width: 45%;
 	justify-content: center;
 	align-items: center;
 }
-.amino-dialog-right-div {
+.humate-dialog-right-div {
 	display: flex;
 	flex-direction: column;
 	width: 45%;
@@ -112,17 +112,17 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 }
 
 @media only screen and (max-width: 600px) {
-	.amino-hero-info > h1 {
+	.humate-hero-info > h1 {
 		font-size: 1.8rem;
 	}
-	.amino-card {
+	.humate-card {
 		width: 70%;
 		margin: 20px;
 	}
-	.amino-card-content > p {
+	.humate-card-content > p {
 		font-size: 12px !important;
 	}
-	.amino-card-content > h2 {
+	.humate-card-content > h2 {
 		font-size: 16px !important;
 	}
 }
@@ -131,8 +131,8 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 		flex-direction: column;
 		margin: 10px 0;
 	}
-	.amino-dialog-left-div,
-	.amino-dialog-right-div {
+	.humate-dialog-left-div,
+	.humate-dialog-right-div {
 		width: 90%;
 		justify-content: center;
 		align-items: center;
@@ -150,17 +150,17 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 	}
 }
 @media only screen and (min-width: 600px) and (max-width: 1210px) {
-	.amino-hero-info > h1 {
+	.humate-hero-info > h1 {
 		font-size: 2rem;
 	}
-	.amino-card {
+	.humate-card {
 		width: 40%;
 		margin: 40px 20px;
 	}
-	.amino-card-content > p {
+	.humate-card-content > p {
 		font-size: 14px !important;
 	}
-	.amino-card-content > h2 {
+	.humate-card-content > h2 {
 		font-size: 18px !important;
 	}
 }

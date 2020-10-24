@@ -1,6 +1,9 @@
 body {
 	background-color: white;
 }
+#loader {
+	visibility: hidden;
+}
 .content-footer {
 	position: relative;
 	padding-bottom: 226px;

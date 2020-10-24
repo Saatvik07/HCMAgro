@@ -13,7 +13,7 @@ import {
 } from "@material-ui/core";
 import "./Amino.css";
 import NavBar from "../../NavBar/NavBar";
-const product1 = [
+const aminoTable = [
 	{ item: "", standard1: "50-55%", standard2:"80-85%", standard3:"90-95%" },
 	{ item: "Appearance", standard1: "White", standard2:"Cream Powder", standard3:"Off white" },
 	{ item: "Total Protein", standard1: "50-55%", standard2:"80-85%", standard3:"90-95%" },
@@ -23,10 +23,28 @@ const product1 = [
 	{ item: "Odour", standard1: "Protein Odour", standard2:"Protein Odour", standard3:"Protein Odour" },
 	{ item: "Water solubility", standard1: "100%", standard2:"100%", standard3:"100%" },
 ];
-const product1Benefits = [
+const aminoBenefits = [
 	"Stimulates plant growth and increases the output of plants.",
 	"Improve the quality of product & also promotes the development of root & shoots",
 	"A good supplementary nutrilizer to N,P,K fertilizers & pesticides",
+];
+const fulvicTable = [
+	{ item: "FAS(Dry basis)", standard: "70%-80% min"},
+	{ item: "Water Soluble(Dry Basis)", standard: "95%- 100% min"},
+	{ item: "Moisture", standard: "10% max"},
+	{ item: "pH", standard: "5-6"},
+	{ item: "Appearance", standard: "Brown/Black Powder/ Flake"}
+];
+const fulvicBenefits = [
+	"Chelate with plant nutrients to improve their uptake by plants, and reduce their immobilization in the soil.",
+	"Quicker seed germination and faster root and shoot growth.",
+	"Improve moisture retention in plants and reduce moisture stress.",
+	"Prevent and cure the plant pathema.",
+	"Enhance the uptake of available nutrition.",
+	"Improve the function of fertilizer and pesticides.",
+	"Promote residue decomposition.",
+	"Enhance plant germination and growth.",
+	"Provide valuable source of carbon for soil microbes.",
 ];
 function Amino() {
 	const [modals, setModals] = useState([false, false, false]);
@@ -67,7 +85,7 @@ function Amino() {
 							alt='Granule Organic amino'
 							className='amino-card-image'
 						/>
-						<CardContent style={{ height: "40%" }}>
+						<CardContent style={{ height: "40%" }} className="amino-card-content">
 							<Typography
 								gutterBottom
 								variant='h5'
@@ -108,7 +126,7 @@ function Amino() {
 							alt='Granule Organic amino'
 							className='amino-card-image'
 						/>
-						<CardContent style={{ height: "40%" }}>
+						<CardContent style={{ height: "40%" }} className="amino-card-content">
 							<Typography
 								gutterBottom
 								variant='h5'
@@ -150,7 +168,7 @@ function Amino() {
 							alt='Granule Organic amino'
 							className='amino-card-image'
 						/>
-						<CardContent>
+						<CardContent className="amino-card-content">
 							<Typography
 								gutterBottom
 								variant='h5'
@@ -181,10 +199,10 @@ function Amino() {
 					</CardActions>
 				</Card>
 			</div>
-			<Dialog open={modals[0]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+			<Dialog open={modals[0] || modals[1]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 
 				<div className='product-dialog-container '>
-					<div className='manure-modal-left-div '>
+					<div className='amino-dialog-left-div '>
 						<img
 							className='product-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
@@ -194,7 +212,7 @@ function Amino() {
 							<h2>Benefits</h2>
 						</Paper>
 						<List className="product-dialog-list">
-							{product1Benefits.map((benefit) => (
+							{aminoBenefits.map((benefit) => (
 								<ListItem>
 									<ListItemIcon>
 										<StarBorder />
@@ -204,7 +222,7 @@ function Amino() {
 							))}
 						</List>
 					</div>
-					<div className='manure-modal-right-div'>
+					<div className='amino-dialog-right-div'>
 					<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>
@@ -216,7 +234,7 @@ function Amino() {
 									</TableRow>
 								</TableHead>
 								<TableBody>
-									{product1.map((row) => (
+									{aminoTable.map((row) => (
 										<TableRow key={row.item}>
 											<TableCell component='th' scope='row'>
 												{row.item}
@@ -236,17 +254,41 @@ function Amino() {
 			<Dialog open={modals[2]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 
 				<div className='product-dialog-container '>
-					<div className='manure-modal-left-div '>
+					<div className='amino-dialog-left-div'>
 						<img
 							className='product-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
-						<Paper elevation={5} className='manure-modal-heading'>
+						<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{fulvicTable.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+						
+						
+					</div>
+					<div className='amino-dialog-left-div'>
+					<Paper elevation={5} className='manure-modal-heading'>
 							<h2>Benefits</h2>
 						</Paper>
-						<List className="product-dialog-list">
-							{product1Benefits.map((benefit) => (
+					<List className="product-dialog-list">
+							{fulvicBenefits.map((benefit) => (
 								<ListItem>
 									<ListItemIcon>
 										<StarBorder />
@@ -255,32 +297,7 @@ function Amino() {
 								</ListItem>
 							))}
 						</List>
-					</div>
-					<div className='manure-modal-right-div'>
-					<TableContainer className='manure-modal-table-container'>
-							<Table className='manure-modal-table'>
-								<TableHead>
-									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell></TableCell>
-										<TableCell>Standard</TableCell>
-										<TableCell></TableCell>
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{product1.map((row) => (
-										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
-												{row.item}
-											</TableCell>
-											<TableCell>{row.standard1}</TableCell>
-											<TableCell>{row.standard2}</TableCell>
-											<TableCell>{row.standard3}</TableCell>
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
+					
 
 					</div>
 				</div>
