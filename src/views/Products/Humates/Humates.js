@@ -7,7 +7,6 @@ import {
 	CardActions,
 	Button,
 	Typography,
-	Modal,
 	Paper,
 	TableContainer,TableBody,Table,TableHead,TableRow,TableCell,List,ListItem,ListItemIcon,ListItemText, Dialog
 } from "@material-ui/core";
@@ -106,11 +105,9 @@ function Humates() {
 	const handleClose = ()=>{
 			let dialog = document.body.querySelector("#dialog");
 			dialog.animate([
-				// keyframes
 				{ opacity: 1 }, 
 				{ opacity: 0}
 			  ], { 
-				// timing options
 				duration: 700,
 			  });
 			  setTimeout(() => {
@@ -324,8 +321,7 @@ function Humates() {
 					</CardActions>
 				</Card>
 			</div>
-			<Dialog open={modals[0] || modals[1]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
-
+			<Dialog open={modals[0]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div '>
 						<img
@@ -333,11 +329,33 @@ function Humates() {
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
+						<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{humicTable.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+					</div>
+					<div className='amino-dialog-right-div'>
 						<Paper elevation={5} className='manure-modal-heading'>
 							<h2>Benefits</h2>
 						</Paper>
 						<List className="product-dialog-list">
-							{aminoBenefits.map((benefit) => (
+							{humicBenefits.map((benefit) => (
 								<ListItem>
 									<ListItemIcon>
 										<StarBorder />
@@ -347,37 +365,9 @@ function Humates() {
 							))}
 						</List>
 					</div>
-					<div className='amino-dialog-right-div'>
-					<TableContainer className='manure-modal-table-container'>
-							<Table className='manure-modal-table'>
-								<TableHead>
-									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell></TableCell>
-										<TableCell>Standard</TableCell>
-										<TableCell></TableCell>
-									</TableRow>
-								</TableHead>
-								<TableBody>
-									{aminoTable.map((row) => (
-										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
-												{row.item}
-											</TableCell>
-											<TableCell>{row.standard1}</TableCell>
-											<TableCell>{row.standard2}</TableCell>
-											<TableCell>{row.standard3}</TableCell>
-										</TableRow>
-									))}
-								</TableBody>
-							</Table>
-						</TableContainer>
-
-					</div>
 				</div>
 			</Dialog>
-			<Dialog open={modals[2]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
-
+			<Dialog open={modals[1]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 						<img
@@ -394,7 +384,7 @@ function Humates() {
 									</TableRow>
 								</TableHead>
 								<TableBody>
-									{fulvicTable.map((row) => (
+									{potassiumTable.map((row) => (
 										<TableRow key={row.item}>
 											<TableCell component='th' scope='row'>
 												{row.item}
@@ -413,7 +403,177 @@ function Humates() {
 							<h2>Benefits</h2>
 						</Paper>
 					<List className="product-dialog-list">
-							{fulvicBenefits.map((benefit) => (
+							{potassiumBenefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					
+
+					</div>
+				</div>
+			</Dialog>
+			<Dialog open={modals[2]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+				<div className='product-dialog-container '>
+					<div className='amino-dialog-left-div'>
+						<img
+							className='product-dialog-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{sodiumTable.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+						<Paper elevation={5} className='manure-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+						<List className="product-dialog-list">
+								{sodiumBenefits.map((benefit) => (
+									<ListItem>
+										<ListItemIcon>
+											<StarBorder />
+										</ListItemIcon>
+										<ListItemText primary={benefit}></ListItemText>
+									</ListItem>
+								))}
+						</List>
+					</div>
+					<div className='amino-dialog-left-div'>
+					<Paper elevation={5} className='manure-modal-heading'>
+							<h2>For Animals</h2>
+						</Paper>
+					<List className="product-dialog-list">
+							{sodiumBenefits2.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+					</List>
+					<Paper elevation={5} className='manure-modal-heading'>
+							<h2>For Industry</h2>
+						</Paper>
+					<List className="product-dialog-list">
+							{sodiumBenefits3.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+					</List>
+					</div>
+				</div>
+			</Dialog>
+			<Dialog open={modals[3]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+				<div className='product-dialog-container '>
+					<div className='amino-dialog-left-div'>
+						<img
+							className='product-dialog-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{boronTable.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+						
+						
+					</div>
+					<div className='amino-dialog-left-div'>
+					<Paper elevation={5} className='manure-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+					<List className="product-dialog-list">
+							{boronBenefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit}></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+				</div>
+			</Dialog>
+			<Dialog open={modals[4]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+				<div className='product-dialog-container '>
+					<div className='amino-dialog-left-div'>
+						<img
+							className='product-dialog-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
+							alt='product1'
+						/>
+						<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell>Item</TableCell>
+										<TableCell>Standard</TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{superPotassiumTable.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row'>
+												{row.item}
+											</TableCell>
+											<TableCell>{row.standard}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+						
+						
+					</div>
+					<div className='amino-dialog-left-div'>
+					<Paper elevation={5} className='manure-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+					<List className="product-dialog-list">
+							{potassiumBenefits.map((benefit) => (
 								<ListItem>
 									<ListItemIcon>
 										<StarBorder />

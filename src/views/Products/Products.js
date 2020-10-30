@@ -396,7 +396,7 @@ function Products() {
 							that contributes naturally in increasing the soil fertility and accelerating plant
 							growth.
 							<br></br>
-							<Button variant='outlined' className='products-card-expand-icon'>
+							<Button variant='outlined' className='products-card-expand-icon' >
 								SEE MORE
 							</Button>
 						</CardContent>
@@ -442,7 +442,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/category2");
+									history.push("/humate");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />

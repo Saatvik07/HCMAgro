@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import Products from "../Products/Products";
 import About from "../About/About";
 import Amino from "../Products/Amino/Amino";
+import Humates from "../Products/Humates/Humates";
 import {
 	Button,
 	TableBody,
@@ -49,7 +50,7 @@ function App() {
 	const handleSendClick = () =>{
 		setMailLoader(true);
 		setPrompt(<div style={{background:"linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
-		<h3>Hang in there, sending the catalog might a minute or two due to the size of PDF file</h3>
+		<h3>Hang in there, sending the catalog might take a minute or two due to the size of PDF file</h3>
 		<IconButton onClick={()=>{
 			setPrompt(null);
 		}}>
@@ -99,6 +100,7 @@ function App() {
 						<Route path='/silicon' component={Silicon}></Route>
 						<Route path='/contact' component={Contact}></Route>
 						<Route path = "/amino" component={Amino}></Route>
+						<Route path="/humate" component={Humates}></Route>
 					</Switch>
 				</div>
 				{matches ? (
