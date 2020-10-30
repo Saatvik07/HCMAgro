@@ -27,39 +27,53 @@ function Contact() {
 	const [mailLoader, setMailLoader] = useState(false);
 	const [prompt, setPrompt] = useState(null);
 	const handleSend = async()=>{
-		setMailLoader(true);
-		sendQuery(name,email,query).then(result=>{
-			if(result==="message sent"){
-				setMailLoader(false);
-				setPrompt(<div style={{background:"linear-gradient(90deg,hsla(140, 73%, 36%, 1) 0%,hsla(152, 85%, 50%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", width:"100vw"}} className="animate__animated animate__fadeIn">
-					<h3>Query received by us, please check your email for confirmation</h3>
-					<IconButton onClick={()=>{
-						setPrompt(null);
-					}}>
-						<HighlightOffIcon className="closePrompt-button"/>
-					</IconButton>
-				</div>);
-			}
-			else if(result==="not sent"){
-				setMailLoader(false);
-				setPrompt(<div style={{background:"linear-gradient(90deg, hsla(52, 82%, 52%, 1) 0%, hsla(1, 92%, 47%, 1) 100%);", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", width:"100vw"}} className="animate__animated animate__headShake">
-					<h3>Sorry there was some issue sending your message, try again later or try using another email address</h3>
-					<IconButton onClick={()=>{
-						setPrompt(null);
-					}}>
-						<HighlightOffIcon className="closePrompt-button"/>
-					</IconButton>
-				</div>);
-			}
-		});
+		if(query===""||name===""||email===""){
+			setPrompt(<div className="prompt-alert animate__animated animate__headShake">
+						<h3>All the fields are required, please fill out all of them</h3>
+						<IconButton onClick={()=>{
+							setPrompt(null);
+						}}>
+							<HighlightOffIcon className="closePrompt-button"/>
+						</IconButton>
+					</div>);
+		}
+		else{
+			setMailLoader(true);
+			sendQuery(name,email,query).then(result=>{
+				if(result==="message sent"){
+					setMailLoader(false);
+					setPrompt(<div className="prompt-success animate__animated animate__fadeIn">
+						<h3>Query received by us, please check your email for confirmation</h3>
+						<IconButton onClick={()=>{
+							setPrompt(null);
+						}}>
+							<HighlightOffIcon className="closePrompt-button"/>
+						</IconButton>
+					</div>);
+				}
+				else if(result==="not sent"){
+					setMailLoader(false);
+					setPrompt(<div className="prompt-alert animate__animated animate__headShake">
+						<h3>Sorry there was some issue sending your message, try again later or try using another email address</h3>
+						<IconButton onClick={()=>{
+							setPrompt(null);
+						}}>
+							<HighlightOffIcon className="closePrompt-button"/>
+						</IconButton>
+					</div>);
+				}
+			});
+		}
+		
 		
 		
 	}
 	return (
 		<div className='contact-container'>
 			<div className='contact-hero animate__animated animate__fadeIn'>
+				<NavBar />
 				<div className='contact-hero-overlay '>
-					<NavBar />
+					
 					<div className='contact-hero-info'>
 						<h1>Contact Us</h1>
 					</div>
@@ -72,38 +86,38 @@ function Contact() {
 					<List className='get-in-touch-list'>
 						<ListItem>
 							<ListItemIcon>
-								<PinDropIcon style={{ color: "white" }} />
+								<PinDropIcon style={{ color: "#DAD7CD" }} />
 							</ListItemIcon>
 							<ListItemText primary='Regd. Office: RR -29, 1st Floor, Mainwali Nagar, New Delhi - 110087'></ListItemText>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
-								<BusinessIcon style={{ color: "white" }} />
+								<BusinessIcon style={{ color: "#DAD7CD" }} />
 							</ListItemIcon>
 							<ListItemText primary='Unit-1: 1/18, Kirari Road, Near Bhalla Factory, Nangloi, New Delhi-110041'></ListItemText>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
-								<BusinessIcon style={{ color: "white" }} />
+								<BusinessIcon style={{ color: "#DAD7CD" }} />
 							</ListItemIcon>
 							<ListItemText primary='Unit-2: 5 K.M. Stone, Beri Dighal Road, Sampla, Distt-Rohtak, Haryana-124501'></ListItemText>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
-								<CallIcon style={{ color: "white" }} />
+								<CallIcon style={{ color: "#DAD7CD" }} />
 							</ListItemIcon>
 							<ListItemText primary='Tel:011-25267064, 011-40192472'></ListItemText>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
-								<MailIcon style={{ color: "white" }} />
+								<MailIcon style={{ color: "#DAD7CD" }} />
 							</ListItemIcon>
 							<ListItemText primary='Email: info@hcmagroproducts.com'></ListItemText>
 						</ListItem>
 					</List>
 					<div className="contact-social-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246785/output-onlinepngtools_tmslgv.png" alt="facebook" className="footer-social-icon"/>
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246786/output-onlinepngtools_1_yvqgh0.png" alt="instagram" className="footer-social-icon"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_4_mfn3to.png" alt="facebook" className="footer-social-icon"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_5_epf2ki.png" alt="instagram" className="footer-social-icon"/>
 					</div>
 				</div>
 				<div className='contact-main-right animate__animated animate__fadeIn'>
@@ -119,7 +133,7 @@ function Contact() {
 									InputProps={{
 										startAdornment: (
 											<InputAdornment position='start'>
-												<AccountCircle style={{ color: "white" }} />
+												<AccountCircle style={{ color: "#DAD7CD" }} />
 											</InputAdornment>
 										),
 									}}
@@ -130,13 +144,14 @@ function Contact() {
 							</ListItem>
 							<ListItem>
 								<TextField
+									
 									label='Email'
 									variant='outlined'
 									className='contact-input'
 									InputProps={{
 										startAdornment: (
 											<InputAdornment position='start'>
-												<MailIcon style={{ color: "white" }} />
+												<MailIcon style={{ color: "#DAD7CD" }} />
 											</InputAdornment>
 										),
 									}}
@@ -157,7 +172,7 @@ function Contact() {
 									InputProps={{
 										startAdornment: (
 											<InputAdornment position='start'>
-												<ModeCommentIcon style={{ color: "white" }} />
+												<ModeCommentIcon style={{ color: "#DAD7CD" }} />
 											</InputAdornment>
 										),
 									}}

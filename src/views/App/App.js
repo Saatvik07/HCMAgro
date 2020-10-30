@@ -31,6 +31,7 @@ import Xanthan from "../Products/Xanthan/Xanthan";
 import Silicon from "../Products/Silicon/Silicon";
 import ScrollTop from "../../utils/ScrollTop";
 import {sendCatalogue} from "../../utils/helpers";
+import Seaweed from "../Products/Seaweed/Seaweed";
 function App() {
 	const [email, setEmail] = useState("");
 	const [mailLoader, setMailLoader] = useState(false);
@@ -49,7 +50,7 @@ function App() {
 	}, [])
 	const handleSendClick = () =>{
 		setMailLoader(true);
-		setPrompt(<div style={{background:"linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
+		setPrompt(<div style={{background:"linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"#f0f3bd", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
 		<h3>Hang in there, sending the catalog might take a minute or two due to the size of PDF file</h3>
 		<IconButton onClick={()=>{
 			setPrompt(null);
@@ -61,7 +62,7 @@ function App() {
 		sendCatalogue(email).then(result=>{
 			if(result==="Not sent"){
 				setMailLoader(false);
-				setPrompt(<div style={{background:"linear-gradient(90deg, hsla(52, 82%, 52%, 1) 0%, hsla(1, 92%, 47%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__headShake">
+				setPrompt(<div style={{background:"linear-gradient(90deg, hsla(52, 82%, 52%, 1) 0%, hsla(1, 92%, 47%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"#f0f3bd", maxWidth:"100vw"}} className="animate__animated animate__headShake">
 				<h3>Sorry there was an issue, please try again later or with some other email address</h3>
 				<IconButton onClick={()=>{
 					setPrompt(null);
@@ -73,7 +74,7 @@ function App() {
 			}
 			else if(result==="Catalog sent"){
 				setMailLoader(false);
-				setPrompt(<div style={{background:"linear-gradient(90deg,hsla(140, 73%, 36%, 1) 0%,hsla(152, 85%, 50%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"white", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
+				setPrompt(<div style={{background:"linear-gradient(90deg,hsla(140, 73%, 36%, 1) 0%,hsla(152, 85%, 50%, 1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"#f0f3bd", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
 				<h3>Successfully sent, please check your email for confirmation</h3>
 				<IconButton onClick={()=>{
 					setPrompt(null);
@@ -101,6 +102,7 @@ function App() {
 						<Route path='/contact' component={Contact}></Route>
 						<Route path = "/amino" component={Amino}></Route>
 						<Route path="/humate" component={Humates}></Route>
+						<Route path="/seaweed" component={Seaweed}></Route>
 					</Switch>
 				</div>
 				{matches ? (
@@ -162,7 +164,7 @@ function App() {
 									<div className='footer-left-email'>
 										<ListItem>
 											<ListItemIcon>
-												<EmailIcon style={{ color: "white" }} />
+												<EmailIcon style={{ color: "#f0f3bd" }} />
 											</ListItemIcon>
 											<ListItemText primary='Get the Catalogue' className='get-catalogue-label' />
 										</ListItem>
@@ -342,7 +344,7 @@ function App() {
 							<div className='footer-container'>
 								<div className='footer-left'>
 									<img
-										src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
+										src='https://res.cloudinary.com/maximuscloud/image/upload/v1604081896/output-onlinepngtools_3_fgplwa.png'
 										alt='logo'
 										className='footer-logo'
 									></img>
@@ -398,9 +400,9 @@ function App() {
 											</Table>
 										</div>
 										<div className="footer-center-left-bottom">
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246785/output-onlinepngtools_tmslgv.png" alt="facebook" className="footer-social-icon"/>
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246786/output-onlinepngtools_1_yvqgh0.png" alt="instagram" className="footer-social-icon"/>
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603246790/output-onlinepngtools_2_hoogjv.png" alt="mail" className="footer-social-icon"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_4_mfn3to.png" alt="facebook" className="footer-social-icon"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_5_epf2ki.png" alt="instagram" className="footer-social-icon"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_6_bp53mw.png" alt="mail" className="footer-social-icon"/>
 										</div>
 									</div>
 										
@@ -552,7 +554,7 @@ function App() {
 								<div className='footer-right'>
 									<ListItem>
 										<ListItemIcon>
-											<EmailIcon style={{ color: "white" }} />
+											<EmailIcon style={{ color: "#f0f3bd" }} />
 										</ListItemIcon>
 										<ListItemText primary='Get the Catalogue' />
 									</ListItem>

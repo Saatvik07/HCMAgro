@@ -13,7 +13,7 @@ function About() {
 	const matches = useMediaQuery("(max-width:1250px)");
 	const backgroundPic = matches
 		? "https://res.cloudinary.com/maximuscloud/image/upload/v1602886111/pexels-karolina-grabowska-4207907_qntcox.jpg"
-		: "https://res.cloudinary.com/maximuscloud/image/upload/v1602961317/pexels-anni-roenkae-3625632_z2rwjc.jpg";
+		: "https://res.cloudinary.com/maximuscloud/image/upload/v1600902481/pexels-pixabay-276259_qru4lg.jpg";
 	useEffect(() => {
 		AOS.init();
 	}, []);

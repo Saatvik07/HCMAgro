@@ -1,0 +1,94 @@
+.seaweed-container {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+}
+.seaweed-hero {
+	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1600557794/pexels-john-lambeth-2252584_gqmapm.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 40%;
+}
+.seaweed-hero-overlay {
+	background: #151515;
+	opacity: 0.7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.seaweed-hero-info {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 90%;
+}
+.seaweed-hero-info > h1 {
+	font-size: 5rem;
+}
+.seaweed-card-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 50px;
+}
+.seaweed-info {
+	font-size: 1.2rem;
+	margin-bottom: 50px;
+	font-weight: bold;
+	width: 90%;
+	text-align: center;
+}
+.seaweed-card-container-left,
+.seaweed-card-container-right {
+	display: flex;
+	width: 45%;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+.seaweed-image {
+	width: 75%;
+	margin: 30px auto;
+	height: auto;
+}
+.seaweed-table-container {
+	width: 75% !important;
+	margin: 20px auto;
+	border: 2px solid black;
+}
+.seaweed-heading {
+	background-color: #db9a69 !important;
+	display: flex;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto;
+}
+@media only screen and (max-width: 1150px) and (min-width: 721px) {
+	.seaweed-info {
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width: 720px) {
+	.seaweed-hero-info > h1 {
+		font-size: 2.5rem;
+	}
+	.seaweed-card-container {
+		flex-direction: column;
+	}
+	.seaweed-card-container-left,
+	.seaweed-card-container-right {
+		width: 95%;
+	}
+	.seaweed-info {
+		font-size: 1rem;
+		margin-top: 50px;
+		width: 90%;
+	}
+}

@@ -12,6 +12,7 @@ import {
 	useMediaQuery,
 	Menu,
 	MenuItem,
+	Drawer
 } from "@material-ui/core";
 import CallIcon from "@material-ui/icons/Call";
 import MailIcon from "@material-ui/icons/Mail";
@@ -27,14 +28,14 @@ const CustomTooltip = withStyles((theme) => ({
 function NavBar() {
 	const [callTool, setCallTool] = useState(false);
 	const [mailTool, setMailTool] = useState(false);
-	const [anchorEl, setAnchorEl] = useState(null);
+	const [menu, setMenu] = useState(false);
 
-	const handleClick = (event) => {
-		setAnchorEl(event.currentTarget);
+	const handleClick = () => {
+		setMenu(true);
 	};
 
 	const handleClose = () => {
-		setAnchorEl(null);
+		setMenu(false);
 	};
 	const matches = useMediaQuery("(max-width:1075px)");
 	return (
@@ -43,15 +44,43 @@ function NavBar() {
 				<>
 					<div className='navBar-left'>
 						<img
-							src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1604081896/output-onlinepngtools_3_fgplwa.png'
 							alt='logo'
 							className='navBar-logo-phone'
 						></img>
 						<MenuIcon onClick={handleClick} />
-						<Menu
+						<Drawer anchor="top" open={menu} onClose={handleClose} className="menu-drawer">
+							<List>
+								<ListItem>
+									<Link to='/' className='router-link'>
+										<h3 className='navBar-link'>Home</h3>
+									</Link>
+								</ListItem>
+							</List>
+							<List>
+								<ListItem>
+									<Link to='/about' className='router-link'>
+										<h3 className='navBar-link'>About Us</h3>
+									</Link>
+								</ListItem>
+							</List>
+							<List>
+								<ListItem>
+									<Link to='/products' className='router-link'>
+										<h3 className='navBar-link'>Products</h3>
+									</Link>
+								</ListItem>
+							</List>
+							<List>
+								<ListItem>
+									<Link to='/contact' className='router-link'>
+										<h3 className='navBar-link'>Contact Us</h3>
+									</Link>
+								</ListItem>
+							</List>
+						</Drawer>
+						{/* <Menu
 							className='phone-menu-list'
-							anchorEl={anchorEl}
-							keepMounted
 							open={Boolean(anchorEl)}
 							onClose={handleClose}
 						>
@@ -75,7 +104,7 @@ function NavBar() {
 									<h3 className='navBar-link'>Contact Us</h3>
 								</Link>
 							</MenuItem>
-						</Menu>
+						</Menu> */}
 					</div>
 					<div className='navBar-right-phone'>
 						<ClickAwayListener
@@ -152,7 +181,7 @@ function NavBar() {
 				<>
 					<div className='navBar-left'>
 						<img
-							src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1604081896/output-onlinepngtools_3_fgplwa.png'
 							alt='logo'
 							className='navBar-logo'
 						></img>

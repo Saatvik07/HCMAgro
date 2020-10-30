@@ -30,8 +30,8 @@ function Products() {
 	return (
 		<div className='products-container'>
 			<div className='products-hero animate__animated animate__fadeIn'>
+				<NavBar />
 				<div className='products-hero-overlay '>
-					<NavBar />
 					<div className='products-hero-info'>
 						<h1>Products</h1>
 					</div>
@@ -54,7 +54,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Organic Manure
 							</Typography>
@@ -92,7 +92,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Xanthan Gum
 							</Typography>
@@ -130,7 +130,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Silicon Spreader
 							</Typography>
@@ -168,7 +168,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Sea Weed Extract
 							</Typography>
@@ -185,37 +185,37 @@ function Products() {
 							<List>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Seaweed Extract Granules' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Seaweed Extract Powder' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Seaweed Extract Flakes' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Seaweed Extract Gel' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Green Seaweed Extract' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Brown Seaweed Extract' className='products-list-text' />
 								</ListItem>
@@ -227,7 +227,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/category2");
+									history.push("/seaweed");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />
@@ -251,7 +251,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Bio-Fertilizer
 							</Typography>
@@ -268,13 +268,13 @@ function Products() {
 							<List>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Rhizobium Biofertilizer' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Azotobacter Biofertilizer'
@@ -283,7 +283,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Azospirillum  Biofertilizer'
@@ -292,7 +292,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='phosphate solubilizing bacteria (PSB)  Biofertilizer'
@@ -301,7 +301,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Mycorrhizal Biofertilizer '
@@ -310,7 +310,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Potassium mobilizing Biofertilizer '
@@ -319,7 +319,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Zinc solubilizing Biofertilizer'
@@ -328,7 +328,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Acetobacter Biofertilizer '
@@ -337,19 +337,19 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Carrier based consortia ' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Liquid consortia' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Phosphate Solubilizing Fungal Biofertilizer'
@@ -388,7 +388,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Humate/Humic Series
 							</Typography>
@@ -406,31 +406,31 @@ function Products() {
 							<List>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Humic Acid' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Potassium Humate' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Super Potassium Humate' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Boron Humate' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Sodium Humate' className='products-list-text' />
 								</ListItem>
@@ -466,7 +466,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Amino & Fulvic Acid Series
 							</Typography>
@@ -483,19 +483,19 @@ function Products() {
 							<List>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Amino Acid Powder' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Amino Acid Granules' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Fulvic Acid' className='products-list-text' />
 								</ListItem>
@@ -531,7 +531,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Zinc Series
 							</Typography>
@@ -548,13 +548,13 @@ function Products() {
 							<List>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Zinc Tablets' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText primary='Zinc Powder' className='products-list-text' />
 								</ListItem>
@@ -590,7 +590,7 @@ function Products() {
 								gutterBottom
 								variant='h5'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
 								Water Soluble Film
 							</Typography>
@@ -607,7 +607,7 @@ function Products() {
 							<List>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Water soluble film for agriculture'
@@ -616,7 +616,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Water soluble film for embroidery '
@@ -625,7 +625,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Water soluble films for laundry '
@@ -634,7 +634,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Water soluble laundry pods'
@@ -643,7 +643,7 @@ function Products() {
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
-										<ChevronRightIcon style={{ color: "white" }} />
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
 									<ListItemText
 										primary='Water soluble laundry bags'
