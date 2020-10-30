@@ -44,7 +44,7 @@ function NavBar() {
 				<>
 					<div className='navBar-left'>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1604081896/output-onlinepngtools_3_fgplwa.png'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1604101145/output-onlinepngtools_16_k5noco.png'
 							alt='logo'
 							className='navBar-logo-phone'
 						></img>
@@ -79,32 +79,6 @@ function NavBar() {
 								</ListItem>
 							</List>
 						</Drawer>
-						{/* <Menu
-							className='phone-menu-list'
-							open={Boolean(anchorEl)}
-							onClose={handleClose}
-						>
-							<MenuItem onClick={handleClose}>
-								<Link to='/' className='router-link'>
-									<h3 className='navBar-link'>Home</h3>
-								</Link>
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								<Link to='/about' className='router-link'>
-									<h3 className='navBar-link'>About Us</h3>
-								</Link>
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								<Link to='/products' className='router-link'>
-									<h3 className='navBar-link'>Products</h3>
-								</Link>
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								<Link to='/contact' className='router-link'>
-									<h3 className='navBar-link'>Contact Us</h3>
-								</Link>
-							</MenuItem>
-						</Menu> */}
 					</div>
 					<div className='navBar-right-phone'>
 						<ClickAwayListener
@@ -181,7 +155,7 @@ function NavBar() {
 				<>
 					<div className='navBar-left'>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1604081896/output-onlinepngtools_3_fgplwa.png'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1604101145/output-onlinepngtools_16_k5noco.png'
 							alt='logo'
 							className='navBar-logo'
 						></img>

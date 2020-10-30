@@ -116,8 +116,8 @@ function Contact() {
 						</ListItem>
 					</List>
 					<div className="contact-social-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_4_mfn3to.png" alt="facebook" className="footer-social-icon"/>
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604081960/output-onlinepngtools_5_epf2ki.png" alt="instagram" className="footer-social-icon"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_15_ddd6ej.png" alt="facebook" className="footer-social-icon"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_14_rcfpvw.png" alt="instagram" className="footer-social-icon"/>
 					</div>
 				</div>
 				<div className='contact-main-right animate__animated animate__fadeIn'>

@@ -216,23 +216,23 @@ function Home() {
 					</div>
 					<div className="home-about-hero-svg-bar">
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108097/chemistry_orfhan.png" className="home-about-svg" alt="research-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg"/>
 								<h5>Innovative</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108095/agricultural_obpsw4.png" className="home-about-svg" alt="environment-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_7_fgtybu.png" className="home-about-svg" alt="environment-svg"/>
 								<h5>Eco-Friendly</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108097/agriculture_1_jzeweq.png" className="home-about-svg" alt="organic-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_9_elizrd.png" className="home-about-svg" alt="organic-svg"/>
 								<h5>Organic</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108097/seed_urrup5.png" className="home-about-svg" alt="best-practices-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_8_hdarcx.png" className="home-about-svg" alt="best-practices-svg"/>
 								<h5>Best Practices</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108095/agriculture_tjeu0p.png" className="home-about-svg" alt="techno-advanced-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_11_kwfayo.png" className="home-about-svg" alt="techno-advanced-svg"/>
 								<h5>Technologically Advanced</h5>
 							</div>
 					</div>
@@ -263,26 +263,26 @@ function Home() {
 						
 						<div className="home-about-hero-svg-bar">
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108097/chemistry_orfhan.png" className="home-about-svg" alt="research-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg"/>
 								<h5>Innovative</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108095/agricultural_obpsw4.png" className="home-about-svg" alt="environment-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_7_fgtybu.png" className="home-about-svg" alt="environment-svg"/>
 								<h5>Eco-Friendly</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108097/agriculture_1_jzeweq.png" className="home-about-svg" alt="organic-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_9_elizrd.png" className="home-about-svg" alt="organic-svg"/>
 								<h5>Organic</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108097/seed_urrup5.png" className="home-about-svg" alt="best-practices-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_8_hdarcx.png" className="home-about-svg" alt="best-practices-svg"/>
 								<h5>Best Practices</h5>
 							</div>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1603108095/agriculture_tjeu0p.png" className="home-about-svg" alt="techno-advanced-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_11_kwfayo.png" className="home-about-svg" alt="techno-advanced-svg"/>
 								<h5>Technologically Advanced</h5>
 							</div>
-						</div>
+					</div>
 					</div>
 			</div>}
 		</div>
