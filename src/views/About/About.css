@@ -92,6 +92,36 @@
 .phone-about-first-list {
 	text-align: center;
 }
+.first-info-container {
+	width: 100%;
+	display: flex;
+	background-color: #ebebeb;
+}
+.first-info-left {
+	background-color: #ebebeb;
+	width: 60%;
+}
+.first-info-left > p {
+	color: #3a5a40;
+	font-size: 1.5rem;
+}
+.info-first-image {
+	width: 30%;
+	height: auto;
+}
+.second-info-container {
+	width: 100%;
+	display: flex;
+	background-color: #fefcfd;
+}
+.second-info-left {
+	background-color: #fefcfd;
+	width: 60%;
+}
+.info-second-image {
+	width: 40%;
+	height: auto;
+}
 @media only screen and (max-width: 720px) {
 	.about-headings {
 		font-size: 2rem;

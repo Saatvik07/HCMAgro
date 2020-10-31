@@ -9,6 +9,7 @@ import "swiper/components/effect-flip/effect-flip.scss";
 import NavBar from "../NavBar/NavBar";
 import { Button, useMediaQuery, IconButton} from "@material-ui/core";
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
+import Hexagon from 'react-hexagon'
 SwiperCore.use([Navigation, A11y, Autoplay, EffectFade]);
 function Home() {
 	const matches = useMediaQuery("(max-width:720px)");
@@ -194,6 +195,17 @@ function Home() {
 				</SwiperSlide>
 				...
 			</Swiper>
+			<div className="hex-container">
+				<div className="upper-hex-container">
+					<div className="hex-image hex1"></div>
+					<div className="hex-image hex2"></div>
+				</div>
+				<div className="lower-hex-container">
+					<div className="hex-image hex3"></div>
+				</div>
+			</div>
+			
+			
 			{matches?
 			<div className="home-about-hero-container animate__animated animate__fadeIn">
 					<div style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"space-evenly",marginBottom:"30px"}}>
@@ -238,7 +250,6 @@ function Home() {
 					</div>
 			</div>
 			:<div className="home-about-hero-container animate__animated animate__fadeIn">
-					
 					<div className="home-about-hero-left">
 						<p>Get to know all about HCM</p>
 						{matches?<IconButton size="small"
@@ -283,8 +294,10 @@ function Home() {
 								<h5>Technologically Advanced</h5>
 							</div>
 					</div>
-					</div>
-			</div>}
+				</div>
+			</div>
+			}
+			
 		</div>
 	);
 }
