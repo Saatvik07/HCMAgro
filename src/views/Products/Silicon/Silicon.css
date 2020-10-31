@@ -5,9 +5,10 @@
 	align-items: center;
 }
 .silicon-hero {
-	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1600557794/pexels-john-lambeth-2252584_gqmapm.jpg");
+	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1604086236/pexels-ella-olsson-1458694_enferb.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	width: 100%;
 	height: 40%;
 }
@@ -42,7 +43,6 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	background-color: #fec397;
 }
 .silicon-headline {
 	width: 90%;
@@ -51,6 +51,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.silicon-headline > h2 {
+	color: #3a5a40;
+}
+.silicon-list-text > span {
+	color: #3a5a40;
+	font-weight: bold;
 }
 .silicon-modal-left-div {
 	display: flex;
@@ -72,12 +79,15 @@
 	height: auto;
 }
 .silicon-modal-heading {
-	background-color: #db9a69 !important;
+	background-color: #3a5a40 !important;
 	display: flex;
 	width: 80%;
 	justify-content: center;
 	align-items: center;
 	margin: 20px auto;
+}
+.silicon-modal-heading > h2 {
+	color: #dad7cd;
 }
 .silicon-card-container {
 	display: flex;
@@ -85,9 +95,11 @@
 	align-items: center;
 	flex-direction: column;
 }
+
 @media only screen and (max-width: 720px) {
 	.silicon-hero-info > h1 {
 		font-size: 2.5rem;
+		margin: 20px 0;
 	}
 	.silicon-headline > h2 {
 		font-size: 1rem;

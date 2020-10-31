@@ -5,7 +5,8 @@
 	align-items: center;
 }
 .amino-hero {
-	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1600557794/pexels-john-lambeth-2252584_gqmapm.jpg");
+	background: url("https://res.cloudinary.com/maximuscloud/image/upload/v1604086236/pexels-ella-olsson-1458694_enferb.jpg");
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -65,7 +66,7 @@
 	border: 2px solid white !important;
 }
 .product-dialog-container {
-	background-color: #fec397 !important;
+	background-color: #dad7cd !important;
 	margin: 50px auto;
 	display: flex;
 	align-items: center;
@@ -90,7 +91,7 @@
 }
 body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scrollPaper > div {
 	width: 80%;
-	background-color: #fec397;
+	background-color: #dad7cd !important;
 }
 .product-dialog-image {
 	width: 75%;
@@ -114,6 +115,7 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 @media only screen and (max-width: 600px) {
 	.amino-hero-info > h1 {
 		font-size: 1.8rem;
+		margin: 20px;
 	}
 	.amino-card {
 		width: 70%;
@@ -130,6 +132,10 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 	.product-dialog-container {
 		flex-direction: column;
 		margin: 10px 0;
+	}
+	.amino-hero-info > h1 {
+		margin: 30px;
+		text-align: center;
 	}
 	.amino-dialog-left-div,
 	.amino-dialog-right-div {
@@ -152,6 +158,7 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 @media only screen and (min-width: 600px) and (max-width: 1210px) {
 	.amino-hero-info > h1 {
 		font-size: 2rem;
+		margin: 20px;
 	}
 	.amino-card {
 		width: 40%;

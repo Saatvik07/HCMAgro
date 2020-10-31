@@ -60,7 +60,7 @@ function Products() {
 							</Typography>
 							Organic Manure is an eco-friendly fertilizer, which helps in improving the quality &
 							fertility of soil and hence make the produce healthy & nutritious. It enriches the
-							soil with micro-organisms & restore the depleted nutrients of the soil.
+							soil with micro-organisms & restore the depleted nutrients of soil.
 						</CardContent>
 					</CardActionArea>
 					<CardActions>
