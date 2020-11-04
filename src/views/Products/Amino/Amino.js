@@ -66,8 +66,9 @@ function Amino() {
 	return (
 		<div className='amino-container'>
 			<div className='amino-hero animate__animated animate__fadeIn'>
+			<NavBar />
 				<div className='amino-hero-overlay '>
-					<NavBar />
+					
 					<div className='amino-hero-info'>
 						<h1>Amino & Fulvic Acid Series</h1>
 					</div>
@@ -208,16 +209,16 @@ function Amino() {
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
-						<Paper elevation={5} className='manure-modal-heading'>
+						<Paper elevation={5} className='amino-modal-heading'>
 							<h2>Benefits</h2>
 						</Paper>
 						<List className="product-dialog-list">
 							{aminoBenefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="amino-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>
@@ -227,21 +228,21 @@ function Amino() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
+										<TableCell className="amino-table-text-headings">Item</TableCell>
 										<TableCell></TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="amino-table-text-headings">Standard</TableCell>
 										<TableCell></TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{aminoTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="amino-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard1}</TableCell>
-											<TableCell>{row.standard2}</TableCell>
-											<TableCell>{row.standard3}</TableCell>
+											<TableCell className="amino-table-text">{row.standard1}</TableCell>
+											<TableCell className="amino-table-text">{row.standard2}</TableCell>
+											<TableCell className="amino-table-text">{row.standard3}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -264,17 +265,17 @@ function Amino() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="amino-table-text-headings">Item</TableCell>
+										<TableCell className="amino-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{fulvicTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="amino-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="amino-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -284,16 +285,16 @@ function Amino() {
 						
 					</div>
 					<div className='amino-dialog-left-div'>
-					<Paper elevation={5} className='manure-modal-heading'>
+					<Paper elevation={5} className='amino-modal-heading'>
 							<h2>Benefits</h2>
 						</Paper>
 					<List className="product-dialog-list">
 							{fulvicBenefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color: "#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="amino-list-text-big"></ListItemText>
 								</ListItem>
 							))}
 						</List>
