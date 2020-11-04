@@ -37,8 +37,9 @@ function Manure() {
 	return (
 		<div className='manure-container'>
 			<div className='manure-hero animate__animated animate__fadeIn'>
+			<NavBar />
 				<div className='manure-hero-overlay '>
-					<NavBar />
+					
 					<div className='manure-hero-info'>
 						<h1>Organic Manure</h1>
 					</div>
@@ -56,17 +57,17 @@ function Manure() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="manure-table-text-headings">Item</TableCell>
+										<TableCell className="manure-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{product1.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="manure-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="manure-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -80,10 +81,10 @@ function Manure() {
 						<List>
 							{product1Benefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color: "#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="manure-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>

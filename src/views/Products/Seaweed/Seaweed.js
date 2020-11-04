@@ -38,8 +38,8 @@ function Seaweed() {
     return (
         <div className='seaweed-container'>
             <div className='seaweed-hero animate__animated animate__fadeIn'>
+            <NavBar />
                 <div className='seaweed-hero-overlay '>
-                    <NavBar />
                     <div className='seaweed-hero-info'>
                         <h1>Seaweed Extract</h1>
                     </div>
@@ -57,41 +57,34 @@ function Seaweed() {
                             <Table className='seaweed-table'>
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell>Item</TableCell>
-                                        <TableCell>Standard</TableCell>
+                                        <TableCell className="seaweed-table-text-headings">Item</TableCell>
+                                        <TableCell className="seaweed-table-text-headings">Standard</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
                                     {seaweedTable.map((row) => (
                                         <TableRow key={row.item}>
-                                            <TableCell component='th' scope='row'>
+                                            <TableCell component='th' scope='row' className="seaweed-table-text">
                                                 {row.item}
                                             </TableCell>
-                                            <TableCell>{row.standard}</TableCell>
+                                            <TableCell  className="seaweed-table-text">{row.standard}</TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
                             </Table>
                         </TableContainer>
-                            
-                            
-                            
                     </div>
                     <div className="seaweed-card-container-right">
-                        <div className="seaweed-info">
-                            The Seaweed extract is natural organic concentrate that are extracted from marine plants.<br/><br/> These natural and non-toxic extracts are rich in minor elements and natural growth hormones and trace elements like auxins, gibberellins and cytokinins. These trace elements help the plants in different ways qand leads to faster growth.
-                            <br></br> <br/>Seaweed has sixty trace minerals and ready to use nutrients including Nitrogen, Potassium, Phosphate, Alginic Acid & Magnesium.
-                        </div>
                         <Paper elevation={5} className='seaweed-heading'>
                                 <h2>Benefits</h2>
                             </Paper>
                             <List>
                                 {seaweedBenefits.map((benefit) => (
                                     <ListItem>
-                                        <ListItemIcon>
+                                        <ListItemIcon style={{color:"#3a5a40"}}>
                                             <StarBorder />
                                         </ListItemIcon>
-                                        <ListItemText primary={benefit}></ListItemText>
+                                        <ListItemText primary={benefit} className="seaweed-list-text"></ListItemText>
                                     </ListItem>
                                 ))}
                             </List>
@@ -105,46 +98,42 @@ function Seaweed() {
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
-                         <Paper elevation={5} className='seaweed-heading'>
-							<h2>Benefits</h2>
-						</Paper>
-						<List>
-							{seaweedBenefits.map((benefit) => (
-								<ListItem>
-									<ListItemIcon>
-										<StarBorder />
-									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
-								</ListItem>
-							))}
-						</List>
-                        
-                        
+                        <TableContainer className='seaweed-table-container'>
+                            <Table className='seaweed-table'>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell className="seaweed-table-text-headings">Item</TableCell>
+                                        <TableCell className="seaweed-table-text-headings">Standard</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {seaweedTable.map((row) => (
+                                        <TableRow key={row.item}>
+                                            <TableCell component='th' scope='row' className="seaweed-table-text">
+                                                {row.item}
+                                            </TableCell>
+                                            <TableCell className="seaweed-table-text">{row.standard}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
                 </div>
                 <div className="seaweed-card-container-right">
-                    <div className="seaweed-info">
-                        The Seaweed extract is natural organic concentrate that are extracted from marine plants. These natural and non-toxic extracts are rich in minor elements and natural growth hormones and trace elements like auxins, gibberellins and cytokinins. These trace elements help the plants in different ways qand leads to faster growth. Seaweed has sixty trace minerals and ready to use nutrients including Nitrogen, Potassium, Phosphate, Alginic Acid & Magnesium.
-                    </div>
-                    <TableContainer className='seaweed-table-container'>
-                        <Table className='seaweed-table'>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Item</TableCell>
-                                    <TableCell>Standard</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {seaweedTable.map((row) => (
-                                    <TableRow key={row.item}>
-                                        <TableCell component='th' scope='row'>
-                                            {row.item}
-                                        </TableCell>
-                                        <TableCell>{row.standard}</TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                    <Paper elevation={5} className='seaweed-heading'>
+						<h2>Benefits</h2>
+					</Paper>
+                    <List>
+                        {seaweedBenefits.map((benefit) => (
+                            <ListItem>
+                                <ListItemIcon style={{color:"#3a5a40"}}>
+                                    <StarBorder />
+                                </ListItemIcon>
+                                <ListItemText primary={benefit} className="seaweed-list-text"></ListItemText>
+                            </ListItem>
+                        ))}
+                    </List>
+						
                 </div>
             </div>}
             {/*<div className='seaweed-card-container'>

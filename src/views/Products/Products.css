@@ -40,7 +40,6 @@
 }
 .products-card {
 	width: 25%;
-	min-height: 60vh;
 	margin: 50px;
 }
 .products-card-info {
@@ -86,6 +85,7 @@
 @media only screen and (max-width: 550px) {
 	.products-hero-info > h1 {
 		font-size: 3rem;
+		margin: 40px;
 	}
 	.products-card {
 		width: 70%;
@@ -94,6 +94,7 @@
 @media only screen and (min-width: 551px) and (max-width: 680px) {
 	.products-hero-info > h1 {
 		font-size: 3rem;
+		margin: 40px;
 	}
 	.products-card {
 		width: 40%;
@@ -103,6 +104,7 @@
 @media only screen and (min-width: 680px) and (max-width: 1020px) {
 	.products-hero-info > h1 {
 		font-size: 3rem;
+		margin: 40px;
 	}
 	.products-card {
 		margin: 50px 30px;
@@ -112,6 +114,7 @@
 @media only screen and (min-width: 1020px) and (max-width: 1210px) {
 	.products-hero-info > h1 {
 		font-size: 3rem;
+		margin: 40px;
 	}
 	.products-card {
 		width: 40%;

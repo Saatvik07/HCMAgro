@@ -117,8 +117,8 @@ function Humates() {
 	return (
 		<div className='humate-container'>
 			<div className='humate-hero animate__animated animate__fadeIn'>
+			<NavBar />
 				<div className='humate-hero-overlay '>
-					<NavBar />
 					<div className='humate-hero-info'>
 						<h1>Humates/Humic Series</h1>
 					</div>
@@ -325,7 +325,7 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div '>
 						<img
-							className='product-dialog-image'
+							className='humate-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
@@ -333,17 +333,17 @@ function Humates() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="humate-table-text-headings">Item</TableCell>
+										<TableCell className="humate-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{humicTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="humate-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="humate-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -351,16 +351,16 @@ function Humates() {
 						</TableContainer>
 					</div>
 					<div className='amino-dialog-right-div'>
-						<Paper elevation={5} className='manure-modal-heading'>
+						<Paper elevation={5} className='humate-modal-heading'>
 							<h2>Benefits</h2>
 						</Paper>
 						<List className="product-dialog-list">
 							{humicBenefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>
@@ -371,7 +371,7 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 						<img
-							className='product-dialog-image'
+							className='humate-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
@@ -379,17 +379,17 @@ function Humates() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="humate-table-text-headings">Item</TableCell>
+										<TableCell className="humate-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{potassiumTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="humate-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="humate-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -405,10 +405,10 @@ function Humates() {
 					<List className="product-dialog-list">
 							{potassiumBenefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>
@@ -421,7 +421,7 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 						<img
-							className='product-dialog-image'
+							className='humate-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
@@ -429,17 +429,17 @@ function Humates() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="humate-table-text-headings">Item</TableCell>
+										<TableCell className="humate-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{sodiumTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="humate-table-text" >
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="humate-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -451,10 +451,10 @@ function Humates() {
 						<List className="product-dialog-list">
 								{sodiumBenefits.map((benefit) => (
 									<ListItem>
-										<ListItemIcon>
+										<ListItemIcon style={{color:"#3a5a40"}}>
 											<StarBorder />
 										</ListItemIcon>
-										<ListItemText primary={benefit}></ListItemText>
+										<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 									</ListItem>
 								))}
 						</List>
@@ -466,10 +466,10 @@ function Humates() {
 					<List className="product-dialog-list">
 							{sodiumBenefits2.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 								</ListItem>
 							))}
 					</List>
@@ -479,10 +479,10 @@ function Humates() {
 					<List className="product-dialog-list">
 							{sodiumBenefits3.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 								</ListItem>
 							))}
 					</List>
@@ -493,7 +493,7 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 						<img
-							className='product-dialog-image'
+							className='humate-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
@@ -501,17 +501,17 @@ function Humates() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="humate-table-text-headings">Item</TableCell>
+										<TableCell className="humate-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{boronTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="humate-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="humate-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -527,10 +527,10 @@ function Humates() {
 					<List className="product-dialog-list">
 							{boronBenefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>
@@ -541,7 +541,7 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 						<img
-							className='product-dialog-image'
+							className='humate-dialog-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
 							alt='product1'
 						/>
@@ -549,17 +549,17 @@ function Humates() {
 							<Table className='manure-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Item</TableCell>
-										<TableCell>Standard</TableCell>
+										<TableCell className="humate-table-text-headings">Item</TableCell>
+										<TableCell className="humate-table-text-headings">Standard</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{superPotassiumTable.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="humate-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="humate-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -575,10 +575,10 @@ function Humates() {
 					<List className="product-dialog-list">
 							{potassiumBenefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color:"#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="humate-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>

@@ -140,6 +140,7 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 	.amino-dialog-left-div,
 	.amino-dialog-right-div {
 		width: 90%;
+		margin: 20px auto;
 		justify-content: center;
 		align-items: center;
 	}

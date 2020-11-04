@@ -49,8 +49,9 @@ function Xanthan() {
 	return (
 		<div className='xanthan-container'>
 			<div className='xanthan-hero animate__animated animate__fadeIn'>
+			<NavBar />
 				<div className='xanthan-hero-overlay '>
-					<NavBar />
+					
 					<div className='xanthan-hero-info'>
 						<h1>Xanthan Gum</h1>
 					</div>
@@ -70,10 +71,10 @@ function Xanthan() {
 						<List>
 							{product1Benefits.map((benefit) => (
 								<ListItem>
-									<ListItemIcon>
+									<ListItemIcon style={{color: "#3a5a40"}}>
 										<StarBorder />
 									</ListItemIcon>
-									<ListItemText primary={benefit}></ListItemText>
+									<ListItemText primary={benefit} className="xanthan-list-text"></ListItemText>
 								</ListItem>
 							))}
 						</List>
@@ -83,17 +84,17 @@ function Xanthan() {
 							<Table className='xanthan-modal-table'>
 								<TableHead>
 									<TableRow>
-										<TableCell>Characteristics</TableCell>
-										<TableCell>Specifications</TableCell>
+										<TableCell className="xanthan-table-text-headings">Characteristics</TableCell>
+										<TableCell className="xanthan-table-text-headings">Specifications</TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{product1.map((row) => (
 										<TableRow key={row.item}>
-											<TableCell component='th' scope='row'>
+											<TableCell component='th' scope='row' className="xanthan-table-text">
 												{row.item}
 											</TableCell>
-											<TableCell>{row.standard}</TableCell>
+											<TableCell className="xanthan-table-text">{row.standard}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
