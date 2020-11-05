@@ -89,9 +89,17 @@
 .seaweed-table-text-headings {
 	font-size: 1.2rem !important;
 }
-@media only screen and (max-width: 1150px) and (min-width: 721px) {
+@media only screen and (max-width: 1000px) and (min-width: 721px) {
 	.seaweed-info {
 		font-size: 1rem;
+	}
+	.seaweed-card-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.seaweed-card-container-left,
+	.seaweed-card-container-right {
+		width: 70%;
 	}
 }
 @media only screen and (max-width: 720px) {
@@ -99,7 +107,9 @@
 		font-size: 2.5rem;
 	}
 	.seaweed-card-container {
+		margin: 50px auto;
 		flex-direction: column;
+		align-items: center;
 	}
 	.seaweed-card-container-left,
 	.seaweed-card-container-right {

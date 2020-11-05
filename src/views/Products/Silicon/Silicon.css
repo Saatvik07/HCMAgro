@@ -81,7 +81,7 @@
 .silicon-modal-heading {
 	background-color: #3a5a40 !important;
 	display: flex;
-	width: 80%;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	margin: 20px auto;
@@ -95,7 +95,16 @@
 	align-items: center;
 	flex-direction: column;
 }
-
+@media only screen and (max-width: 1100px) and (min-width: 721px) {
+	.silicon-modal-container {
+		flex-direction: column;
+		margin-top: 0px;
+	}
+	.silicon-modal-left-div,
+	.silicon-modal-right-div {
+		width: 70%;
+	}
+}
 @media only screen and (max-width: 720px) {
 	.silicon-hero-info > h1 {
 		font-size: 2.5rem;

@@ -32,6 +32,7 @@ import Silicon from "../Products/Silicon/Silicon";
 import ScrollTop from "../../utils/ScrollTop";
 import {sendCatalogue} from "../../utils/helpers";
 import Seaweed from "../Products/Seaweed/Seaweed";
+import Zinc from "../Products/Zinc/Zinc";
 function App() {
 	const [email, setEmail] = useState("");
 	const [mailLoader, setMailLoader] = useState(false);
@@ -103,6 +104,7 @@ function App() {
 						<Route path = "/amino" component={Amino}></Route>
 						<Route path="/humate" component={Humates}></Route>
 						<Route path="/seaweed" component={Seaweed}></Route>
+						<Route path="/zinc" component={Zinc}></Route>
 					</Switch>
 				</div>
 				{matches ? (
