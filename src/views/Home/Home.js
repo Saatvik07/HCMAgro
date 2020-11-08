@@ -1,5 +1,5 @@
-import React from "react";
-import { withRouter, useHistory, Link} from "react-router-dom";
+import React, {useEffect}from "react";
+import { withRouter, useHistory} from "react-router-dom";
 import "./Home.css";
 import SwiperCore, { Navigation, A11y, EffectFade, Autoplay} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,10 +9,14 @@ import "swiper/components/effect-flip/effect-flip.scss";
 import NavBar from "../NavBar/NavBar";
 import { Button, useMediaQuery, IconButton} from "@material-ui/core";
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
+import AOS from "aos";
 SwiperCore.use([Navigation, A11y, Autoplay, EffectFade]);
 function Home() {
 	const matches = useMediaQuery("(max-width:720px)");
 	const history = useHistory();
+	useEffect(()=>{
+		AOS.init();
+	},[])
 	return (
 		<div>
 			<Swiper
@@ -196,37 +200,53 @@ function Home() {
 			</Swiper>
 			<div className="hex-container">
 				<div className="upper-hex-container">
-					<div className="hex-image hex1"></div>
-					<div className="hex-image hex2"></div>
+					<div className="hex-image hex1"
+						data-aos='fade-up'
+						data-aos-mirror='true'
+						data-aos-once='false'></div>
+					
 				</div>
 				<div className="lower-hex-container">
-					<div className="hex-image hex3"></div>
+				<div className="hex-image hex2"
+					data-aos='fade-left'
+					data-aos-mirror='true'
+					data-aos-once='false'></div>
+					<div className="hex-image hex3"
+					data-aos='fade-right'
+					data-aos-mirror='true'
+					data-aos-once='false'></div>
 				</div>
 			</div>
 			
 			
 			{matches?
-			<div className="home-about-hero-container animate__animated animate__fadeIn">
+			<div className="home-about-hero-container animate__animated animate__fadeIn" data-aos='fade-up'
+			data-aos-mirror='true'
+			data-aos-once='false' >
 					<div style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"space-evenly",marginBottom:"30px"}}>
-						<div className="home-about-hero-left">
+						<div className="home-about-hero-left" >
 							<p>Get to know all about HCM</p>
-							<IconButton size="small"
+							<IconButton size="small" 
 								onClick={() => {
 									history.push("/about");
 								}}
 							>
-								<ArrowForwardOutlinedIcon />
+								<ArrowForwardOutlinedIcon style={{color: "#3a5a40"}}/>
 							</IconButton> 
 						</div>
 						
-						<div className="home-about-hero-right">
+						<div className="home-about-hero-right" data-aos='fade-up'
+						data-aos-mirror='true'
+						data-aos-once='false'>
 							<p>HCM Agro Products is the key enterprise in the field of agriculture focusing
 								relentlessly on quality and empowering our customers with a stunning and
 								innovative range of products.Our broad vision propels us forward in the direction of sustainable agriculture
 								with minimal impact on the environment which encompasses several aspects.</p>
 						</div>
 					</div>
-					<div className="home-about-hero-svg-bar">
+					<div className="home-about-hero-svg-bar" data-aos='fade-up'
+						data-aos-mirror='true'
+						data-aos-once='false'>
 							<div className="home-about-svg-container">
 								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg"/>
 								<h5>Innovative</h5>
@@ -250,7 +270,10 @@ function Home() {
 					</div>
 			</div>
 			:<div className="home-about-hero-container animate__animated animate__fadeIn">
-					<div className="home-about-hero-left">
+					<div className="home-about-hero-left"
+						data-aos='fade-up'
+						data-aos-mirror='true'
+						data-aos-once='false'>
 						<p>Get to know all about HCM</p>
 						<Button variant="outlined" className="home-learn-button" size="large" onClick={() => {
 								history.push("/about");
@@ -259,13 +282,19 @@ function Home() {
 						</Button>
 					</div>
 					
-					<div className="home-about-hero-right">
+					<div className="home-about-hero-right" 
+							data-aos='fade-up'
+							data-aos-mirror='true'
+							data-aos-once='false'>
 						<p>HCM Agro Products is the key enterprise in the field of agriculture focusing
 							relentlessly on quality and empowering our customers with a stunning and
 							innovative range of products.Our broad vision propels us forward in the direction of sustainable agriculture
 							with minimal impact on the environment which encompasses several aspects.</p>
 						
-						<div className="home-about-hero-svg-bar">
+						<div className="home-about-hero-svg-bar" 
+							data-aos='fade-up'
+							data-aos-mirror='true'
+							data-aos-once='false'>
 							<div className="home-about-svg-container">
 								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg"/>
 								<h5>Innovative</h5>

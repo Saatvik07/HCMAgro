@@ -143,6 +143,10 @@ body
 	align-items: center;
 	margin: 20px;
 }
+.home-about-svg-container > h5 {
+	font-size: 1.2rem;
+	color: #3a5a40;
+}
 .home-about-hero-svg-bar {
 	display: flex;
 	width: 100%;
@@ -205,11 +209,14 @@ body
 	justify-content: center;
 	align-items: center;
 }
-.hex1,
-.hex2 {
-	margin: 0px 30px;
+.hex2,
+.hex3 {
+	margin: 0px 35px;
+	transform: rotateZ(270deg);
 }
-
+.hex1 {
+	transform: rotateZ(90deg);
+}
 @media only screen and (max-width: 720px) {
 	.slide-info {
 		width: 80%;

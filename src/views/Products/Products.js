@@ -15,7 +15,7 @@ import {
 	ListItemText,
 } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-
+import AOS from "aos";
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
 import { useHistory } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
@@ -27,6 +27,9 @@ function Products() {
 	const [expandZinc, setExpandZinc] = useState(false);
 	const [expandFilm, setExpandFilm] = useState(false);
 	const history = useHistory();
+	useEffect(()=>{
+		AOS.init();
+	},[])
 	return (
 		<div className='products-container'>
 			<div className='products-hero animate__animated animate__fadeIn'>
@@ -38,7 +41,9 @@ function Products() {
 				</div>
 			</div>
 			<div className='products-card-container'>
-				<Card className='products-card one animate__animated animate__fadeIn'>
+				<Card className='products-card one animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/manure");
@@ -76,7 +81,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card two animate__animated animate__fadeIn'>
+				<Card className='products-card two animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/xanthan");
@@ -114,7 +121,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card three animate__animated animate__fadeIn'>
+				<Card className='products-card three animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							history.push("/silicon");
@@ -152,7 +161,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card one animate__animated animate__fadeIn'>
+				<Card className='products-card one animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							setExpandSeaWeed(!expandSeaWeed);
@@ -235,7 +246,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card two animate__animated animate__fadeIn'>
+				<Card className='products-card two animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							setExpandBio(!expandBio);
@@ -372,7 +385,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card three animate__animated animate__fadeIn'>
+				<Card className='products-card three animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							setExpandHumate(!expandHumate);
@@ -450,7 +465,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card one animate__animated animate__fadeIn'>
+				<Card className='products-card one animate__animated animate__fadeIn'
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							setExpandAmino(!expandAmino);
@@ -515,7 +532,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card two animate__animated animate__fadeIn'>
+				<Card className='products-card two animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							setExpandZinc(!expandZinc);
@@ -574,7 +593,9 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card three animate__animated animate__fadeIn'>
+				<Card className='products-card three animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
 							setExpandFilm(!expandFilm);
