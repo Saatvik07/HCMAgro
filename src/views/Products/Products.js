@@ -552,7 +552,7 @@ function Products() {
 								component='h2'
 								style={{ marginBottom: "20px", color: "#DAD7CD" }}
 							>
-								Zinc Series
+								Zinc Oxide Series
 							</Typography>
 							In plants, zinc is a key constituent of many enzymes and proteins. It is needed by
 							plants in small amounts, but yet crucial to plant development.
@@ -569,13 +569,13 @@ function Products() {
 									<ListItemIcon>
 										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
-									<ListItemText primary='Zinc Tablets' className='products-list-text' />
+									<ListItemText primary='Zinc Oxide Tablets' className='products-list-text' />
 								</ListItem>
 								<ListItem>
 									<ListItemIcon>
 										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
 									</ListItemIcon>
-									<ListItemText primary='Zinc Powder' className='products-list-text' />
+									<ListItemText primary='Zinc Oxide Powder' className='products-list-text' />
 								</ListItem>
 							</List>
 						</CardContent>
@@ -585,7 +585,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/zinc");
+									history.push("/zinc-oxide");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />
@@ -680,6 +680,66 @@ function Products() {
 								className='products-card-button'
 								onClick={() => {
 									history.push("/pva");
+								}}
+							>
+								<ArrowForwardOutlinedIcon />
+							</IconButton>
+						</div>
+					</CardActions>
+				</Card>
+				<Card className='products-card two animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
+					<CardActionArea
+						onClick={() => {
+							setExpandZinc(!expandZinc);
+						}}
+					>
+						<img
+							className='products-card-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
+							alt='seaweed extract'
+						/>
+						<CardContent className='products-card-info'>
+							<Typography
+								gutterBottom
+								variant='h5'
+								component='h2'
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
+							>
+								Zinc-EDTA Series
+							</Typography>
+							Zinc is an essential micronutrient for plants growth.Because Chelated Zinc is readily available for plants to absorb, it will improve zinc deficiencies faster
+							<br></br>
+							<Button variant='outlined' className='products-card-expand-icon'>
+								SEE MORE
+							</Button>
+						</CardContent>
+					</CardActionArea>
+					<Collapse in={expandZinc} timeout='auto' unmountOnExit>
+						<CardContent>
+							<List>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
+									</ListItemIcon>
+									<ListItemText primary='Zinc-EDTA Tablets' className='products-list-text' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
+									</ListItemIcon>
+									<ListItemText primary='Zinc-EDTA Powder' className='products-list-text' />
+								</ListItem>
+							</List>
+						</CardContent>
+					</Collapse>
+					<CardActions>
+						<div className='products-card-footer'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/zinc-edta");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />

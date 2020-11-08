@@ -43,7 +43,7 @@ function Zinc() {
 			<NavBar />
 				<div className='zinc-hero-overlay '>
 					<div className='zinc-hero-info'>
-						<h1>Zinc Series</h1>
+						<h1>Zinc Oxide Series</h1>
 					</div>
 				</div>
 			</div>
@@ -89,7 +89,7 @@ function Zinc() {
 							))}
 						</List>
                         <Paper elevation={5} className='zinc-modal-heading'>
-							<h2>Application</h2>
+							<h2>Applications</h2>
 						</Paper>
                         <Accordion className="zinc-accordion">
                             <AccordionSummary

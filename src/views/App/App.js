@@ -34,6 +34,7 @@ import {sendCatalogue} from "../../utils/helpers";
 import Seaweed from "../Products/Seaweed/Seaweed";
 import Zinc from "../Products/Zinc/Zinc";
 import PVA from "../Products/PVA/PVA";
+import ZincEDTA from "../Products/ZincEDTA/ZincEDTA";
 function App() {
 	const [email, setEmail] = useState("");
 	const [mailLoader, setMailLoader] = useState(false);
@@ -105,8 +106,9 @@ function App() {
 						<Route path = "/amino" component={Amino}></Route>
 						<Route path="/humate" component={Humates}></Route>
 						<Route path="/seaweed" component={Seaweed}></Route>
-						<Route path="/zinc" component={Zinc}></Route>
+						<Route path="/zinc-oxide" component={Zinc}></Route>
 						<Route path="/pva" component={PVA}></Route>
+						<Route path="/zinc-edta" component={ZincEDTA}></Route>
 					</Switch>
 				</div>
 				{matches ? (
