@@ -679,7 +679,7 @@ function Products() {
 							<IconButton
 								className='products-card-button'
 								onClick={() => {
-									history.push("/category2");
+									history.push("/pva");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />

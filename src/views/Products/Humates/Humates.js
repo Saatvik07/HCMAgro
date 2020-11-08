@@ -284,7 +284,7 @@ function Humates() {
                 <Card className='humate-card animate__animated animate__fadeIn'>
 					<CardActionArea
 						onClick={() => {
-							setModals([false, false, false, true,false]);
+							setModals([false, false, false, false,true]);
 						}}
 					>
 						<img
@@ -312,7 +312,7 @@ function Humates() {
 								variant='outlined'
 								className='humate-card-button'
 								onClick={() => {
-									setModals([false, false, false, true,false]);
+									setModals([false, false, false, false,true]);
 								}}
 							>
 								Learn More
@@ -418,7 +418,7 @@ function Humates() {
 				</div>
 			</Dialog>
 			<Dialog open={modals[2]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
-				<div className='product-dialog-container '>
+				<div className='product-dialog-container ' style={{alignItems:"flex-start"}}>
 					<div className='amino-dialog-left-div'>
 						<img
 							className='humate-dialog-image'

@@ -33,6 +33,7 @@ import ScrollTop from "../../utils/ScrollTop";
 import {sendCatalogue} from "../../utils/helpers";
 import Seaweed from "../Products/Seaweed/Seaweed";
 import Zinc from "../Products/Zinc/Zinc";
+import PVA from "../Products/PVA/PVA";
 function App() {
 	const [email, setEmail] = useState("");
 	const [mailLoader, setMailLoader] = useState(false);
@@ -105,6 +106,7 @@ function App() {
 						<Route path="/humate" component={Humates}></Route>
 						<Route path="/seaweed" component={Seaweed}></Route>
 						<Route path="/zinc" component={Zinc}></Route>
+						<Route path="/pva" component={PVA}></Route>
 					</Switch>
 				</div>
 				{matches ? (
