@@ -26,6 +26,8 @@ function Products() {
 	const [expandAmino, setExpandAmino] = useState(false);
 	const [expandZinc, setExpandZinc] = useState(false);
 	const [expandFilm, setExpandFilm] = useState(false);
+	const [expandSilica, setExpandSilica] = useState(false);
+	const [expandZincEDTA, setExpandZincEDTA] = useState(false);
 	const history = useHistory();
 	useEffect(()=>{
 		AOS.init();
@@ -687,12 +689,12 @@ function Products() {
 						</div>
 					</CardActions>
 				</Card>
-				<Card className='products-card two animate__animated animate__fadeIn' 
+				<Card className='products-card one animate__animated animate__fadeIn' 
 						data-aos-mirror='true'
 						data-aos-once='false'>
 					<CardActionArea
 						onClick={() => {
-							setExpandZinc(!expandZinc);
+							setExpandZincEDTA(!expandZincEDTA);
 						}}
 					>
 						<img
@@ -716,7 +718,7 @@ function Products() {
 							</Button>
 						</CardContent>
 					</CardActionArea>
-					<Collapse in={expandZinc} timeout='auto' unmountOnExit>
+					<Collapse in={expandZincEDTA} timeout='auto' unmountOnExit>
 						<CardContent>
 							<List>
 								<ListItem>
@@ -740,6 +742,108 @@ function Products() {
 								className='products-card-button'
 								onClick={() => {
 									history.push("/zinc-edta");
+								}}
+							>
+								<ArrowForwardOutlinedIcon />
+							</IconButton>
+						</div>
+					</CardActions>
+				</Card>
+				<Card className='products-card two animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
+					<CardActionArea
+						onClick={() => {
+							setExpandSilica(!expandSilica);
+						}}
+					>
+						<img
+							className='products-card-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
+							alt='seaweed extract'
+						/>
+						<CardContent className='products-card-info'>
+							<Typography
+								gutterBottom
+								variant='h5'
+								component='h2'
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
+							>
+								Silica Series
+							</Typography>
+							Silicate fertilizer in effervescent form for paddy , upland and grass.
+							<br></br>
+							<Button variant='outlined' className='products-card-expand-icon'>
+								SEE MORE
+							</Button>
+						</CardContent>
+					</CardActionArea>
+					<Collapse in={expandSilica} timeout='auto' unmountOnExit>
+						<CardContent>
+							<List>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
+									</ListItemIcon>
+									<ListItemText primary='Silica Tablets' className='products-list-text' />
+								</ListItem>
+								<ListItem>
+									<ListItemIcon>
+										<ChevronRightIcon style={{ color: "#DAD7CD" }} />
+									</ListItemIcon>
+									<ListItemText primary='Silica Powder' className='products-list-text' />
+								</ListItem>
+							</List>
+						</CardContent>
+					</Collapse>
+					<CardActions>
+						<div className='products-card-footer'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/silica");
+								}}
+							>
+								<ArrowForwardOutlinedIcon />
+							</IconButton>
+						</div>
+					</CardActions>
+				</Card>
+				<Card className='products-card three animate__animated animate__fadeIn' 
+						data-aos-mirror='true'
+						data-aos-once='false'>
+					<CardActionArea
+						onClick={() => {
+							history.push("/glass-beads");
+						}}
+					>
+						<img
+							className='products-card-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
+							alt='seaweed extract'
+						/>
+						<CardContent className='products-card-info'>
+							<Typography
+								gutterBottom
+								variant='h5'
+								component='h2'
+								style={{ marginBottom: "20px", color: "#DAD7CD" }}
+							>
+								Glass Beads
+							</Typography>
+							Info not available 
+							<br></br>
+							<Button variant='outlined' className='products-card-expand-icon'>
+								SEE MORE
+							</Button>
+						</CardContent>
+					</CardActionArea>
+					<CardActions>
+						<div className='products-card-footer'>
+							<IconButton
+								className='products-card-button'
+								onClick={() => {
+									history.push("/glass-beads");
 								}}
 							>
 								<ArrowForwardOutlinedIcon />

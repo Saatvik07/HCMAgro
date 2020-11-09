@@ -29,6 +29,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import Contact from "../Contact/Contact";
 import Xanthan from "../Products/Xanthan/Xanthan";
 import Silicon from "../Products/Silicon/Silicon";
+import Silica from "../Products/Silica/Silica";
 import ScrollTop from "../../utils/ScrollTop";
 import {sendCatalogue} from "../../utils/helpers";
 import Seaweed from "../Products/Seaweed/Seaweed";
@@ -109,6 +110,7 @@ function App() {
 						<Route path="/zinc-oxide" component={Zinc}></Route>
 						<Route path="/pva" component={PVA}></Route>
 						<Route path="/zinc-edta" component={ZincEDTA}></Route>
+						<Route path="/silica" component={Silica}></Route>
 					</Switch>
 				</div>
 				{matches ? (

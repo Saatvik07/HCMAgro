@@ -2,12 +2,6 @@ import React from 'react'
 import StarBorder from "@material-ui/icons/StarBorder";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import {
-	TableContainer,
-	TableHead,
-	TableCell,
-	TableRow,
-	Table,
-	TableBody,
 	Paper,
 	List,
 	ListItem,
