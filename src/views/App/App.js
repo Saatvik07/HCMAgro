@@ -42,16 +42,8 @@ function App() {
 	const [prompt, setPrompt] = useState(null);
 	const matches = useMediaQuery("(max-width:1250px)");
 	useEffect(() => {
-		document.onreadystatechange = function(){
-			if (document.readyState !== "complete") { 
-				document.querySelector("body").style.visibility = "hidden"; 
-				document.querySelector("#loader").style.visibility = "visible"; 
-			} else { 
-				document.querySelector("#loader").style.display = "none"; 
-				document.querySelector("body").style.visibility = "visible"; 
-			} 
-		}
-	}, [])
+		
+	}, []);
 	const handleSendClick = () =>{
 		setMailLoader(true);
 		setPrompt(<div style={{background:"linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", display:"flex", justifyContent:"space-evenly", alignItems:"center",padding:"20px",color:"#DAD7CD", maxWidth:"100vw"}} className="animate__animated animate__fadeIn">
@@ -585,7 +577,6 @@ function App() {
 					</>
 				)}
 				{prompt}
-				<CircularProgress className="loader" id="loader"/>
 			</BrowserRouter>
 		</div>
 	);

@@ -217,6 +217,9 @@ body
 .hex1 {
 	transform: rotateZ(90deg);
 }
+.not-loaded {
+	display: none;
+}
 @media only screen and (max-width: 720px) {
 	.slide-info {
 		width: 80%;

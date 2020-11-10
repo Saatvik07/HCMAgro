@@ -1,4 +1,4 @@
-import React, {useEffect}from "react";
+import React, {useEffect, useState}from "react";
 import { withRouter, useHistory} from "react-router-dom";
 import "./Home.css";
 import SwiperCore, { Navigation, A11y, EffectFade, Autoplay} from "swiper";
@@ -7,18 +7,26 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/effect-flip/effect-flip.scss";
 import NavBar from "../NavBar/NavBar";
-import { Button, useMediaQuery, IconButton} from "@material-ui/core";
+import { Button, useMediaQuery, IconButton, CircularProgress} from "@material-ui/core";
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
 import AOS from "aos";
 SwiperCore.use([Navigation, A11y, Autoplay, EffectFade]);
 function Home() {
 	const matches = useMediaQuery("(max-width:720px)");
 	const history = useHistory();
+	const [loading,setLoading] = useState([false,false]);
 	useEffect(()=>{
-		AOS.init();
-	},[])
+		if(loading[0]==true && loading[1]==true){
+			document.getElementById("loader").style.display="none";
+			document.getElementById("main-container").classList.remove("not-loaded");
+			AOS.init();
+			setLoading([false,false]);
+		}
+		console.log(loading);
+	})
 	return (
-		<div>
+		<div style={{textAlign:"center"}}> 
+			<div id="main-container" className="not-loaded">
 			<Swiper
 				slidesPerView={1}
 				navigation
@@ -31,6 +39,7 @@ function Home() {
 					stopOnLastSlide: false,
 					disableOnInteraction: false,
 				}}
+				
 			>
 				<SwiperSlide tag='li'>
 					<div
@@ -47,6 +56,9 @@ function Home() {
 									src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
 									alt='logo'
 									style={{ width: "200px", height: "auto", opacity: 1 }}
+									onLoad = {()=>{
+										setLoading([true,loading[1]]);
+									}}
 								></img>
 								<h1 style={{ color: "white", opacity: 1 }}>
 									We welcome you to fascinating world of HCM Agro Products Private Ltd.
@@ -198,7 +210,7 @@ function Home() {
 				</SwiperSlide>
 				...
 			</Swiper>
-			<div className="hex-container">
+			<div className="hex-container" >
 				<div className="upper-hex-container">
 					<div className="hex-image hex1"
 						data-aos='fade-up'
@@ -248,7 +260,9 @@ function Home() {
 						data-aos-mirror='true'
 						data-aos-once='false'>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg" onLoad = {()=>{
+					setLoading([loading[0],true]);
+				}}/>
 								<h5>Innovative</h5>
 							</div>
 							<div className="home-about-svg-container">
@@ -269,7 +283,7 @@ function Home() {
 							</div>
 					</div>
 			</div>
-			:<div className="home-about-hero-container animate__animated animate__fadeIn">
+			:<div className="home-about-hero-container animate__animated animate__fadeIn" >
 					<div className="home-about-hero-left"
 						data-aos='fade-up'
 						data-aos-mirror='true'
@@ -296,7 +310,9 @@ function Home() {
 							data-aos-mirror='true'
 							data-aos-once='false'>
 							<div className="home-about-svg-container">
-								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg"/>
+								<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101158/output-onlinepngtools_10_dlgnob.png" className="home-about-svg" alt="research-svg" onLoad = {()=>{
+				setLoading([loading[0],true]);
+			}}/>
 								<h5>Innovative</h5>
 							</div>
 							<div className="home-about-svg-container">
@@ -319,7 +335,8 @@ function Home() {
 				</div>
 			</div>
 			}
-			
+			</div>
+			<CircularProgress id="loader" style={{height:"200px", width:"200px",color:"#3a5a40", marginTop:"50px"}}/>
 		</div>
 	);
 }

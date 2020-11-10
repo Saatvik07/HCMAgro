@@ -3,7 +3,7 @@ import AOS from "aos";
 import "./About.css";
 import "aos/dist/aos.css";
 
-import { List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from "@material-ui/core";
+import { List, ListItem, ListItemIcon, ListItemText, useMediaQuery, CircularProgress} from "@material-ui/core";
 
 import { Parallax } from "react-parallax";
 import NavBar from "../NavBar/NavBar";
@@ -14,17 +14,29 @@ function About() {
 	const backgroundPic = matches
 		? "https://res.cloudinary.com/maximuscloud/image/upload/v1602886111/pexels-karolina-grabowska-4207907_qntcox.jpg"
 		: "https://res.cloudinary.com/maximuscloud/image/upload/v1604110262/pexels-ketut-subiyanto-4132369_thzhs0.jpg";
-	useEffect(() => {
-		AOS.init();
-	}, []);
+	useEffect(()=>{
+
+		if(!loading){
+			document.getElementById("loader").style.display="none";
+			document.querySelector(".parallax-container").classList.remove("not-loaded");
+			setLoading(true);
+			AOS.init();
+		}
+		console.log(loading);
+	})
+	useEffect(()=>{
+		document.querySelector(".parallax-background").id="parallax-image";
+		document.getElementById("parallax-image").onload = ()=>{
+			setLoading(false);
+		}
+	})
 	return (
 		<div className='about-container'>
+			<div className="parallax-container not-loaded">
 			<Parallax
 				bgImage={backgroundPic}
 				strength={1500}
-				onLoad={() => {
-					setLoading(false);
-				}}
+				bgClassName="parallax-background"
 			>
 				<div className='about-hero '>
 					<div className='about-hero-overlay '>
@@ -194,6 +206,9 @@ function About() {
 					</div>
 				</div>
 			</Parallax>
+			</div>
+			
+			<CircularProgress id="loader" style={{height:"200px", width:"200px",color:"#3a5a40", marginTop:"50px"}}/>
 		</div>
 	);
 }
