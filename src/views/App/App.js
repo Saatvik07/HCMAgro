@@ -111,7 +111,7 @@ function App() {
 							<div className='footer-container-phone'>
 								<div className='footer-left-phone'>
 									<div className='footer-left-table'>
-										<Table>
+										<Table className="footer-left-table-container">
 											<TableHead>
 												<TableRow>
 													<TableCell className='footer-tableCell' colSpan={2}>
@@ -139,6 +139,8 @@ function App() {
 															</ListItem>
 														</Link>
 													</TableCell>
+												</TableRow>
+												<TableRow>
 													<TableCell className='footer-tableCell'>
 														<Link to='/about' className='router-link'>
 															<ListItem className='footer-table-listItem'>
@@ -156,19 +158,16 @@ function App() {
 											</TableBody>
 										</Table>
 										<div className="footer-center-left-bottom-phone">
-										<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_15_ddd6ej.png" alt="facebook" className="footer-social-icon"/>
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_14_rcfpvw.png" alt="instagram" className="footer-social-icon"/>
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_13_nxub9s.png" alt="mail" className="footer-social-icon"/>
+										<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_15_ddd6ej.png" alt="facebook" className="footer-social-icon-phone"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_14_rcfpvw.png" alt="instagram" className="footer-social-icon-phone"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_13_nxub9s.png" alt="mail" className="footer-social-icon-phone"/>
 										</div>
 									</div>
 									<div className='footer-left-email'>
-										<ListItem>
-											<ListItemIcon>
-												<EmailIcon style={{ color: "#DAD7CD" }} />
-											</ListItemIcon>
+										<div className="footer-left-email-iconbar">
+											<EmailIcon style={{ color: "#DAD7CD", marginRight:"10px"}} />
 											<ListItemText primary='Get the Catalogue' className='get-catalogue-label' />
-										</ListItem>
-
+										</div>
 										<TextField
 											className='footer-input phone'
 											variant='outlined'
@@ -212,7 +211,7 @@ function App() {
 													</Link>
 												</TableCell>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category2' className='router-link'>
+													<Link to='/xanthan' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
@@ -227,7 +226,7 @@ function App() {
 											</TableRow>
 											<TableRow>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category2' className='router-link'>
+													<Link to='/silicon' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
@@ -240,13 +239,13 @@ function App() {
 													</Link>
 												</TableCell>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category3' className='router-link'>
+													<Link to='/seaweed' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='Category4'
+																primary='Seaweed Extract'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
@@ -255,26 +254,26 @@ function App() {
 											</TableRow>
 											<TableRow>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category4' className='router-link'>
+													<Link to='/bio' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='Category5'
+																primary='Bio-Fertilizer'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
 													</Link>
 												</TableCell>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category2' className='router-link'>
+													<Link to='/humate' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='Category6'
+																primary='Humate/Humic Series'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
@@ -283,26 +282,26 @@ function App() {
 											</TableRow>
 											<TableRow>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category3' className='router-link'>
+													<Link to='/amino' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='Category7'
+																primary='Amino/Fulvic Acid Series'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
 													</Link>
 												</TableCell>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category4' className='router-link'>
+													<Link to='/zinc-oxide' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='Category8'
+																primary='Zinc Oxide Series'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
@@ -311,30 +310,73 @@ function App() {
 											</TableRow>
 											<TableRow>
 												<TableCell className='footer-tableCell'>
-													<Link to='/category2' className='router-link'>
+													<Link to='/pva' className='router-link'>
 														<ListItem className='footer-table-listItem'>
 															<ListItemIcon className='footer-table-icon'>
 																<DoubleArrowIcon />
 															</ListItemIcon>
 															<ListItemText
-																primary='Category9'
+																primary='PVA Films'
 																className='footer-link'
 															></ListItemText>
 														</ListItem>
 													</Link>
 												</TableCell>
+												<TableCell className='footer-tableCell'>
+													<Link to='/zinc-edta' className='router-link'>
+														<ListItem className='footer-table-listItem'>
+															<ListItemIcon className='footer-table-icon'>
+																<DoubleArrowIcon />
+															</ListItemIcon>
+															<ListItemText
+																primary='Zinc-EDTA Series'
+																className='footer-link'
+															></ListItemText>
+														</ListItem>
+													</Link>
+												</TableCell>
+												
+											</TableRow>
+											<TableRow>
+												<TableCell className='footer-tableCell'>
+													<Link to='/silica' className='router-link'>
+														<ListItem className='footer-table-listItem'>
+															<ListItemIcon className='footer-table-icon'>
+																<DoubleArrowIcon />
+															</ListItemIcon>
+															<ListItemText
+																primary='Silica Series'
+																className='footer-link'
+															></ListItemText>
+														</ListItem>
+													</Link>
+												</TableCell>
+												<TableCell className='footer-tableCell'>
+													<Link to='/glass-beads' className='router-link'>
+														<ListItem className='footer-table-listItem'>
+															<ListItemIcon className='footer-table-icon'>
+																<DoubleArrowIcon />
+															</ListItemIcon>
+															<ListItemText
+																primary='Glass Beads'
+																className='footer-link'
+															></ListItemText>
+														</ListItem>
+													</Link>
+												</TableCell>
+												
 											</TableRow>
 										</TableBody>
 									</Table>
-									<div className='footer-right-bottom'>
+								</div>
+							</div>
+							<div className='footer-bottom'>
 										<img
 											src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
 											alt='logo'
 											className='footer-logo-phone'
 										></img>
 										<h5>© 2020 HCM Agro Products Pvt Ltd. All Rights Reserved.</h5>
-									</div>
-								</div>
 							</div>
 						</footer>
 					</>
@@ -464,83 +506,127 @@ function App() {
 															</ListItem>
 														</Link>
 													</TableCell>
+													
 												</TableRow>
 												<TableRow>
 													<TableCell className='footer-tableCell'>
-														<Link to='/category3' className='router-link'>
+														<Link to='/bio' className='router-link'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
 																	<DoubleArrowIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='Category4'
+																	primary='Bio-Fertilizer'
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>
 														</Link>
 													</TableCell>
 													<TableCell className='footer-tableCell'>
-														<Link to='/category4' className='router-link'>
+														<Link to='/humate' className='router-link'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
 																	<DoubleArrowIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='Category5'
+																	primary="Humate/Humic Series"
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>
 														</Link>
 													</TableCell>
 													<TableCell className='footer-tableCell'>
-														<Link to='/category2' className='router-link'>
+														<Link to='/amino' className='router-link'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
 																	<DoubleArrowIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='Category6'
+																	primary='Amino/Fulvic Acid Series'
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>
 														</Link>
 													</TableCell>
+													
 												</TableRow>
 												<TableRow>
 													<TableCell className='footer-tableCell'>
-														<Link to='/category3' className='router-link'>
+														<Link to='/pva' className='router-link'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
 																	<DoubleArrowIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='Category7'
+																	primary='PVA Films'
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>
 														</Link>
 													</TableCell>
 													<TableCell className='footer-tableCell'>
-														<Link to='/category4' className='router-link'>
+														<Link to='/zinc-edta' className='router-link'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
 																	<DoubleArrowIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='Category8'
+																	primary='Zinc-EDTA Series'
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>
 														</Link>
 													</TableCell>
 													<TableCell className='footer-tableCell'>
-														<Link to='/category2' className='router-link'>
+														<Link to='/silica' className='router-link'>
 															<ListItem className='footer-table-listItem'>
 																<ListItemIcon className='footer-table-icon'>
 																	<DoubleArrowIcon />
 																</ListItemIcon>
 																<ListItemText
-																	primary='Category9'
+																	primary='Silica Series'
+																	className='footer-link'
+																></ListItemText>
+															</ListItem>
+														</Link>
+													</TableCell>
+													
+												</TableRow>
+												<TableRow>
+												<TableCell className='footer-tableCell'>
+														<Link to='/glass-beads' className='router-link'>
+															<ListItem className='footer-table-listItem'>
+																<ListItemIcon className='footer-table-icon'>
+																	<DoubleArrowIcon />
+																</ListItemIcon>
+																<ListItemText
+																	primary='Glass Beads'
+																	className='footer-link'
+																></ListItemText>
+															</ListItem>
+														</Link>
+													</TableCell>
+													<TableCell className='footer-tableCell'>
+														<Link to='/zinc-oxide' className='router-link'>
+															<ListItem className='footer-table-listItem'>
+																<ListItemIcon className='footer-table-icon'>
+																	<DoubleArrowIcon />
+																</ListItemIcon>
+																<ListItemText
+																	primary='Zinc Oxide Series'
+																	className='footer-link'
+																></ListItemText>
+															</ListItem>
+														</Link>
+													</TableCell>
+													<TableCell className='footer-tableCell'>
+														<Link to='/seaweed' className='router-link'>
+															<ListItem className='footer-table-listItem'>
+																<ListItemIcon className='footer-table-icon'>
+																	<DoubleArrowIcon />
+																</ListItemIcon>
+																<ListItemText
+																	primary='Sea Weed Extract'
 																	className='footer-link'
 																></ListItemText>
 															</ListItem>

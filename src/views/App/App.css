@@ -3,11 +3,11 @@ body {
 }
 .content-footer {
 	position: relative;
-	padding-bottom: 226px;
+	padding-bottom: 325px;
 }
 .content-footer-phone {
 	position: relative;
-	padding-bottom: 390px;
+	padding-bottom: 500px;
 }
 .content {
 	background-color: #dad7cd;
@@ -37,6 +37,7 @@ footer {
 	left: 0;
 	z-index: 0;
 	align-self: flex-end;
+	background-color: #3a5a40;
 }
 .footer-logo {
 	margin: 20px;
@@ -55,14 +56,17 @@ footer {
 	margin: 0;
 }
 .footer-center {
-	width: 60%;
+	width: 65%;
 	display: flex;
 	align-items: center;
 	color: #dad7cd;
 }
-.footer-center-left,
+.footer-center-left {
+	width: 25%;
+	margin: 30px;
+}
 .footer-center-right {
-	width: 35%;
+	width: 70%;
 	margin: 30px;
 }
 .footer-center-left {
@@ -128,7 +132,7 @@ td {
 	height: auto;
 }
 .footer-social-icon-phone {
-	width: 25px;
+	width: 22.5px;
 	height: auto;
 }
 .footer-sendBtn {
@@ -162,25 +166,25 @@ input:-webkit-autofill {
 }
 .footer-container-phone {
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	width: 100%;
 	background: #3a5a40;
 }
-.footer-left-phone,
+
 .footer-right-phone {
 	display: flex;
-	width: 45%;
+	width: 50%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
-.footer-right-phone {
-	width: 50%;
-	margin: 0 10px;
+.footer-left-phone {
+	width: 40%;
+	margin-right: 10px;
 }
 .footer-logo-phone {
-	width: 20%;
+	width: 15%;
 	height: auto;
 }
 .footer-right-bottom {
@@ -190,7 +194,13 @@ input:-webkit-autofill {
 	align-items: center;
 	justify-content: center;
 }
-.footer-right-bottom > h5 {
+.footer-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer-bottom > h5 {
 	font-size: 8px;
 	text-align: center;
 }
@@ -198,16 +208,44 @@ input:-webkit-autofill {
 	font-size: 14px;
 }
 .footer-left-email {
+	width: 80%;
+	margin: 10px auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+.footer-left-email-iconbar {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+}
+.footer-left-email-iconbar > svg {
+	font-size: 20px;
+}
+.phone > div > input {
+	height: 0.75rem !important;
+}
+.footer-left-table-container {
+	width: 80% !important;
+	margin: 0 auto;
 }
 @media only screen and (max-width: 720px) {
 	.footer-link > span {
 		font-size: 10px !important;
 	}
 	.content-footer-phone {
-		padding-bottom: 335px;
+		padding-bottom: 430px;
+	}
+	.get-catalogue-label > span {
+		font-size: 10px;
+	}
+	.footer-table-icon > svg {
+		font-size: 16px;
+	}
+	footer {
+		padding-top: 10px;
 	}
 }
