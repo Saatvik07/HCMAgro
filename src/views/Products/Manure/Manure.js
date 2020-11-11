@@ -51,7 +51,7 @@ function Manure() {
 						<img
 							className='manure-modal-image'
 							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							alt='Organic Manure'
 						/>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>

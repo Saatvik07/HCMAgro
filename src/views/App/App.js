@@ -372,7 +372,7 @@ function App() {
 							</div>
 							<div className='footer-bottom'>
 										<img
-											src='https://hcmagroproducts.com/wp-content/uploads/2018/08/LOgo.png'
+											src='https://res.cloudinary.com/maximuscloud/image/upload/v1604101145/output-onlinepngtools_16_k5noco.png'
 											alt='logo'
 											className='footer-logo-phone'
 										></img>

@@ -33,7 +33,7 @@ function Home() {
 				tag='ul'
 				effect='fade'
 				id='first'
-				className='animate__animated animate__fadeIn swiper-container'
+				className='animate__animated animate__fadeIn home-swiper-container'
 				autoplay={{
 					delay: "3000",
 					stopOnLastSlide: false,

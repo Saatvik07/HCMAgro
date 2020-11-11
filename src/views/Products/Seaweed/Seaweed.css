@@ -60,7 +60,7 @@
 }
 .seaweed-table-container {
 	width: 80% !important;
-	margin: 20px auto;
+	margin: 60px auto;
 	border: 2px solid #3a5a40 !important;
 }
 .seaweed-heading > h2 {
@@ -88,6 +88,21 @@
 }
 .seaweed-table-text-headings {
 	font-size: 1.2rem !important;
+}
+.seaweed-swiper-container {
+	height: 50vh !important;
+	width: 100% !important;
+	margin: 30px auto;
+}
+.seaweed-slide-info {
+	width: 100%;
+	background-color: #3a5a40;
+	opacity: 0.9;
+	display: flex;
+	justify-content: center;
+}
+.seaweed-slide-info > h1 {
+	color: #dad7cd;
 }
 @media only screen and (max-width: 1000px) and (min-width: 721px) {
 	.seaweed-info {
@@ -122,5 +137,9 @@
 	}
 	.seaweed-heading {
 		width: 90%;
+	}
+	.seaweed-swiper-container {
+		width: 90% !important;
+		margin: 0 auto;
 	}
 }

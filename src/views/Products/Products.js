@@ -63,8 +63,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557794/pexels-john-lambeth-2252584_gqmapm.jpg'
-								alt='humates'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/v1605027376/cover_isnwao.jpg'
+								alt='Organic Manure'
 								onLoad={()=>{
 									setLoading([true,loading[1],loading[2]]);
 								}}
@@ -192,7 +192,7 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/v1605050499/COVER_PICTURE_yrfbvl.jpg'
 								alt='seaweed extract'
 							/>
 							<CardContent className='products-card-info'>
