@@ -92,6 +92,9 @@
 .xanthan-table-text-headings {
 	font-size: 1.2rem !important;
 }
+.xanthan-card-container {
+	width: 100%;
+}
 @media only screen and (max-width: 1000px) and (min-width: 721px) {
 	.xanthan-hero-info > h1 {
 		font-size: 2.5rem;

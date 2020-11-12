@@ -101,7 +101,8 @@
 	display: flex;
 	justify-content: center;
 }
-.seaweed-slide-info > h1 {
+.seaweed-slide-info > h1,
+.seaweed-slide-info > h3 {
 	color: #dad7cd;
 }
 @media only screen and (max-width: 1000px) and (min-width: 721px) {

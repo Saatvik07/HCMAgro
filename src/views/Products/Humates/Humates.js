@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import StarBorder from "@material-ui/icons/StarBorder";
+import Carousel from 'react-material-ui-carousel';
 import {
 	Card,
 	CardActionArea,
@@ -120,7 +121,7 @@ function Humates() {
 			<NavBar />
 				<div className='humate-hero-overlay '>
 					<div className='humate-hero-info'>
-						<h1>Humates/Humic Series</h1>
+						<h1>Humate/Humic Series</h1>
 					</div>
 				</div>
 			</div>
@@ -132,8 +133,8 @@ function Humates() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='Granule Organic amino'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1605189057/Humid_acid_granules_f5u9em.jpg'
+							alt='Humic Acid'
 							className='humate-card-image'
 						/>
 						<CardContent style={{ height: "40%" }} className="humate-card-content">
@@ -171,7 +172,7 @@ function Humates() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566655/WhatsApp_Image_2020-09-18_at_22.32.15_1_fhjpq0.jpg'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/c_fill,h_2520,w_4048/v1605189289/Potassium_Flakes_uzsxrs.jpg'
 							alt='Granule Organic amino'
 							className='humate-card-image'
 						/>
@@ -210,7 +211,7 @@ function Humates() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566656/WhatsApp_Image_2020-09-18_at_22.31.30_x9y8d4.jpg'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_2520,w_4048/v1605200516/Sodium_humate_flakes_kqgnr6.jpg'
 							alt='Granule Organic amino'
 							className='humate-card-image'
 						/>
@@ -249,8 +250,8 @@ function Humates() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566656/WhatsApp_Image_2020-09-18_at_22.31.30_x9y8d4.jpg'
-							alt='Granule Organic amino'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_2520,w_4084/v1605204064/Boron_Humate_granules_jlt8vi.jpg'
+							alt='Boron Humate'
 							className='humate-card-image'
 						/>
 						<CardContent className="humate-card-content">
@@ -288,8 +289,8 @@ function Humates() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566656/WhatsApp_Image_2020-09-18_at_22.31.30_x9y8d4.jpg'
-							alt='Granule Organic amino'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_2520,w_4048/v1605093672/Cover_Picture_Super_potassium_CRYSTALS_xqc3mz.jpg'
+							alt='Super Potassium Humate'
 							className='humate-card-image'
 						/>
 						<CardContent className="humate-card-content">
@@ -324,11 +325,51 @@ function Humates() {
 			<Dialog open={modals[0]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div '>
-						<img
-							className='humate-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
+						<Carousel className="humate-carousel" interval={4000}>
+						<div>
+							<img
+								className='slide-container'
+								style={{
+									width:"100%",
+									margin: "0 auto",
+									height: "40vh",
+									display:"flex",
+									flexDirection:"column",
+									justifyContent: "flex-end",
+									backgroundImage:
+										"url(https://res.cloudinary.com/maximuscloud/image/upload/v1605094326/Humic_acid_FLAKES_jxe4ka.jpg)",
+								}}
+							/>
+                            
+							<div className='seaweed-slide-info'>
+								<h3>Humic Acid Flakes</h3>
+							</div>
+						</div>
+
+						
+                            
+                    
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height:"40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605189057/Humid_acid_granules_f5u9em.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h3>Humic Acid Granules</h3>
+                                </div>
+                            
+                        </div>
+						</Carousel>
+						
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>
@@ -370,11 +411,46 @@ function Humates() {
 			<Dialog open={modals[1]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
-						<img
-							className='humate-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
+					<Carousel className="humate-carousel" interval={4000}>
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height: "40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605189289/Potassium_Flakes_uzsxrs.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h1>Potassium Humate Flakes</h1>
+                                </div>
+                            
+                        </div>
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height:"40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605189288/Potassium_Humate_CRYSTALS_krkzaz.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h1>Potassium Humate Crystals</h1>
+                                </div>
+                            
+                        </div>
+						</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>
@@ -420,11 +496,27 @@ function Humates() {
 			<Dialog open={modals[2]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container ' style={{alignItems:"flex-start"}}>
 					<div className='amino-dialog-left-div'>
-						<img
-							className='humate-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
+					<Carousel className="humate-carousel" interval={4000}>
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height: "40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605200516/Sodium_humate_flakes_kqgnr6.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h1>Potassium Humate Flakes</h1>
+                                </div>
+                            
+                        </div>
+						</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>
@@ -463,7 +555,7 @@ function Humates() {
 					<Paper elevation={5} className='manure-modal-heading'>
 							<h2>For Animals</h2>
 						</Paper>
-					<List className="product-dialog-list">
+					<List className="product-dialog-list" style={{marginBottom:"50px"}}>
 							{sodiumBenefits2.map((benefit) => (
 								<ListItem>
 									<ListItemIcon style={{color:"#3a5a40"}}>
@@ -492,11 +584,27 @@ function Humates() {
 			<Dialog open={modals[3]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
-						<img
-							className='humate-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
+					<Carousel className="humate-carousel" interval={4000}>
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height: "40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605204064/Boron_Humate_granules_jlt8vi.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h1>Boron Humate Crystals</h1>
+                                </div>
+                            
+                        </div>
+					</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>
@@ -540,11 +648,46 @@ function Humates() {
 			<Dialog open={modals[4]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
-						<img
-							className='humate-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
+					<Carousel className="humate-carousel" interval={4000}>
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height: "40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605093672/Cover_Picture_Super_potassium_CRYSTALS_xqc3mz.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h1>Super Potassium Humate Crystals</h1>
+                                </div>
+                            
+                        </div>
+						<div
+                            className='slide-container'
+                            style={{
+                                width:"100%",
+								margin: "0 auto",
+								height:"40vh",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent: "flex-end",
+                                backgroundImage:
+                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605204111/Super_potassium_FLAKES_lxowoc.jpg)",
+                            }}
+                        >
+                            
+                                <div className='seaweed-slide-info'>
+                                    <h1>Super Potassium Humate Flakes</h1>
+                                </div>
+                            
+                        </div>
+						</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>

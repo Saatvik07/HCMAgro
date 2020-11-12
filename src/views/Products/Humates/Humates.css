@@ -101,6 +101,10 @@
 	animation-name: fadeAway;
 	animation-duration: 1s;
 }
+.humate-carousel {
+	height: 55vh !important;
+	width: 100% !important;
+}
 @keyfames fadeAway {
 	from {
 		opacity: 1;

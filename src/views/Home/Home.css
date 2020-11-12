@@ -23,8 +23,8 @@
 	justify-content: center;
 	align-items: center;
 	color: #dad7cd;
-	background-color: #344e41;
-	opacity: 0.85;
+	background-color: #151515;
+	opacity: 0.9;
 }
 body
 	> div.MuiDrawer-root.MuiDrawer-modal.menu-drawer

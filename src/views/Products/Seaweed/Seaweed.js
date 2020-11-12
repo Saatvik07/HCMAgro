@@ -108,22 +108,22 @@ function Seaweed() {
                                     ))}
                                 </List>
                                 <Swiper
-                    slidesPerView={1}
-                    navigation
-                    tag='ul'
-                    effect='flip'
-                    id='first'
-                    className='animate__animated animate__fadeIn seaweed-swiper-container'
-                    autoplay={{
-                        delay: "3000",
-                        stopOnLastSlide: false,
-                        disableOnInteraction: false,
-                    }}
-                    onLoad={()=>{
-                        setLoading([loading[0],true]);
-                    }}
-                    
-                >
+                            slidesPerView={1}
+                            navigation
+                            tag='ul'
+                            effect='flip'
+                            id='first'
+                            className='animate__animated animate__fadeIn seaweed-swiper-container'
+                            autoplay={{
+                                delay: "3000",
+                                stopOnLastSlide: false,
+                                disableOnInteraction: false,
+                            }}
+                            onLoad={()=>{
+                                setLoading([loading[0],true]);
+                            }}
+                            
+                        >
                     <SwiperSlide tag='li'>
                         <div
                             className='slide-container'
@@ -148,24 +148,20 @@ function Seaweed() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide tag='li'>
-                        <div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-                                margin: "0 auto",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605050746/seaweed_flakess_zkivqb.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Seaweed Flakes</h1>
-                                </div>
-                            
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                            <img
+                                className='slide-container'
+                                src='https://res.cloudinary.com/maximuscloud/image/upload/v1605050746/seaweed_flakess_zkivqb.jpg'
+                                style={{
+                                    width:"100%",
+                                    margin: "0 auto",
+                                }}
+                            />
+                            <div className='seaweed-slide-info'>
+                                <h1>Seaweed Flakes</h1>
+                            </div>
                         </div>
+                        
                     </SwiperSlide>
                     <SwiperSlide tag='li'>
                         <div

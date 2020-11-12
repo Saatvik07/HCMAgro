@@ -67,8 +67,8 @@ function Silicon() {
 					<div className='silicon-modal-left-div '>
 						<img
 							className='silicon-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1605208356/COVER_svqrlp.jpg'
+							alt='Silicon Spreader'
 						/>
 					</div>
 					

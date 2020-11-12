@@ -106,7 +106,7 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557804/pexels-matheus-cenali-2733918_j78wcf.jpg'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5184/v1605205885/Cover_picture_1_mveai5.jpg'
 								alt='Xanthan gum'
 								onLoad={()=>{
 									setLoading([loading[0],true,loading[2]]);
@@ -149,7 +149,7 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557788/pexels-quang-nguyen-vinh-2135677_f5mpyo.jpg'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5185/v1605206808/pexels-skitterphoto-9311_qwaqkk.jpg'
 								alt='Silicon Spreader'
 								onLoad={()=>{
 									setLoading([loading[0],loading[1],true]);
@@ -416,8 +416,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5184/v1605093672/Cover_Picture_Super_potassium_CRYSTALS_xqc3mz.jpg'
+								alt='Humates'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography
@@ -496,7 +496,7 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5184/v1605207095/Amino_acid_granules_iuuiao.jpg'
 								alt='seaweed extract'
 							/>
 							<CardContent className='products-card-info'>

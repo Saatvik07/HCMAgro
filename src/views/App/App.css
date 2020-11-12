@@ -23,6 +23,7 @@ body {
 	width: 100%;
 	background: #3a5a40;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 .footer-container-phone {
@@ -45,7 +46,7 @@ footer {
 	height: auto;
 }
 .footer-left {
-	width: 15%;
+	width: 20%;
 	margin: 0 30px;
 	display: flex;
 	flex-direction: column;
@@ -56,17 +57,13 @@ footer {
 	margin: 0;
 }
 .footer-center {
-	width: 65%;
+	width: 25%;
 	display: flex;
 	align-items: center;
 	color: #dad7cd;
 }
 .footer-center-left {
-	width: 25%;
-	margin: 30px;
-}
-.footer-center-right {
-	width: 70%;
+	width: 100%;
 	margin: 30px;
 }
 .footer-center-left {
@@ -76,7 +73,7 @@ footer {
 	align-items: center;
 }
 .footer-right {
-	width: 15%;
+	width: 25%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

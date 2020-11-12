@@ -62,8 +62,8 @@ function Xanthan() {
 					<div className='xanthan-modal-left-div '>
 						<img
 							className='xanthan-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1605206691/Xanthum_Gum_dajnoh.jpg'
+							alt='Xanthan Gum'
 						/>
 						<Paper elevation={5} className='xanthan-modal-heading'>
 							<h2>Applications</h2>
