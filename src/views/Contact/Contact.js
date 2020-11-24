@@ -78,7 +78,7 @@ function Contact() {
 		
 	}
 	return (
-		<div>
+		<div style={{textAlign:"center"}}>
 			<div className='contact-container  not-loaded animate__animated animate__fadeIn'>
 				<div className='contact-hero animate__animated animate__fadeIn'>
 					<NavBar />

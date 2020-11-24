@@ -4,7 +4,6 @@ import { Paper, List, ListItem, ListItemIcon, ListItemText, Button, Dialog, useM
 import StarBorder from "@material-ui/icons/StarBorder";
 import NavBar from "../../NavBar/NavBar";
 import "../../../../node_modules/video-react/dist/video-react.css"; 
-import { Player } from 'video-react';
 const product1Benefits = [
 	"Facilitate uptake of chemicals into the plant tissue.",
 	"Easy dispersion in aqueous systems.",

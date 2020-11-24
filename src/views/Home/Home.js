@@ -7,11 +7,54 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/effect-flip/effect-flip.scss";
 import NavBar from "../NavBar/NavBar";
-import { Button, useMediaQuery, IconButton, CircularProgress} from "@material-ui/core";
+import { Button, useMediaQuery, IconButton, CircularProgress,GridList,GridListTile,GridListTileBar, makeStyles} from "@material-ui/core";
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
 import AOS from "aos";
 SwiperCore.use([Navigation, A11y, Autoplay, EffectFade]);
+const tileData = [
+	{
+		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605050728/Seaweed_granules_yhjcmy.jpg",
+		title:"Seaweed Extract",
+
+	},
+	{
+		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605189057/Humid_acid_granules_f5u9em.jpg",
+		title:"Humic Acid",
+	},
+	{
+		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605050732/seaweed_gel_mg5iax.jpg",
+		title:"Seaweed Extract Gel"
+	},
+	{
+		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605204111/Super_potassium_FLAKES_lxowoc.jpg",
+		title:"Super Potassium Flakes"
+	}
+]
+const useStyles = makeStyles((theme) => ({
+	root: {
+	  display: 'flex',
+	  flexWrap: 'wrap',
+	  justifyContent: 'space-around',
+	  overflow: 'hidden',
+	  backgroundColor: theme.palette.background.paper,
+	},
+	gridList: {
+	  flexWrap: 'nowrap',
+	  // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+	  transform: 'translateZ(0)',
+	  margin: "30px 0px !important"
+	},
+	title: {
+	  color: theme.palette.primary.light,
+	},
+	titleBar: {
+	  background:
+		'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+	},
+  }));
 function Home() {
+	const classes = useStyles();
 	const matches = useMediaQuery("(max-width:720px)");
 	const history = useHistory();
 	const [loading,setLoading] = useState([false,false]);
@@ -210,7 +253,24 @@ function Home() {
 				</SwiperSlide>
 				...
 			</Swiper>
-			<div className="hex-container" >
+			<p className="home-best-heading">Our Bestsellers</p>
+			<GridList className={classes.gridList} cols={2.5}>
+				{tileData.map((tile) => (
+				<GridListTile key={tile.img} className="home-tile">
+					<img src={tile.image} alt={tile.title} />
+					<GridListTileBar
+					title={tile.title}
+					className="home-title-bar"
+					actionIcon={
+						<IconButton aria-label={`star ${tile.title}`}>
+						<OpenInNewIcon  style={{color:"#dad7cd"}}/>
+						</IconButton>
+					}
+					/>
+				</GridListTile>
+				))}
+      	</GridList>
+			{/* <div className="hex-container" >
 				<div className="upper-hex-container">
 					<div className="hex-image hex1"
 						data-aos='fade-up'
@@ -228,7 +288,7 @@ function Home() {
 					data-aos-mirror='true'
 					data-aos-once='false'></div>
 				</div>
-			</div>
+			</div> */}
 			
 			
 			{matches?

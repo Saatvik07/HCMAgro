@@ -108,7 +108,7 @@ function App() {
 				{matches ? (
 					<>
 						<footer>
-							<div className='footer-container-phone'>
+							<div className='footer-container-phone' style={{marginTop:"30px"}}>
 								<div className='footer-left-phone'>
 									<div className='footer-left-table'>
 										<Table className="footer-left-table-container">
@@ -116,9 +116,7 @@ function App() {
 												<TableRow>
 													<TableCell className='footer-tableCell' colSpan={2}>
 														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<TripOriginIcon />
-															</ListItemIcon>
+															
 															<ListItemText
 																primary='Quick Links'
 																className='footer-link'
@@ -132,21 +130,14 @@ function App() {
 													<TableCell className='footer-tableCell'>
 														<Link to='/' className='router-link'>
 															<ListItem className='footer-table-listItem'>
-																<ListItemIcon className='footer-table-icon'>
-																	<DoubleArrowIcon />
-																</ListItemIcon>
 																<ListItemText primary='Home' className='footer-link'></ListItemText>
 															</ListItem>
 														</Link>
 													</TableCell>
-												</TableRow>
-												<TableRow>
 													<TableCell className='footer-tableCell'>
 														<Link to='/about' className='router-link'>
 															<ListItem className='footer-table-listItem'>
-																<ListItemIcon className='footer-table-icon'>
-																	<DoubleArrowIcon />
-																</ListItemIcon>
+																
 																<ListItemText
 																	primary='About Us'
 																	className='footer-link'
@@ -158,13 +149,15 @@ function App() {
 											</TableBody>
 										</Table>
 										<div className="footer-center-left-bottom-phone">
-										<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_15_ddd6ej.png" alt="facebook" className="footer-social-icon-phone"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_15_ddd6ej.png" alt="facebook" className="footer-social-icon-phone"/>
 											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_14_rcfpvw.png" alt="instagram" className="footer-social-icon-phone"/>
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_13_nxub9s.png" alt="mail" className="footer-social-icon-phone"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1606176122/output-onlinepngtools_18_vvdvub.png" alt="mail" className="footer-social-icon-phone"/>
 										</div>
 									</div>
-									<div className='footer-left-email'>
-										<div className="footer-left-email-iconbar">
+									
+								</div>
+								<div className='footer-right-phone'>
+								<div className="footer-left-email-iconbar" style={{width:"65%",margin:"0px auto 10px auto"}}>
 											<EmailIcon style={{ color: "#DAD7CD", marginRight:"10px"}} />
 											<ListItemText primary='Get the Catalogue' className='get-catalogue-label' />
 										</div>
@@ -179,195 +172,7 @@ function App() {
 										<Button variant='outlined' className='footer-sendBtn' onClick={handleSendClick}>
 											Send
 										</Button>
-									</div>
-								</div>
-								<div className='footer-right-phone'>
-									<Table>
-										<TableHead>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<ListItem className='footer-table-listItem'>
-														<ListItemIcon className='footer-table-icon'>
-															<TripOriginIcon />
-														</ListItemIcon>
-														<ListItemText primary='Products' className='footer-link'></ListItemText>
-													</ListItem>
-												</TableCell>
-											</TableRow>
-										</TableHead>
-										<TableBody>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/manure' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Organic Manure'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												<TableCell className='footer-tableCell'>
-													<Link to='/xanthan' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Xanthan Gum'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/silicon' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Silicon Spreader'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												<TableCell className='footer-tableCell'>
-													<Link to='/seaweed' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Seaweed Extract'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/bio' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Bio-Fertilizer'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												<TableCell className='footer-tableCell'>
-													<Link to='/humate' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Humate/Humic Series'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/amino' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Amino/Fulvic Acid Series'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												<TableCell className='footer-tableCell'>
-													<Link to='/zinc-oxide' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Zinc Oxide Series'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/pva' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='PVA Films'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												<TableCell className='footer-tableCell'>
-													<Link to='/zinc-edta' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Zinc-EDTA Series'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												
-											</TableRow>
-											<TableRow>
-												<TableCell className='footer-tableCell'>
-													<Link to='/silica' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Silica Series'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												<TableCell className='footer-tableCell'>
-													<Link to='/glass-beads' className='router-link'>
-														<ListItem className='footer-table-listItem'>
-															<ListItemIcon className='footer-table-icon'>
-																<DoubleArrowIcon />
-															</ListItemIcon>
-															<ListItemText
-																primary='Glass Beads'
-																className='footer-link'
-															></ListItemText>
-														</ListItem>
-													</Link>
-												</TableCell>
-												
-											</TableRow>
-										</TableBody>
-									</Table>
+									
 								</div>
 							</div>
 							<div className='footer-bottom'>
@@ -438,14 +243,14 @@ function App() {
 										<div className="footer-center-left-bottom">
 											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_15_ddd6ej.png" alt="facebook" className="footer-social-icon"/>
 											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_14_rcfpvw.png" alt="instagram" className="footer-social-icon"/>
-											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1604101143/output-onlinepngtools_13_nxub9s.png" alt="mail" className="footer-social-icon"/>
+											<img src="https://res.cloudinary.com/maximuscloud/image/upload/v1606176122/output-onlinepngtools_18_vvdvub.png" alt="mail" className="footer-social-icon"/>
 										</div>
 									</div>
 										
 									
 								</div>
 								<div className='footer-right'>
-									<ListItem>
+									<ListItem style={{width:"60%",margin:"0px auto"}}>
 										<ListItemIcon>
 											<EmailIcon style={{ color: "#DAD7CD" }} />
 										</ListItemIcon>
@@ -478,3 +283,4 @@ function App() {
 export default App;
 //Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 //Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+//Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
