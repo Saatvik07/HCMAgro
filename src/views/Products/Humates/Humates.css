@@ -58,6 +58,7 @@
 }
 .humate-card-footer-container {
 	height: 20%;
+	padding: 20px;
 	width: 100%;
 }
 .humate-card-button {
@@ -144,7 +145,7 @@
 		margin: 40px 0;
 	}
 	.humate-card {
-		width: 70%;
+		width: 80%;
 		margin: 20px;
 	}
 	.humate-modal-heading > h2 {

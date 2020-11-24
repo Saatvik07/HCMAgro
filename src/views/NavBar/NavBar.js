@@ -19,8 +19,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 const CustomTooltip = withStyles((theme) => ({
 	tooltip: {
-		backgroundColor: "#d28a7c",
-		color: "rgba(0, 0, 0, 0.87)",
+		backgroundColor: "#3a5a40",
+		color: "#dad7cd",
 		maxWidth: 220,
 		fontSize: theme.typography.pxToRem(14),
 	},

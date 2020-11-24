@@ -151,7 +151,7 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 		margin: 20px;
 	}
 	.amino-card {
-		width: 70%;
+		width: 80%;
 		margin: 20px;
 	}
 	.amino-card-content > p {
@@ -159,6 +159,12 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 	}
 	.amino-card-content > h2 {
 		font-size: 16px !important;
+	}
+	.amino-card-footer {
+		padding: 10px;
+	}
+	.amino-card-container {
+		margin: 30px 0;
 	}
 }
 @media only screen and (max-width: 875px) {
@@ -187,6 +193,9 @@ body > div.MuiDialog-root.product-dialog > div.MuiDialog-container.MuiDialog-scr
 		> div.MuiListItemText-root
 		> span {
 		font-size: 14px !important;
+	}
+	.amino-card-footer {
+		padding: 10px;
 	}
 }
 @media only screen and (min-width: 600px) and (max-width: 1210px) {
