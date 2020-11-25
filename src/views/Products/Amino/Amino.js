@@ -11,6 +11,7 @@ import {
 	Paper,
 	TableContainer,TableBody,Table,TableHead,TableRow,TableCell,List,ListItem,ListItemIcon,ListItemText, Dialog
 } from "@material-ui/core";
+import Carousel from 'react-material-ui-carousel';
 import "./Amino.css";
 import NavBar from "../../NavBar/NavBar";
 const aminoTable = [
@@ -82,8 +83,8 @@ function Amino() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='Granule Organic amino'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606229184/White_Amino_Powder_yqqwy4.jpg'
+							alt='amino powder'
 							className='amino-card-image'
 						/>
 						<CardContent style={{ height: "40%" }} className="amino-card-content">
@@ -123,8 +124,8 @@ function Amino() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566655/WhatsApp_Image_2020-09-18_at_22.32.15_1_fhjpq0.jpg'
-							alt='Granule Organic amino'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5184/v1606228744/Amino_acid_granules_1_toh9d0.jpg'
+							alt='amino granules'
 							className='amino-card-image'
 						/>
 						<CardContent style={{ height: "40%" }} className="amino-card-content">
@@ -138,9 +139,9 @@ function Amino() {
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
 								Mycorrhizae is a biofertilizer that helps in promotion of plant growth in an
-								environment friendly manner as well as providing several other benefits to
-								cultivation of plants. We offer commercial production of viable, healthy genetically
-								pure & high quality mycorrhizae without contamination in sterile environment.
+								eco friendly manner as well as providing several other benefits to
+								cultivation. We offer commercial production of viable, healthy genetically
+								pure & high quality mycorrhizae without contamination.
 							</Typography>
 						</CardContent>
 					</CardActionArea>
@@ -165,8 +166,8 @@ function Amino() {
 						}}
 					>
 						<img
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566656/WhatsApp_Image_2020-09-18_at_22.31.30_x9y8d4.jpg'
-							alt='Granule Organic amino'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606228765/Fulvic_acid_POWDER_ztefpl.jpg'
+							alt='Fulvic Acid'
 							className='amino-card-image'
 						/>
 						<CardContent className="amino-card-content">
@@ -200,14 +201,66 @@ function Amino() {
 					</CardActions>
 				</Card>
 			</div>
-			<Dialog open={modals[0] || modals[1]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+			<Dialog open={modals[0]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
 
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div '>
 						<img
 							className='product-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606229184/White_Amino_Powder_yqqwy4.jpg'
+							alt='amino powder'
+						/>
+						<Paper elevation={5} className='amino-modal-heading'>
+							<h2>Benefits</h2>
+						</Paper>
+						<List className="product-dialog-list">
+							{aminoBenefits.map((benefit) => (
+								<ListItem>
+									<ListItemIcon style={{color:"#3a5a40"}}>
+										<StarBorder />
+									</ListItemIcon>
+									<ListItemText primary={benefit} className="amino-list-text"></ListItemText>
+								</ListItem>
+							))}
+						</List>
+					</div>
+					<div className='amino-dialog-right-div'>
+					<TableContainer className='manure-modal-table-container'>
+							<Table className='manure-modal-table'>
+								<TableHead>
+									<TableRow>
+										<TableCell className="amino-table-text-headings">Item</TableCell>
+										<TableCell></TableCell>
+										<TableCell className="amino-table-text-headings">Standard</TableCell>
+										<TableCell></TableCell>
+									</TableRow>
+								</TableHead>
+								<TableBody>
+									{aminoTable.map((row) => (
+										<TableRow key={row.item}>
+											<TableCell component='th' scope='row' className="amino-table-text">
+												{row.item}
+											</TableCell>
+											<TableCell className="amino-table-text">{row.standard1}</TableCell>
+											<TableCell className="amino-table-text">{row.standard2}</TableCell>
+											<TableCell className="amino-table-text">{row.standard3}</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</TableContainer>
+
+					</div>
+				</div>
+			</Dialog>
+			<Dialog open={modals[1]} onClose={handleClose} scroll="paper" className="product-dialog animate__animated animate__fadeIn" id="dialog">
+
+				<div className='product-dialog-container '>
+					<div className='amino-dialog-left-div '>
+						<img
+							className='product-dialog-image'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606228744/Amino_acid_granules_1_toh9d0.jpg'
+							alt='amino granules'
 						/>
 						<Paper elevation={5} className='amino-modal-heading'>
 							<h2>Benefits</h2>
@@ -256,11 +309,38 @@ function Amino() {
 
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
-						<img
-							className='product-dialog-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
-						/>
+					<Carousel className="amino-carousel" interval={4000}>
+                            <div>
+                                <img
+                                    className='slide-container'
+                                    src="https://res.cloudinary.com/maximuscloud/image/upload/v1606228765/Fulvic_acid_POWDER_ztefpl.jpg"
+                                    style={{
+                                        width:"100%",
+                                        margin: "0 auto",
+                                        height: "45vh",
+                                    }}
+                                />
+                                
+                                <div className='amino-slide-info'>
+                                    <h2>Amino Acid Powder</h2>
+                                </div>
+                            </div>
+                            <div>
+                                    <img
+                                    className='slide-container'
+                                    src="https://res.cloudinary.com/maximuscloud/image/upload/v1606228908/Fulvic_acid_flakes_cjklhl.jpg"
+                                    style={{
+                                        width:"100%",
+                                        margin: "0 auto",
+                                        height: "45vh",
+                                    }}
+                                />
+                                    <div className='amino-slide-info'>
+                                        <h2>Amino Acid Flakes</h2>
+                                    </div>
+                                
+                            </div>
+						</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>

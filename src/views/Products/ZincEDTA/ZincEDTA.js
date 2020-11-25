@@ -47,8 +47,8 @@ function ZincEDTA() {
 					<div className='zincEDTA-modal-left-div '>
 						<img
 							className='zincEDTA-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606231203/zinc_tabs_sn7sns.jpg'
+							alt='Zinc EDTA'
 						/>
 						<Accordion className="zincEDTA-accordion">
                             <AccordionSummary

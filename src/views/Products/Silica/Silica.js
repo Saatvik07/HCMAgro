@@ -51,8 +51,8 @@ function Silica() {
 					<div className='silica-modal-left-div '>
 						<img
 							className='silica-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606226799/Silica_Tablets_rq88oz.jpg'
+							alt="Silica Series"
 						/>
 						
 					</div>

@@ -1,5 +1,6 @@
 body {
 	background-color: #dad7cd;
+	/* font-family: "Merienda One", cursive; */
 }
 .content-footer {
 	position: relative;
@@ -37,7 +38,7 @@ footer {
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	z-index: 0;
+	z-index: -100;
 	align-self: flex-end;
 	background-color: #3a5a40;
 }

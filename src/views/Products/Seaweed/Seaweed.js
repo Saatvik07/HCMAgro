@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/effect-flip/effect-flip.scss";
+import Carousel from 'react-material-ui-carousel';
 import StarBorder from "@material-ui/icons/StarBorder";
 import {
 	TableContainer,
@@ -191,7 +192,8 @@ function Seaweed() {
                     <div className="seaweed-card-container-left"  onLoad={()=>{
                             setLoading([true,loading[1]]);
                         }}>
-                        <div style={{backgroundImage:"url(https://res.cloudinary.com/maximuscloud/image/upload/v1605050728/Seaweed_granules_yhjcmy.jpg)",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize: "cover", width:"80%", height:"50vh", display:"flex",alignItems:"flex-end",margin:"30px auto"}}>
+                        <div style={{width:"80%", height:"50vh", display:"flex",alignItems:"flex-end",margin:"30px auto",flexDirection:"column"}}>
+                            <img src="https://res.cloudinary.com/maximuscloud/image/upload/v1605050728/Seaweed_granules_yhjcmy.jpg" alt="seaweed granules" style={{width:"100%",height:"auto"}}/>
                             <div className='seaweed-slide-info'>
                                 <h1>
                                     Seaweed Granules
@@ -235,88 +237,53 @@ function Seaweed() {
                                 </ListItem>
                             ))}
                         </List>
-                        <Swiper
-                    slidesPerView={1}
-                    navigation
-                    tag='ul'
-                    effect='flip'
-                    id='first'
-                    className='animate__animated animate__fadeIn seaweed-swiper-container'
-                    autoplay={{
-                        delay: "3000",
-                        stopOnLastSlide: false,
-                        disableOnInteraction: false,
-                    }}
-                    onLoad={()=>{
-                        setLoading([loading[0],true]);
-                    }}
-                    
-                >
-                    <SwiperSlide tag='li'>
-                        <div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-                                margin: "0 auto",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605050733/Seaweed_Powder_gjty5r.jpg)",
-                            }}
-                            
-                        >
-                            
+                        <Carousel className="humate-carousel" interval={4000}>
+                            <div>
+                                <img
+                                    className='slide-container'
+                                    src="https://res.cloudinary.com/maximuscloud/image/upload/v1605050733/Seaweed_Powder_gjty5r.jpg"
+                                    style={{
+                                        width:"100%",
+                                        margin: "0 auto",
+                                        height: "45vh",
+                                    }}
+                                />
+                                
                                 <div className='seaweed-slide-info'>
-                                    <h1>
-                                        Seaweed Powder
-                                    </h1>
+                                    <h2>Seaweed Extract Powder</h2>
                                 </div>
-                            
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide tag='li'>
-                        <div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-                                margin: "0 auto",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605050746/seaweed_flakess_zkivqb.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Seaweed Flakes</h1>
-                                </div>
-                            
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide tag='li'>
-                        <div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-                                margin: "0 auto",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605050732/seaweed_gel_mg5iax.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Seaweed Gel</h1>
-                                </div>
-                            
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-                        
+                            </div>
+                            <div>
+                                    <img
+                                    className='slide-container'
+                                    src="https://res.cloudinary.com/maximuscloud/image/upload/v1605050746/seaweed_flakess_zkivqb.jpg"
+                                    style={{
+                                        width:"100%",
+                                        margin: "0 auto",
+                                        height: "45vh",
+                                    }}
+                                />
+                                    <div className='seaweed-slide-info'>
+                                        <h2>Seaweed Extract Flakes</h2>
+                                    </div>
+                                
+                            </div>
+                            <div>
+                                    <img
+                                    className='slide-container'
+                                    src="https://res.cloudinary.com/maximuscloud/image/upload/v1605050732/seaweed_gel_mg5iax.jpg"
+                                    style={{
+                                        width:"100%",
+                                        margin: "0 auto",
+                                        height: "45vh",
+                                    }}
+                                />
+                                    <div className='seaweed-slide-info'>
+                                        <h2>Seaweed Extract Gel</h2>
+                                    </div>
+                                
+                            </div>
+						</Carousel>
                     </div>
                 </div>}
             </div>

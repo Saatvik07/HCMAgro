@@ -60,7 +60,7 @@
 }
 .seaweed-table-container {
 	width: 80% !important;
-	margin: 60px auto;
+	margin: 80px auto;
 	border: 2px solid #3a5a40 !important;
 }
 .seaweed-heading > h2 {
@@ -102,7 +102,7 @@
 	justify-content: center;
 }
 .seaweed-slide-info > h1,
-.seaweed-slide-info > h3 {
+.seaweed-slide-info > h2 {
 	color: #dad7cd;
 }
 @media only screen and (max-width: 1000px) and (min-width: 721px) {

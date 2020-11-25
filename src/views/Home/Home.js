@@ -253,8 +253,8 @@ function Home() {
 				</SwiperSlide>
 				...
 			</Swiper>
-			<p className="home-best-heading">Our Bestsellers</p>
-			<GridList className={classes.gridList} cols={2.5}>
+			<p className="home-best-heading" data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>Our Bestsellers</p>
+			<GridList className={classes.gridList} cols={2.5}data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>
 				{tileData.map((tile) => (
 				<GridListTile key={tile.img} className="home-tile">
 					<img src={tile.image} alt={tile.title} />

@@ -52,8 +52,8 @@ function Zinc() {
 					<div className='zinc-modal-left-div '>
 						<img
 							className='zinc-modal-image'
-							src='https://res.cloudinary.com/maximuscloud/image/upload/v1600566657/WhatsApp_Image_2020-09-18_at_22.32.15_bhx166.jpg'
-							alt='product1'
+							src='https://res.cloudinary.com/maximuscloud/image/upload/v1606227022/cover_optional_jey52z.jpg'
+							alt='zinc oxide'
 						/>
 						<TableContainer className='zinc-modal-table-container'>
 							<Table className='zinc-modal-table'>

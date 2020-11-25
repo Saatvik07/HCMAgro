@@ -277,8 +277,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/v1606226784/pexels-markus-spiske-965740_jwlmyw.jpg'
+								alt='bio fertilizer'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography
@@ -563,8 +563,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/v1606227022/cover_optional_jey52z.jpg'
+								alt='zinc oxide powder'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography
@@ -624,8 +624,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5184/v1605208615/COVER_1_ldrbvh.jpg'
+								alt='water soluble PVA'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography
@@ -718,8 +718,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/v1606226837/zinc_tabs_COVER_lq8t95.jpg'
+								alt='zinc EDTA'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography
@@ -778,8 +778,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/v1606226799/Silica_Tablets_rq88oz.jpg'
+								alt='Silica Tablets'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography
@@ -838,8 +838,8 @@ function Products() {
 						>
 							<img
 								className='products-card-image'
-								src='https://res.cloudinary.com/maximuscloud/image/upload/v1600557792/pexels-nick-collins-1274609_jut6vd.jpg'
-								alt='seaweed extract'
+								src='https://res.cloudinary.com/maximuscloud/image/upload/c_scale,h_3456,w_5184/v1606226780/IMG_6538_m0wvfc.jpg'
+								alt='Glass beads'
 							/>
 							<CardContent className='products-card-info'>
 								<Typography

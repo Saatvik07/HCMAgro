@@ -158,11 +158,11 @@ function PVA() {
 						<CardContent style={{ height: "40%" }} className="pva-card-content">
 							<Typography
 								gutterBottom
-								variant='h5'
+								variant='h6'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white", }}
+								style={{ marginBottom: "15px", color: "white", }}
 							>
-								Water Soluble film for agriculture
+								Water Soluble Films for agriculture
 							</Typography>
 						</CardContent>
 					</CardActionArea>
@@ -194,11 +194,11 @@ function PVA() {
 						<CardContent style={{ height: "40%" }} className="pva-card-content">
 							<Typography
 								gutterBottom
-								variant='h5'
+								variant='h6'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "15px", color: "white" }}
 							>
-								Water Soluble film for embroidery
+								Water Soluble Films for embroidery
 							</Typography>
 						</CardContent>
 					</CardActionArea>
@@ -230,11 +230,11 @@ function PVA() {
 						<CardContent className="pva-card-content">
 							<Typography
 								gutterBottom
-								variant='h5'
+								variant='h6'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "15px", color: "white" }}
 							>
-								Water Soluble films for Cement/Dye/Enzymes
+								Water Soluble Films for Cement
 							</Typography>
 						</CardContent>
 					</CardActionArea>
@@ -266,9 +266,9 @@ function PVA() {
 						<CardContent className="pva-card-content">
 							<Typography
 								gutterBottom
-								variant='h5'
+								variant='h6'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "15px", color: "white" }}
 							>
                                 Water Soluble Laundry Pods
 							</Typography>
@@ -302,9 +302,9 @@ function PVA() {
 						<CardContent className="pva-card-content">
 							<Typography
 								gutterBottom
-								variant='h5'
+								variant='h6'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "15px", color: "white" }}
 							>
                                 Water Soluble Laundry Bags
 							</Typography>
@@ -338,11 +338,11 @@ function PVA() {
 						<CardContent className="pva-card-content">
 							<Typography
 								gutterBottom
-								variant='h5'
+								variant='h6'
 								component='h2'
-								style={{ marginBottom: "20px", color: "white" }}
+								style={{ marginBottom: "15px", color: "white" }}
 							>
-                                Water Soluble Films for Powdered Detergents
+                                Water Soluble Films for Detergents
 							</Typography>
 						</CardContent>
 					</CardActionArea>

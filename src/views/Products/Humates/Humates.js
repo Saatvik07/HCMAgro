@@ -326,48 +326,40 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div '>
 						<Carousel className="humate-carousel" interval={4000}>
-						<div>
-							<img
-								className='slide-container'
-								style={{
-									width:"100%",
-									margin: "0 auto",
-									height: "40vh",
-									display:"flex",
-									flexDirection:"column",
-									justifyContent: "flex-end",
-									backgroundImage:
-										"url(https://res.cloudinary.com/maximuscloud/image/upload/v1605094326/Humic_acid_FLAKES_jxe4ka.jpg)",
-								}}
-							/>
-                            
-							<div className='seaweed-slide-info'>
-								<h3>Humic Acid Flakes</h3>
+							<div>
+								<img
+									className='slide-container'
+									src="https://res.cloudinary.com/maximuscloud/image/upload/v1605094326/Humic_acid_FLAKES_jxe4ka.jpg"
+									style={{
+										width:"100%",
+										margin: "0 auto",
+										height: "40vh",
+									}}
+								/>
+								
+								<div className='seaweed-slide-info'>
+									<h2>Humic Acid Flakes</h2>
+								</div>
 							</div>
-						</div>
 
+							
+								
 						
-                            
-                    
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height:"40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605189057/Humid_acid_granules_f5u9em.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h3>Humic Acid Granules</h3>
-                                </div>
-                            
-                        </div>
+							<div>
+									<img
+									className='slide-container'
+									src="https://res.cloudinary.com/maximuscloud/image/upload/v1605189057/Humid_acid_granules_f5u9em.jpg"
+									style={{
+										width:"100%",
+										margin: "0 auto",
+										height: "40vh",
+									}}
+								/>
+									<div className='seaweed-slide-info'>
+										<h2>Humic Acid Granules</h2>
+									</div>
+								
+							</div>
 						</Carousel>
 						
 						<TableContainer className='manure-modal-table-container'>
@@ -412,44 +404,36 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 					<Carousel className="humate-carousel" interval={4000}>
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height: "40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605189289/Potassium_Flakes_uzsxrs.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Potassium Humate Flakes</h1>
-                                </div>
-                            
-                        </div>
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height:"40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605189288/Potassium_Humate_CRYSTALS_krkzaz.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Potassium Humate Crystals</h1>
-                                </div>
-                            
-                        </div>
+							<div>
+								<img
+									className='slide-container'
+									src="https://res.cloudinary.com/maximuscloud/image/upload/v1605189289/Potassium_Flakes_uzsxrs.jpg"
+									style={{
+										width:"100%",
+										margin: "0 auto",
+										height: "40vh",
+									}}
+								/>
+								
+								<div className='seaweed-slide-info'>
+									<h2>Potassium Humate Flakes</h2>
+								</div>
+							</div>
+							<div>
+									<img
+									className='slide-container'
+									src="https://res.cloudinary.com/maximuscloud/image/upload/v1605189289/Potassium_Flakes_uzsxrs.jpg"
+									style={{
+										width:"100%",
+										margin: "0 auto",
+										height: "40vh",
+									}}
+								/>
+									<div className='seaweed-slide-info'>
+										<h3>Potassium Humate Crystals</h3>
+									</div>
+								
+							</div>
 						</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
@@ -497,25 +481,21 @@ function Humates() {
 				<div className='product-dialog-container ' style={{alignItems:"flex-start"}}>
 					<div className='amino-dialog-left-div'>
 					<Carousel className="humate-carousel" interval={4000}>
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height: "40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605200516/Sodium_humate_flakes_kqgnr6.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Potassium Humate Flakes</h1>
-                                </div>
-                            
-                        </div>
+							<div>
+								<img
+									className='slide-container'
+									src="https://res.cloudinary.com/maximuscloud/image/upload/v1605200516/Sodium_humate_flakes_kqgnr6.jpg"
+									style={{
+										width:"100%",
+										margin: "0 auto",
+										height: "40vh",
+									}}
+								/>
+								
+								<div className='seaweed-slide-info'>
+									<h2>Sodium Humate Flakes</h2>
+								</div>
+							</div>
 						</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
@@ -585,24 +565,11 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 					<Carousel className="humate-carousel" interval={4000}>
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height: "40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605204064/Boron_Humate_granules_jlt8vi.jpg)",
-                            }}
-                        >
-                            
+						<div>
+							<img className='slide-container' src="https://res.cloudinary.com/maximuscloud/image/upload/v1605204064/Boron_Humate_granules_jlt8vi.jpg" style={{width:"100%",margin: "0 auto",height: "40vh",}}/>
                                 <div className='seaweed-slide-info'>
-                                    <h1>Boron Humate Crystals</h1>
+                                    <h2>Boron Humate Crystals</h2>
                                 </div>
-                            
                         </div>
 					</Carousel>
 						<TableContainer className='manure-modal-table-container'>
@@ -649,45 +616,13 @@ function Humates() {
 				<div className='product-dialog-container '>
 					<div className='amino-dialog-left-div'>
 					<Carousel className="humate-carousel" interval={4000}>
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height: "40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605093672/Cover_Picture_Super_potassium_CRYSTALS_xqc3mz.jpg)",
-                            }}
-                        >
-                            
+						<div>
+							<img className='slide-container' src="https://res.cloudinary.com/maximuscloud/image/upload/v1605093672/Cover_Picture_Super_potassium_CRYSTALS_xqc3mz.jpg" style={{width:"100%",margin: "0 auto",height: "40vh",}}/>
                                 <div className='seaweed-slide-info'>
-                                    <h1>Super Potassium Humate Crystals</h1>
+                                    <h2>Boron Humate Crystals</h2>
                                 </div>
-                            
                         </div>
-						<div
-                            className='slide-container'
-                            style={{
-                                width:"100%",
-								margin: "0 auto",
-								height:"40vh",
-                                display:"flex",
-                                flexDirection:"column",
-                                justifyContent: "flex-end",
-                                backgroundImage:
-                                    "url(https://res.cloudinary.com/maximuscloud/image/upload/v1605204111/Super_potassium_FLAKES_lxowoc.jpg)",
-                            }}
-                        >
-                            
-                                <div className='seaweed-slide-info'>
-                                    <h1>Super Potassium Humate Flakes</h1>
-                                </div>
-                            
-                        </div>
-						</Carousel>
+					</Carousel>
 						<TableContainer className='manure-modal-table-container'>
 							<Table className='manure-modal-table'>
 								<TableHead>

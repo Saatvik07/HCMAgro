@@ -58,7 +58,7 @@
 }
 .humate-card-footer-container {
 	height: 20%;
-	padding: 20px;
+	padding: 20px !important;
 	width: 100%;
 }
 .humate-card-button {
