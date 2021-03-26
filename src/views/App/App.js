@@ -36,6 +36,9 @@ import Seaweed from "../Products/Seaweed/Seaweed";
 import Zinc from "../Products/Zinc/Zinc";
 import PVA from "../Products/PVA/PVA";
 import ZincEDTA from "../Products/ZincEDTA/ZincEDTA";
+import 'primereact/resources/themes/saga-green/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 function App() {
 	const [email, setEmail] = useState("");
 	const [mailLoader, setMailLoader] = useState(false);

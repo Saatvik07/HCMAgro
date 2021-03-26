@@ -7,28 +7,34 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/effect-flip/effect-flip.scss";
 import NavBar from "../NavBar/NavBar";
-import { Button, useMediaQuery, IconButton, CircularProgress,GridList,GridListTile,GridListTileBar, makeStyles} from "@material-ui/core";
+import {useMediaQuery, IconButton, CircularProgress,GridList,GridListTile,GridListTileBar, makeStyles} from "@material-ui/core";
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
+import {Carousel} from "primereact/carousel";
+import {Button} from "primereact/button";
 import AOS from "aos";
 SwiperCore.use([Navigation, A11y, Autoplay, EffectFade]);
 const tileData = [
 	{
 		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605050728/Seaweed_granules_yhjcmy.jpg",
 		title:"Seaweed Extract",
+		link:"/seaweed"
 
 	},
 	{
 		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605189057/Humid_acid_granules_f5u9em.jpg",
 		title:"Humic Acid",
+		link:"/humate"
 	},
 	{
 		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605050732/seaweed_gel_mg5iax.jpg",
-		title:"Seaweed Extract Gel"
+		title:"Seaweed Extract Gel",
+		link:'/seaweed'
 	},
 	{
 		image:"https://res.cloudinary.com/maximuscloud/image/upload/v1605204111/Super_potassium_FLAKES_lxowoc.jpg",
-		title:"Super Potassium Flakes"
+		title:"Super Potassium Flakes",
+		link:'/products'
 	}
 ]
 const useStyles = makeStyles((theme) => ({
@@ -67,6 +73,42 @@ function Home() {
 		}
 		console.log(loading);
 	})
+	const responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '600px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '480px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
+	const productTemplate = (product) => {
+        return (
+            <div className="product-item">
+                <div className="product-item-content">
+                    <div className="p-mb-3">
+                        <img src={`${product.image}`} alt={product.title} className="product-image" />
+                    </div>
+                    <div>
+                        <h1 className="p-mb-1 product-heading">{product.title}</h1>
+                        <div className="car-buttons p-mt-5">
+                            <Button icon="pi pi-arrow-circle-right" className="p-button p-mr-2" iconPos="right" label="Learn More" onClick={()=>{
+								history.push(`${product.link}`)
+							}}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 	return (
 		<div style={{textAlign:"center"}}> 
 			<div id="main-container" className="not-loaded">
@@ -254,7 +296,7 @@ function Home() {
 				...
 			</Swiper>
 			<p className="home-best-heading" data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>Our Bestsellers</p>
-			<GridList className={classes.gridList} cols={2.5}data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>
+			{/* <GridList className={classes.gridList} cols={2.5}data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>
 				{tileData.map((tile) => (
 				<GridListTile key={tile.img} className="home-tile">
 					<img src={tile.image} alt={tile.title} />
@@ -269,7 +311,8 @@ function Home() {
 					/>
 				</GridListTile>
 				))}
-      	</GridList>
+      	</GridList> */}
+
 			{/* <div className="hex-container" >
 				<div className="upper-hex-container">
 					<div className="hex-image hex1"
@@ -289,7 +332,10 @@ function Home() {
 					data-aos-once='false'></div>
 				</div>
 			</div> */}
-			
+			<Carousel
+				value={tileData} numVisible={3} numScroll={1} responsiveOptions={responsiveOptions} circular autoplayInterval={3000} itemTemplate={productTemplate}
+				className="home-carousel"
+			/>
 			
 			{matches?
 			<div className="home-about-hero-container animate__animated animate__fadeIn" data-aos='fade-up'
@@ -349,11 +395,10 @@ function Home() {
 						data-aos-mirror='true'
 						data-aos-once='false'>
 						<p>Get to know all about HCM</p>
-						<Button variant="outlined" className="home-learn-button" size="large" onClick={() => {
+						<Button className="home-learn-button p-button-outlined" label="Learn More" onClick={() => {
 								history.push("/about");
-							}}>  
-							Learn More
-						</Button>
+						}}/>  
+						
 					</div>
 					
 					<div className="home-about-hero-right" 

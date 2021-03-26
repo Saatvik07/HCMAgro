@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+
 import "./Contact.css";
 import {
 	ListItemIcon,
@@ -33,7 +35,6 @@ function Contact() {
 			document.querySelector(".contact-container").classList.remove("not-loaded");
 			setLoading(true);
 		}
-		console.log(loading);
 	})
 	const handleSend = async()=>{
 		if(query===""||name===""||email===""){
@@ -48,6 +49,12 @@ function Contact() {
 		}
 		else{
 			setMailLoader(true);
+			// emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+			// .then((result) => {
+			// 	console.log(result.text);
+			// }, (error) => {
+			// 	console.log(error.text);
+			// })
 			sendQuery(name,email,query).then(result=>{
 				if(result==="message sent"){
 					setMailLoader(false);
